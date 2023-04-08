@@ -1,0 +1,67 @@
+
+.maincontainer { 
+     width: 100%; float:left; border-radius: 25px; background: url('../images/container-bg.jpg') no-repeat center center; background-size:cover;   box-shadow: inset 8px 8px 10px 0 rgba(0,0,0,0.6) , -4px -4px 0px 0px rgba(107,107,107,0.4), 4px 4px 0px 0px rgba(138,138,138,0.4),   3px -3px 0px 0px rgba(138,138,138,0.4), -3px 3px 0px 0px rgba(138,138,138,0.4);
+     section { 
+          width: 100%; float: left;
+          .meridian_button {
+               display: inline-block; margin: 0 auto; padding: 1rem 2.5rem;  text-align: center; background: linear-gradient(120deg, rgba(101,101,101,1) 0%, rgba(250,250,250,1) 40%, rgba(250,250,250,1) 65%, rgba(101,101,101,1) 100%); @include DinNextLtProHeavy(); font-size: 30px; color: $blue; border: none; box-shadow:0px 5px 3px 3px rgba(0,0,0,.3); @include outT(); border-radius: 15px; text-decoration: none; letter-spacing: 5px; cursor: pointer; text-transform: uppercase;
+               &:hover { color: $black; @include inT(); }
+          }
+     }
+}
+
+.screen1 { 
+      padding:6rem 15rem 4rem 15rem; 
+      h2 { width: 100%; float: left; text-align: center; text-transform: uppercase; @include DinNextLtProHeavy(); color: $white; font-size: 60px; text-shadow:6px 6px 11px rgba(0,0,0,.7);  }
+     .meridianmegaLine { width:100%; float:left; clear: both; display: block; height:3px; margin: 0.4rem 0 0.8rem 0; background-color: $white; line-height: 1; font-size: 1; box-shadow:0px 5px 5px 5px rgba(0,0,0,.3); }
+     h3 {
+          width: 100%; float: left; text-align: center; text-transform: uppercase;  @include DinNextLtProHeavy(); color: $white; font-size: 36px; text-shadow:6px 6px 11px rgba(0,0,0,.7); letter-spacing: 4px;
+          i.fa-inr { font-size: 90%; line-height: 1; font-weight: 400; }
+     }
+      .meridianForm { 
+          width: 100%; float: left; margin-top: 1rem; @include fBS(); flex-wrap: wrap;
+          .meridianField {
+               float: left; text-align: center; margin-top: 1.5rem;
+               .mf_input { 
+                    float: left; width: 100%; padding: 0.8rem 1.5rem; border: solid 2px $white2; outline: none; background:$black2; border-radius: 15px; text-align: left;  @include DinNextLtProMedium(); color: $white; font-size: 22px; box-shadow:0px 5px 5px 5px rgba(0,0,0,.3);
+                    &::-webkit-input-placeholder {  color: $white3; text-transform: uppercase; opacity: 1; }
+                    &:-ms-input-placeholder { color: $white3;  text-transform: uppercase; opacity: 1;  }
+                    &::placeholder { color: $white3;  text-transform: uppercase; opacity: 1;  }
+               }
+               
+               .mf_error { display: none; margin-top: 0.7rem; float: left; width: 100%; text-align: left; @include DinNextLtProMedium(); color: $red; font-size: 16px;  }
+               &.mf100 { width:100%;}
+               &.mf50 { width:48%; }
+               &.mf25 { width:50%; margin-left: 25%; margin-bottom: 1rem; }
+               &.mf33 {   width:60%; margin:2.5rem 20%; }
+          }
+     }
+}
+.screen3 { 
+     padding:6rem 10rem 4rem 10rem;
+     h2 { width: 100%; float: left; text-align: center; text-transform: uppercase; @include DinNextLtProHeavy(); color: $white; font-size: 32px; line-height: 1.4;  letter-spacing: 1px; }
+     h3 { width: 100%; float: left; text-align: center; margin: 1rem 0 2rem 0; text-transform: none;  @include DinNextLtProMedium(); color: $green; font-size: 32px; line-height: 1.4;  letter-spacing: 2px;} 
+     aside { 
+          width: 100%; float: left; text-align: center;   
+     }
+}
+ 
+
+
+
+ 
+@media only screen and (max-width:1255px) 
+{
+ 
+}
+
+
+@media only screen and (max-width:1023px) 
+{
+ 
+}
+
+@media only screen and (max-width:599px) 
+{
+ 
+}
