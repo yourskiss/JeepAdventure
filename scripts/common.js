@@ -5,11 +5,36 @@ $(window).on('orientationchange', function ()
 });
 /* page refresh on orientation change === END */
 
+ 
+// only number validation === start
+function isNumber(evt) {
+    evt = (evt) ? evt : window.event;
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        return false;
+    }
+    return true;
+}
+// only number validation === end
 
 
+
+// only Letter validation === start
+function isLetter(e) 
+{
+    var regex = new RegExp("^[a-zA-Z ]+$");
+    var strigChar = String.fromCharCode(!e.charCode ? e.which : e.charCode);
+    if (regex.test(strigChar)) {
+        return true;
+    }
+    return false
+}
+// only Letter validation === end
+
+ 
     
 
-/* validation === start */
+/* form validation === start */
 function formValidation()
 {
     // debugger;
@@ -50,40 +75,8 @@ function formValidation()
         return true;
     }
 }
-/* validation === end */
+/* form validation === end */
 
-
-
-
- 
-// only number validation === start
-function isNumber(evt) {
-    evt = (evt) ? evt : window.event;
-    var charCode = (evt.which) ? evt.which : evt.keyCode;
-    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-        return false;
-    }
-    return true;
-}
-// only number validation === end
-
-// only Letter validation === start
-function isLetter(e) 
-{
-    var regex = new RegExp("^[a-zA-Z ]+$");
-    var strigChar = String.fromCharCode(!e.charCode ? e.which : e.charCode);
-    if (regex.test(strigChar)) {
-        return true;
-    }
-    return false
-}
-// only Letter validation === end
-
- 
-
-
-
-   
 
 /* otpValidation === start */
 function otpValidation()
@@ -110,3 +103,12 @@ function otpValidation()
 
 
 
+
+/* click to answer button === start */
+$("#quiczAnswerKey li").click(function()
+{
+    $("#quiczAnswerKey li").removeClass("active");
+    $(this).addClass("active");
+    $("#quizSubmitBtn").removeClass("disabled");
+});
+/* click to answer button === end */
