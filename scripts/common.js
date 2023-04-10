@@ -112,3 +112,36 @@ $("#quiczAnswerKey li").click(function()
     $("#quizSubmitBtn").removeClass("disabled");
 });
 /* click to answer button === end */
+
+
+/* time counter ===== start */
+function timeCounter()
+{
+    var tmrCount = $('#tmrCount');
+    $.each(tmrCount, function(key, val) 
+    {
+        var getDate = new Date();	//$(this).attr('data-id');
+        getDate.setHours(getDate.getHours() + 6);
+        setInterval(() => {
+            var endTime = new Date(getDate);			
+            endTime = (Date.parse(endTime) / 1000);
+            var currentTime = new Date();
+            currentTime = (Date.parse(currentTime) / 1000);
+            var leftTime = endTime - currentTime;
+            var days = Math.floor(leftTime / 86400); 
+            var hours = Math.floor((leftTime - (days * 86400)) / 3600);
+            var minutes = Math.floor((leftTime - (days * 86400) - (hours * 3600 )) / 60);
+            var seconds = Math.floor((leftTime - (days * 86400) - (hours * 3600) - (minutes * 60)));
+            if (hours < "10") { hours = "0" + hours; }
+            if (minutes < "10") { minutes = "0" + minutes; }
+            if (seconds < "10") { seconds = "0" + seconds; }
+            $(val).find('#tmrDays').html(days);
+            if(days>0){ $(val).find('#tmrHours').html(parseInt(hours)+parseInt(parseInt(days)*parseInt(24))); }
+            else{ $(val).find('#tmrHours').html(hours); }
+            $(val).find('#tmrMinutes').html(minutes);
+            $(val).find('#tmrSeconds').html(seconds);	
+        }, 1000); 
+    });
+}
+timeCounter();
+/* time counter ===== end  */
