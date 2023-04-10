@@ -27,11 +27,32 @@ body {  margin:0;  padding:0; font-family:'DinNextLtProMedium', Arial, sans-seri
  
 
 
-.main { 
-   position: relative; width: 92%; max-width: 1800px; min-height: calc(100vh - 8rem);  float:none; margin:4rem auto; padding:0; border-radius: 25px; background: url('../images/main-bg.jpg') no-repeat center center; background-size:cover;  box-shadow:0px 10px 10px 10px rgba(0,0,0,0.3), inset -5px -5px 0px 0px rgba(219,219,219,0.7), inset 5px 5px 0px 0px rgba(187,187,187,0.7),  inset  5px -5px 0px 0px rgba(187,187,187,0.7), inset -5px 5px 0px 0px rgba(187,187,187,0.7);  @include fCC(); flex-wrap: wrap;   
+.main {  position: relative; width: 92%; max-width: 1800px; min-height: calc(100vh - 8rem);  float:none; margin:4rem auto; padding:0; border-radius: 25px; background: url('../images/main-bg.jpg') no-repeat center center; background-size:cover;  box-shadow:0px 10px 10px 10px rgba(0,0,0,0.3), inset -5px -5px 0px 0px rgba(219,219,219,0.7), inset 5px 5px 0px 0px rgba(187,187,187,0.7),  inset  5px -5px 0px 0px rgba(187,187,187,0.7), inset -5px 5px 0px 0px rgba(187,187,187,0.7);  @include fCC(); flex-wrap: wrap;   
   }
-.mainlogo { position: absolute; right: 1.5rem; top: 1.5rem; max-width: 112px; border: 0; }
+.mainlogo { z-index:8; position: absolute; right: 1.5rem; top: 1.5rem; max-width: 112px; border: 0; }
 
 
+ 
+@media only screen and (max-width:1255px) 
+{
+
+  .main { width: 94%; min-height: calc(100vh - 6rem); margin:3rem auto;  box-shadow:0px 7px 7px 7px rgba(0,0,0,0.3), inset -3px -3px 0px 0px rgba(219,219,219,0.7), inset 3px 3px 0px 0px rgba(187,187,187,0.7),  inset  3px -3px 0px 0px rgba(187,187,187,0.7), inset -3px 3px 0px 0px rgba(187,187,187,0.7); }
+  .mainlogo { right: 1rem; top: 1rem; max-width: 100px; }
+
+}
+
+@media only screen and (max-width:767px) 
+{
+  .main { width: 96%; min-height: calc(100vh - 4rem); margin:2rem auto; border-radius: 20px; }
+  .mainlogo {   max-width: 80px; }
+  
+}
+
+@media only screen and (max-width:479px) 
+{
+  .main {  min-height: calc(100vh - 2rem); margin:1rem auto; border-radius: 15px; }
+  .mainlogo { right: 0.7rem; top:0.7rem;  max-width: 70px; }
+  
+}
 
  
