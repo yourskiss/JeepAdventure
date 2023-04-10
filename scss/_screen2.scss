@@ -1,11 +1,26 @@
 
 .mainbig { 
-    width: 100%; float: left; margin: 0; padding: 0; @include fBC(); 
+    width: 100%; float: left; margin: 0; padding: 0 2rem; @include fBC(); 
     .spincontainer {
-        width: 55%; float: left; min-height: 400px;  background: url('../images/spin-bg.png') no-repeat center center; background-size: 100% 100%;
+        width: 55%; float: left; padding:4rem 10% 5rem 10%; background: url('../images/spin-bg.png') no-repeat center center; background-size: 100% 100%;
+        ul { 
+               width: 100%; float: left; height: 380px; padding:0; overflow: hidden; 
+               li {
+                    @include fSC(); height: 33%; list-style:none; width:100%; float: left; text-align: left; color: $brown; font-size: 42px; @include DinNextLtProMedium(); text-transform: uppercase;
+                    b { font-weight: normal;  }
+                    span { 
+                         margin-left: 0.5rem; font-size: 20px; color: $brown2; 
+                         b { font-weight: normal; }
+                    }
+                    &.active { 
+                         color: $green3; 
+                         span { color: $green3;  }
+                    }
+               }
+        }
     }
     .mainwrapper {
-         max-width: 100%; width: 43%;  float: right; margin: 0;
+         max-width: 100%; width: 43%;  float: right; margin: 0; padding:0;
          &.bgstar { width: 45%; padding: 8rem 3rem 8rem 2rem;  background: url('../images/star-bg.png') no-repeat; background-position: left -2rem top 0; background-size: cover; }
          .mainheader { 
               margin-bottom: -60px;

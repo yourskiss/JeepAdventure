@@ -266,6 +266,7 @@ template {
   max-width: 1130px;
   float: none;
   margin: 0 auto;
+  padding: 3rem;
 }
 .mainwrapper .mainheader {
   z-index: 2;
@@ -636,7 +637,7 @@ template {
   width: 100%;
   float: left;
   margin: 0;
-  padding: 0;
+  padding: 0 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -644,15 +645,55 @@ template {
 .mainbig .spincontainer {
   width: 55%;
   float: left;
-  min-height: 400px;
+  padding: 4rem 10% 5rem 10%;
   background: url("../images/spin-bg.png") no-repeat center center;
   background-size: 100% 100%;
+}
+.mainbig .spincontainer ul {
+  width: 100%;
+  float: left;
+  height: 380px;
+  padding: 0;
+  overflow: hidden;
+}
+.mainbig .spincontainer ul li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 33%;
+  list-style: none;
+  width: 100%;
+  float: left;
+  text-align: left;
+  color: #644b37;
+  font-size: 42px;
+  font-family: "DinNextLtProMedium", Arial, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.mainbig .spincontainer ul li b {
+  font-weight: normal;
+}
+.mainbig .spincontainer ul li span {
+  margin-left: 0.5rem;
+  font-size: 20px;
+  color: #7f644e;
+}
+.mainbig .spincontainer ul li span b {
+  font-weight: normal;
+}
+.mainbig .spincontainer ul li.active {
+  color: #59e642;
+}
+.mainbig .spincontainer ul li.active span {
+  color: #59e642;
 }
 .mainbig .mainwrapper {
   max-width: 100%;
   width: 43%;
   float: right;
   margin: 0;
+  padding: 0;
 }
 .mainbig .mainwrapper.bgstar {
   width: 45%;
@@ -859,7 +900,7 @@ body {
   min-height: calc(100vh - 8rem);
   float: none;
   margin: 4rem auto;
-  padding: 3rem;
+  padding: 0;
   border-radius: 25px;
   background: url("../images/main-bg.jpg") no-repeat center center;
   background-size: cover;
