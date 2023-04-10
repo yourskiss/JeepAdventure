@@ -964,7 +964,7 @@ template {
   width: 100%;
   float: left;
   margin: 0;
-  padding: 3rem 3rem;
+  padding: 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1036,13 +1036,13 @@ template {
   margin-bottom: -60px;
 }
 .mainbig .mainwrapper .mainheader img {
-  max-width: 220px;
+  max-width: 170px;
 }
 .mainbig .mainwrapper .mainfooter {
   margin-top: 1rem;
 }
 .mainbig .mainwrapper .mainfooter img {
-  max-width: 330px;
+  max-width: 280px;
 }
 .mainbig .mainwrapper .maincontainer {
   box-shadow: inset 4px 4px 6px 0 rgba(0, 0, 0, 0.6), -2px -2px 0px 0px rgba(107, 107, 107, 0.4), 2px 2px 0px 0px rgba(138, 138, 138, 0.4), 2px -2px 0px 0px rgba(138, 138, 138, 0.4), -2px 2px 0px 0px rgba(138, 138, 138, 0.4);
@@ -1174,6 +1174,183 @@ template {
   }
   .mainbig .spincontainer ul li span {
     font-size: 18px;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .mainbig {
+    padding: 3rem 1.5rem;
+  }
+  .mainbig.mainbigwithpadding {
+    padding: 0 1rem;
+  }
+  .mainbig .spincontainer {
+    width: 55%;
+    padding: 3rem 10% 3rem 10%;
+  }
+  .mainbig .spincontainer ul {
+    height: 280px;
+  }
+  .mainbig .spincontainer ul li {
+    font-size: 20px;
+  }
+  .mainbig .spincontainer ul li span {
+    margin-left: 0.3rem;
+    font-size: 14px;
+  }
+  .mainbig .mainwrapper {
+    width: 43%;
+  }
+  .mainbig .mainwrapper.bgstar {
+    width: 45%;
+    padding: 8rem 3rem 8rem 2rem;
+  }
+  .mainbig .mainwrapper .mainheader {
+    margin-bottom: -2rem;
+  }
+  .mainbig .mainwrapper .mainheader img {
+    max-width: 140px;
+  }
+  .mainbig .mainwrapper .mainfooter {
+    margin-top: 0.5rem;
+  }
+  .mainbig .mainwrapper .mainfooter img {
+    max-width: 250px;
+  }
+  .mainbig .mainwrapper .maincontainer .screen6 {
+    padding: 3rem 1rem 1.5rem 1rem;
+  }
+  .mainbig .mainwrapper .maincontainer .screen6 h2 {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+  .mainbig .mainwrapper .maincontainer .screen6 h3 {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+  .mainbig .mainwrapper .maincontainer .screen6 h4 {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  .mainbig .mainwrapper .maincontainer .screen6 h5 {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  .mainbig .mainwrapper .maincontainer .screen6 h6 {
+    margin: 0.5rem 0;
+  }
+  .mainbig .mainwrapper .maincontainer .screen6 aside .set_button {
+    padding: 0.7rem 1rem;
+    font-size: 16px;
+    box-shadow: 0px 3px 2px 2px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .mainbig {
+    padding: 3rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  .mainbig.mainbigwithpadding {
+    padding: 0 3rem 3rem 3rem;
+  }
+  .mainbig .spincontainer {
+    width: 100%;
+    padding: 3rem 17%;
+  }
+  .mainbig .spincontainer ul {
+    height: 260px;
+  }
+  .mainbig .mainwrapper {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .mainbig .mainwrapper.bgstar {
+    margin-bottom: 0;
+    width: 100%;
+    padding: 5rem 3rem;
+    background-size: 100% 100%;
+  }
+}
+@media only screen and (max-width: 599px) {
+  .mainbig {
+    padding: 3rem 1rem;
+  }
+  .mainbig.mainbigwithpadding {
+    padding: 0 1rem 3rem 1rem;
+  }
+  .mainbig .spincontainer {
+    width: 100%;
+    padding: 3rem 17%;
+  }
+  .mainbig .spincontainer ul {
+    height: 230px;
+  }
+  .mainbig .spincontainer ul li {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .mainbig .mainwrapper.bgstar {
+    padding: 4rem 2rem;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .mainbig .spincontainer {
+    padding: 2rem 16%;
+  }
+  .mainbig .spincontainer ul {
+    height: 200px;
+  }
+  .mainbig .spincontainer ul li {
+    font-size: 18px;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .mainbig .spincontainer ul li span {
+    margin-left: 0.2rem;
+    font-size: 12px;
+  }
+  .mainbig .mainwrapper {
+    padding: 0;
+  }
+  .mainbig .mainwrapper.bgstar {
+    padding: 3rem 0;
+  }
+  .mainbig .mainwrapper .mainheader {
+    margin-bottom: -2rem;
+  }
+  .mainbig .mainwrapper .mainheader img {
+    max-width: 120px;
+  }
+  .mainbig .mainwrapper .mainfooter {
+    margin-top: 0.5rem;
+  }
+  .mainbig .mainwrapper .mainfooter img {
+    max-width: 260px;
+  }
+  .mainbig .mainwrapper .maincontainer .screen6 {
+    padding: 3rem 1rem 1.5rem 1rem;
+  }
+  .mainbig .mainwrapper .maincontainer .screen6 h2 {
+    font-size: 16px;
+    line-height: 1.3;
+  }
+  .mainbig .mainwrapper .maincontainer .screen6 h3 {
+    font-size: 16px;
+    line-height: 1.3;
+  }
+  .mainbig .mainwrapper .maincontainer .screen6 h4 {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+  .mainbig .mainwrapper .maincontainer .screen6 h5 {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+  .mainbig .mainwrapper .maincontainer .screen6 aside {
+    margin-top: 1rem;
   }
 }
 body {
