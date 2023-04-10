@@ -1,15 +1,26 @@
-
-.maincontainer { 
-     width: 100%; float:left; border-radius: 25px; background: url('../images/container-bg.jpg') no-repeat center center; background-size:cover;   box-shadow: inset 8px 8px 10px 0 rgba(0,0,0,0.6) , -4px -4px 0px 0px rgba(107,107,107,0.4), 4px 4px 0px 0px rgba(138,138,138,0.4),   3px -3px 0px 0px rgba(138,138,138,0.4), -3px 3px 0px 0px rgba(138,138,138,0.4);
-     section { 
-          width: 100%; float: left;
-          .meridian_button {
-               display: inline-block; margin: 0 auto; padding: 1rem 2.5rem;  text-align: center; background: linear-gradient(120deg, rgba(101,101,101,1) 0%, rgba(250,250,250,1) 40%, rgba(250,250,250,1) 65%, rgba(101,101,101,1) 100%); @include DinNextLtProHeavy(); font-size: 30px; color: $blue; border: none; box-shadow:0px 5px 3px 3px rgba(0,0,0,.3); @include outT(); border-radius: 15px; text-decoration: none; letter-spacing: 5px; cursor: pointer; text-transform: uppercase;
-               &:hover { color: $black; @include inT(); }
-               &.disabled { user-select: none; pointer-events: none; opacity: 0.4; }
+.mainwrapper {
+     display: flow-root; position: relative; width: 100%; max-width: 1130px;  float:none; margin: 0 auto;
+     .mainheader { 
+         z-index: 2;position: relative;width: 100%; float: left; text-align: center; margin-bottom: -60px;
+         img { width:90%; max-width: 267px;  margin: 0 auto; display: inline-block; float: none; }
+     }
+     .mainfooter { 
+         width: 100%; float: left; text-align: center; margin-top: 2rem;
+         img {  width:90%;  max-width:475px; margin: 0 auto; display: inline-block; float: none; }
+     }
+     .maincontainer { 
+          width: 100%; float:left; border-radius: 25px; background: url('../images/container-bg.jpg') no-repeat center center; background-size:cover;   box-shadow: inset 8px 8px 10px 0 rgba(0,0,0,0.6) , -4px -4px 0px 0px rgba(107,107,107,0.4), 4px 4px 0px 0px rgba(138,138,138,0.4),   3px -3px 0px 0px rgba(138,138,138,0.4), -3px 3px 0px 0px rgba(138,138,138,0.4);
+          section { 
+               width: 100%; float: left;
+               .meridian_button {
+                    display: inline-block; margin: 0 auto; padding: 1rem 2.5rem;  text-align: center; background: linear-gradient(120deg, rgba(101,101,101,1) 0%, rgba(250,250,250,1) 40%, rgba(250,250,250,1) 65%, rgba(101,101,101,1) 100%); @include DinNextLtProHeavy(); font-size: 30px; color: $blue; border: none; box-shadow:0px 5px 3px 3px rgba(0,0,0,.3); @include outT(); border-radius: 15px; text-decoration: none; letter-spacing: 5px; cursor: pointer; text-transform: uppercase;
+                    &:hover { color: $black; @include inT(); }
+                    &.disabled { user-select: none; pointer-events: none; opacity: 0.4; }
+               }
           }
      }
-}
+ }
+
 
 .screen1 { 
       padding:6rem 15rem 4rem 15rem; 
@@ -68,8 +79,6 @@
      }
 }
 
-
-
 .screen8 { 
      padding:6rem 15rem 4rem 15rem; 
      h2 { width: 100%; float: left; text-align: center; text-transform: uppercase; @include DinNextLtProHeavy(); color: $white; font-size: 60px; text-shadow:6px 6px 11px rgba(0,0,0,.7);  }
@@ -90,6 +99,10 @@
           } 
      }
 }
+
+
+
+
 
 
  
