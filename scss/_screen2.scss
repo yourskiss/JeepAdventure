@@ -16,14 +16,14 @@
                          b { font-weight: normal; }
                     }
                     &.active { 
-                         color: $green3; 
-                         span { color: $green3;  }
+                         color: $green3;  @include outT();
+                         span { color: $green3; @include outT(); }
                     }
                }
                .slick-slide.slick-current.slick-center {
                     .winnerItem {
-                         color: $green3; 
-                         span { color: $green3;  }
+                         color: $green3; @include inT();
+                         span { color: $green3;  @include inT(); }
                     }
                 }
         }

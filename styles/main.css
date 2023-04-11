@@ -1284,15 +1284,19 @@ template {
 }
 .mainbig .spincontainer .winnerSlider .winnerItem.active {
   color: #59e642;
+  transition: all 0.5s ease-out;
 }
 .mainbig .spincontainer .winnerSlider .winnerItem.active span {
   color: #59e642;
+  transition: all 0.5s ease-out;
 }
 .mainbig .spincontainer .winnerSlider .slick-slide.slick-current.slick-center .winnerItem {
   color: #59e642;
+  transition: all 0.5s ease-in;
 }
 .mainbig .spincontainer .winnerSlider .slick-slide.slick-current.slick-center .winnerItem span {
   color: #59e642;
+  transition: all 0.5s ease-in;
 }
 .mainbig .mainwrapper {
   max-width: 100%;
