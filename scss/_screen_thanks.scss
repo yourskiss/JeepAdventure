@@ -1,0 +1,53 @@
+/* #################### screen 3 #################### */
+.screen5 { 
+    padding:6rem 6rem 4rem 6rem;
+    h2 { width: 100%; float: left; text-align: center; text-transform: uppercase; @include DinNextLtProMedium(); color: $white; font-size: 32px; line-height: 1.4;  letter-spacing: 2px; }
+    h3 { width: 100%; float: left; text-align: center;  text-transform: none;  @include DinNextLtProMedium(); color: $white; font-size: 32px; line-height: 1.4;  letter-spacing: 2px;} 
+    aside { 
+         width: 100%; float: left; text-align: center;  margin:2rem 0; 
+         img { max-width: 100%; margin: 0 auto; display: inline-block; float: none; }
+    }
+}
+ 
+
+ 
+
+
+
+ 
+@media only screen and (max-width:1255px) 
+{ 
+
+     /* #################### screen 3 #################### */
+     .screen5 { 
+          padding:5rem 3rem 3rem 3rem;
+          h2 {  font-size: 24px;  }
+          h3 {  font-size: 24px;  } 
+      }
+ 
+}
+
+
+@media only screen and (max-width:767px) 
+{ 
+    /* #################### screen 3 #################### */
+    .screen5 { 
+          padding:4rem 2rem 2rem 2rem; 
+         h2 {  font-size: 18px; letter-spacing: 1px;  }
+         h3 { font-size: 18px; letter-spacing: 1px;  } 
+         aside { margin:1rem 0;  }
+     }
+ 
+}
+
+@media only screen and (max-width:479px) 
+{ 
+
+    /* #################### screen 3 #################### */
+    .screen5 { 
+          padding:2.8rem 1rem 1.5rem 1rem; 
+         h2 {  font-size: 16px;  }
+         h3 { font-size: 16px;  } 
+     }
+ 
+}

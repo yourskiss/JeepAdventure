@@ -1,0 +1,117 @@
+ 
+/* #################### screen 1 & 2 #################### */
+ .screen1 { 
+     padding:6rem 12rem 4rem 12rem; 
+     h2 { width: 100%; float: left; text-align: center; text-transform: uppercase; @include DinNextLtProHeavy(); color: $white; font-size: 60px; text-shadow:6px 6px 11px rgba(0,0,0,.7);  }
+    .meridianmegaLine { width:96%; float:left; clear: both; display: block; height:3px; margin: 0.4rem 2% 0.8rem 2%; background-color: $white; background: linear-gradient(120deg, rgba(101,101,101,1) 0%, rgba(250,250,250,1) 40%, rgba(250,250,250,1) 65%, rgba(101,101,101,1) 100%); line-height: 1; font-size: 1px; box-shadow:0px 3px 3px 3px rgba(0,0,0,.3); }
+    h3 {
+         width: 100%; float: left; text-align: center; text-transform: uppercase;  @include DinNextLtProHeavy(); color: $white; font-size: 36px; text-shadow:6px 6px 11px rgba(0,0,0,.7); letter-spacing: 4px;
+         i.fa-inr { font-size: 90%; line-height: 1; font-weight: 400; }
+    }
+     .meridianForm { 
+         width: 100%; float: left; margin-top: 1rem; @include fBS(); flex-wrap: wrap;
+         .meridianField {
+              float: left; text-align: center; margin-top: 1.5rem;
+              .mf_input { 
+                   float: left; width: 100%; padding: 0.8rem 1.5rem; border: solid 2px $white2; outline: none; background:$black2; border-radius: 15px; text-align: left;  @include DinNextLtProMedium(); color: $white; font-size: 22px; box-shadow:0px 5px 5px 5px rgba(0,0,0,.3);
+                   &::-webkit-input-placeholder {  color: $white3; text-transform: uppercase; opacity: 1; }
+                   &:-ms-input-placeholder { color: $white3;  text-transform: uppercase; opacity: 1;  }
+                   &::placeholder { color: $white3;  text-transform: uppercase; opacity: 1;  }
+              }
+              
+              .mf_error { display: none; margin-top: 0.7rem; float: left; width: 100%; text-align: center; @include DinNextLtProMedium(); color: $red; font-size: 16px;  }
+              &.mf100 { width:100%;}
+              &.mf50 { width:48%; }
+              &.mf25 { width:50%; margin-left: 25%; margin-bottom: 1rem; }
+              &.mf75 {   width:75%; margin: 1rem 12.5%; }
+              &.mf33 {   width:50%; margin:2rem 25%; }
+         }
+         h4 { margin-top:1.5rem; width: 100%; float: left; text-align: center; text-transform: uppercase;  @include DinNextLtProMedium(); color: $green; font-size:18px; text-shadow:1px 1px 2px rgba(0,0,0,.7); letter-spacing: 1px; }
+    }
+    .meridianSubmit { margin-top: 1.5rem; float: left; width: 100%; text-align: center; }
+    p {
+          margin-top:1.5rem; width: 100%; float: left; text-align: center; text-transform: uppercase;  @include DinNextLtProMedium(); color: $white; font-size:20px; text-shadow:2px 2px 4px rgba(0,0,0,.7); letter-spacing: 4px;
+          a { 
+               display: inline-block; text-decoration: underline; color: $white; @include outT();
+               &:hover { text-decoration: none; color: $white; @include inT(); }
+          }
+     }
+}
+ 
+ 
+
+
+
+
+ 
+@media only screen and (max-width:1255px) 
+{
+ 
+
+      /* #################### screen 1 & 2 #################### */
+     .screen1 { 
+          padding:5rem 3rem 3rem 3rem; 
+          h2 { font-size: 36px; text-shadow:3px 3px 6px rgba(0,0,0,.7);  }
+          .meridianmegaLine { width:80%;  height:2px; margin: 0.4rem 10% 0.8rem 10%;  box-shadow:0px 2px 2px 2px rgba(0,0,0,.3); }
+          h3 {
+               font-size: 24px; text-shadow:3px 3px 5px rgba(0,0,0,.7); letter-spacing: 2px;
+          }
+          .meridianForm { 
+               .meridianField {
+                    margin-top: 1rem;
+                    .mf_input { padding: 0.8rem 1.2rem; border: solid 1px $white2; font-size: 18px; box-shadow:0px 3px 3px 3px rgba(0,0,0,.3);}
+                    .mf_error { margin-top: 0.5rem;  font-size: 14px;  }
+               }
+          }
+          p {  font-size:18px; letter-spacing: 2px;}
+     }
+ 
+
+}
+
+
+@media only screen and (max-width:767px) 
+{
+    
+     /* #################### screen 1 & 2 #################### */
+    .screen1 { 
+         padding:4rem 2rem 2rem 2rem; 
+         h2 { font-size: 28px;   }
+         .meridianmegaLine { width:86%;  height:1px; margin: 0.4rem 7% 0.8rem 7%; }
+         h3 {
+              font-size: 18px;  
+         }
+         .meridianForm { 
+              .meridianField {
+                   margin-top: 1rem;
+                   .mf_input { padding: 0.7rem 1rem; font-size: 18px;  }
+              }
+         }
+         p { margin-top:1rem; font-size:16px; letter-spacing:1px;}
+    }
+ 
+
+}
+
+@media only screen and (max-width:479px) 
+{
+     
+
+     /* #################### screen 1 & 2 #################### */
+    .screen1 { 
+         padding:2.8rem 1rem 1.5rem 1rem; 
+         h2 { font-size: 24px;   }
+         .meridianmegaLine { width:90%; height:1px; margin: 0.5rem 5% 0.8rem 5%; }
+         h3 {
+              font-size: 14px;  letter-spacing: 1px;
+         }
+         .meridianForm { 
+              .meridianField {
+                   margin-top: 1rem;
+                   .mf_input { padding: 0.7rem 1rem; font-size: 16px;  }
+                   &.mf25 {margin-bottom: 0.5rem }
+              }
+         }
+    }
+ 
+}

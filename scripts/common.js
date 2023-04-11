@@ -31,7 +31,17 @@ function isLetter(e)
 }
 // only Letter validation === end
 
- 
+ // only AlphaNumeric  === start
+function isAlphaNumeric(e) 
+{
+    var regex = new RegExp("^[a-zA-Z0-9]+$");
+    var strigChar = String.fromCharCode(!e.charCode ? e.which : e.charCode);
+    if (regex.test(strigChar)) {
+        return true;
+    }
+    return false
+}
+// only AlphaNumeric  === end
     
 
 /* form validation === start */
@@ -71,8 +81,23 @@ function formValidation()
     }
     else 
     {
-        $(".mf_error").hide().html('');
-        return true;
+        $("#registerscreen").slideUp(200);
+        $("#OtpNumberScreen").slideDown(200);
+        if($("#OtpNumber").val() == '')
+        {
+            $("#error_OtpNumber").show().html('Please enter OTP');
+            return false;
+        }
+        else if ($("#OtpNumber").val().length !== 6) 
+        {
+            $("#error_OtpNumber").show().html('Please enter valid OTP');
+            return false;
+        }
+        else 
+        {
+            $(".mf_error").hide().html('');
+            return true;
+        }
     }
 }
 /* form validation === end */
@@ -83,26 +108,78 @@ function otpValidation()
 {
     // debugger;
     $(".mf_error").hide().html('');
-    if($("#OtpID").val() == '')
+    if($("#phonenumber").val() == '')
     {
-        $("#error_OtpID").show().html('Please enter OTP');
+        $("#error_phonenumber").show().html('Please enter mobile number');
         return false;
     }
-    else if ($("#OtpID").val().length !== 4) 
+    else if($("#phonenumber").val().length != 10)
     {
-        $("#error_OtpID").show().html('Please enter valid OTP');
+        $("#error_phonenumber").show().html('Please enter valid mobile number');
+        return false;
+    }
+    else if (($("#phonenumber").val().indexOf('9')) != 0 && ($("#phonenumber").val().indexOf('8')) != 0 && ($("#phonenumber").val().indexOf('7')) != 0 && ($("#phonenumber").val().indexOf('6')) != 0) 
+    {
+        $("#error_phonenumber").show().html('Mobile number start with digits like 9, 8, 7, 6');
+        return false;
+    }
+    else 
+    {
+        $("#loginscreen").slideUp(200);
+        $("#otpscreen").slideDown(200);
+        if($("#OtpID").val() == '')
+        {
+            $("#error_OtpID").show().html('Please enter OTP');
+            return false;
+        }
+        else if ($("#OtpID").val().length !== 6) 
+        {
+            $("#error_OtpID").show().html('Please enter valid OTP');
+            return false;
+        }
+        else 
+        {
+            $(".mf_error").hide().html('');
+            return true;
+        }
+    }
+    
+}
+/* otpValidation === end */
+
+
+/* uniqueIdValidation === start */
+function uniqueIdValidation()
+{
+    // debugger;
+    $(".mf_error").hide().html('');
+    if($("#UniqueID").val() == '')
+    {
+        $("#error_UniqueID").show().html('Please enter Unique ID');
         return false;
     }
     else 
     {
         $(".mf_error").hide().html('');
         return true;
-    }
+    }  
 }
-/* otpValidation === end */
+/* uniqueIdValidation === end */
 
 
 
+
+
+/* weekly winner  === start */
+$("#weeklywinnertab dd").click(function()
+{
+    var dataid = $(this).attr('data-id');
+    $("#weeklywinnertab dd").removeClass("active");
+    $(this).addClass("active");
+    $(".weeklywinnerlist").slideUp(500);
+    $(".weeklywinnerlist[data-id='"+dataid+"']").slideDown(500);
+});
+/* weekly winner === end */
 
 /* click to answer button === start */
 $("#quiczAnswerKey li").click(function()

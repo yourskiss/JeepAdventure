@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+
+	<title>Jeep Adventure Day </title>
+
+    <link rel="stylesheet" href="css/fontawesome.css" />
+    <link rel="stylesheet" href="css/main.min.css" />
+    
+</head>
+<body>
+<!-- main start -->
+<main class="main">
+    <img  class="mainlogo" src="images/logo.png" alt="jeep" />
+    <div class="mainwrapper">
+        <div class="mainheader">
+            <img src="images/jeep-adventure-days.png" alt="jeep" />
+        </div>
+        <div class="maincontainer">
+
+            <section class="screen1">
+                <h2>Meridian Mega-Draw</h2>
+                <span class="meridianmegaLine">&nbsp;</span>
+                <h3>Win up to <i class="fa fa-inr" aria-hidden="true"></i> 5 lakh cashback</h3>
+                <div class="meridianForm"  id="registerscreen" style="display: block;">
+                    <div class="meridianField mf100">
+                        <input class="mf_input" type="text" id="fullname" placeholder="Full Name:" onkeypress="return isLetter(event)" maxlength="50" />
+                        <span class="mf_error" id="error_fullname">Full Name</span>
+                    </div>
+                    <div class="meridianField mf50">
+                        <input class="mf_input" type="text" id="mobilenumber" placeholder="Mobile number:"  onkeypress="return isNumber(event)"  maxlength="10"  />
+                        <span class="mf_error" id="error_mobilenumber">Mobile number</span>
+                    </div>
+                    <div class="meridianField mf50">
+                        <input class="mf_input" type="text" id="uniqueid" placeholder="Unique ID:"  maxlength="50" onkeypress="return isAlphaNumeric(event)"  />
+                        <span class="mf_error" id="error_uniqueid">Unique ID</span>
+                    </div>
+                    <div class="meridianField mf25">
+                        <input class="mf_input" type="text" id="location" placeholder="Location:"  maxlength="50"  />
+                        <span class="mf_error" id="error_location">Location</span>
+                    </div>
+                    
+                    
+                </div>
+                <div class="meridianForm" id="OtpNumberScreen" style="display: none;">
+                    <h4 id="register_otp_msg">OTP Sant</h4>
+                    <div class="meridianField mf25">
+                        <input class="mf_input" type="text" id="OtpNumber" placeholder="OTP:"  maxlength="6" onkeypress="return isNumber(event)"   />
+                        <span class="mf_error" id="error_OtpNumber">Otp</span>
+                    </div>
+                </div>
+                <div class="meridianSubmit">
+                    <input class="meridian_button" type="submit" value="REGISTER" onclick="return formValidation();" />
+                </div>
+                <p>
+                    REGISTERED ALREADY? <a href="login.html">LOGIN</a>
+                </p>
+            </section>
+            
+        </div>
+        <div class="mainfooter">
+            <img src="images/meridian.png" alt="meridian" />
+        </div>
+    </div>
+</main>
+<!-- main end -->
+ 
+
+
+ 
+ 
+
+
+<!-- loader === start -->
+<div id="pageloader" class="pageloader">
+    <div>&nbsp;</div>
+</div>
+<!-- loader === end -->
+ 
+ 
+
+
+ 
+ 
+
+<script src="scripts/jquery-min.js"></script>
+<script src="scripts/common.js"></script>
+
+ 
+</body>
+</html>
+ 

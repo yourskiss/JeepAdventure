@@ -1,0 +1,115 @@
+ 
+/* #################### screen 4 & 5 #################### */
+.screen4 { 
+    padding:6rem 10rem 4rem 10rem;
+    h2 { 
+        width: 100%; float: left; text-align: center; text-transform: uppercase; @include DinNextLtProHeavy(); color: $white; font-size: 38px; line-height: 1.4;  letter-spacing: 1px; 
+        a { 
+            text-decoration: none; color: $white; @include outT(); 
+            &:hover { color: $green; @include inT(); }
+        }
+    }
+    ul {
+         width: 100%; float: left; margin: 2rem 0 3rem 0;  @include fBC();  
+         li { 
+            list-style: none; float: left; width:31%; padding: 0; cursor: pointer; border: solid 3px $white2; border-radius:20px; overflow: hidden;  box-shadow:0px 5px 5px 5px rgba(0,0,0,.3); 
+              p { 
+                    float: left;  width: 100%; padding: 1rem 2rem;  text-align: center; background:$black2;  @include DinNextLtProMedium(); color: $white4; font-size: 22px; letter-spacing: normal;
+              }
+              h5 { 
+                    float: left;  width: 100%; 
+                    img { width: 100%; float: left; }
+               }
+              &.active { 
+                    border-color: $green;
+                    p { background-color: $white; color: $black;  }
+             }
+         } 
+    }
+    aside { 
+         width: 100%; float: left; text-align: center;   
+         .btnQuiz {
+               display: inline-block; margin: 0 auto; height: 95px; width:120px; float: none; outline: none; border: none; cursor: pointer; text-decoration: none; font-size: 0px; line-height: 1; background: transparent url('../images/arrow-right.png') no-repeat center center; background-size: 100% 100%; transform:scale(1.0); @include outT(); 
+               &:hover { transform:scale(1.1); @include inT(); }
+               &.disabled { user-select: none; pointer-events: none; opacity: 0.4; }
+         }
+    }
+}
+
+ 
+
+
+
+ 
+@media only screen and (max-width:1255px) 
+{ 
+
+ 
+
+     /* #################### screen 4 & 5 #################### */
+     .screen4 { 
+          padding:5rem 3rem 3rem 3rem;
+          h2 {  font-size: 24px;  }
+          ul {
+                margin: 1rem 0; 
+               li {  
+                    p {   padding:0.8rem 1.5rem; font-size: 18px;  text-align: center; }
+               } 
+          }
+          aside { 
+               .btnQuiz {
+                    height:70px; width:100px; 
+               }
+          }
+      }
+       
+
+}
+
+
+@media only screen and (max-width:767px) 
+{ 
+ 
+    /* #################### screen 4 & 5 #################### */
+    .screen4 { 
+          padding:4rem 2rem 2rem 2rem; 
+         h2 {  font-size: 22px;  }
+         ul {
+               margin:1rem 0 0.5rem 0; @include fCC(); flex-direction: column;
+              li {  
+                    width: 70%; margin: 0.3rem 0; border-radius: 15px; border-width:2px; box-shadow:0px 3px 3px 3px rgba(0,0,0,.3); 
+              } 
+         }
+         aside { 
+              .btnQuiz {
+                    height: 60px;width: 85px;
+              }
+         }
+     }
+      
+
+}
+
+@media only screen and (max-width:479px) 
+{ 
+
+ 
+    /* #################### screen 4 & 5 #################### */
+    .screen4 { 
+          padding:2.8rem 1rem 1.5rem 1rem; 
+         h2 {  font-size: 18px;  }
+         ul {
+               margin:1rem 0 0.5rem 0;
+              li {  
+                    width: 80%;   margin: 0.3rem 0;
+                    p { padding:0.7rem 1rem; font-size: 16px;  }
+              } 
+         }
+         aside { 
+              .btnQuiz {
+                    height: 50px;width: 75px;
+              }
+         }
+     }
+      
+}

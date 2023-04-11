@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+
+	<title>Jeep Adventure Day </title>
+
+    <link rel="stylesheet" href="css/fontawesome.css" />
+    <link rel="stylesheet" href="css/main.min.css" />
+    
+</head>
+<body>
+<!-- main start -->
+<main class="main">
+    <img  class="mainlogo" src="images/logo.png" alt="jeep" />
+    <div class="mainwrapper">
+        <div class="mainheader">
+            <img src="images/jeep-adventure-days.png" alt="jeep" />
+        </div>
+        <div class="maincontainer">
+
+            <section class="screen1">
+                <h2>Meridian Mega-Draw</h2>
+                <span class="meridianmegaLine">&nbsp;</span>
+                <h3>Win up to <i class="fa fa-inr" aria-hidden="true"></i> 5 lakh cashback</h3>
+                <div class="meridianForm" id="loginscreen" style="display: block;">
+                    <div class="meridianField mf75">
+                        <input class="mf_input" type="text" id="phonenumber" placeholder="Mobile Number:"  maxlength="10" onkeypress="return isNumber(event)"   />
+                        <span class="mf_error" id="error_phonenumber">Mobile number</span>
+                    </div>
+                </div>
+                <div class="meridianForm" id="otpscreen" style="display: none;">
+                    <h4 id="login_otp_msg">OTP Sant</h4>
+                    <div class="meridianField mf25">
+                        <input class="mf_input" type="text" id="OtpID" placeholder="OTP:"  maxlength="6" onkeypress="return isNumber(event)"   />
+                        <span class="mf_error" id="error_OtpID">Otp</span>
+                    </div>
+                </div>
+                <div class="meridianSubmit">
+                    <input class="meridian_button" type="submit" value="Login" onclick="return otpValidation();" />
+                </div>
+                <p>
+                   Do not have account <a href="register.html">REGISTERE Now</a>
+                </p>
+            </section>
+            
+        </div>
+        <div class="mainfooter">
+            <img src="images/meridian.png" alt="meridian" />
+        </div>
+    </div>
+</main>
+<!-- main end -->
+ 
+
+
+ 
+ 
+
+
+<!-- loader === start -->
+<div id="pageloader" class="pageloader">
+    <div>&nbsp;</div>
+</div>
+<!-- loader === end -->
+ 
+ 
+
+
+ 
+ 
+
+<script src="scripts/jquery-min.js"></script>
+<script src="scripts/common.js"></script>
+
+ 
+</body>
+</html>
+ 

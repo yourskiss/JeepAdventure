@@ -1,0 +1,95 @@
+
+/* #################### screen 8 #################### */
+.screen8 { 
+   padding:6rem 15rem 4rem 15rem; 
+   h2 { width: 100%; float: left; text-align: center; text-transform: uppercase; @include DinNextLtProHeavy(); color: $white; font-size: 60px; text-shadow:6px 6px 11px rgba(0,0,0,.7);  }
+   h3 { width: 100%; margin: 0.5rem 0 1rem 0; float: left; text-align: center; text-transform: uppercase;  @include DinNextLtProMedium(); color: $white; font-size: 17px; line-height: 1.3;  letter-spacing: 1px;}
+   aside { 
+        width: 100%; float: left; text-align: center; 
+        img { max-width: 100%; margin: 0 auto; display: inline-block; float: none; }
+   }
+   ul { 
+        width: 100%; float: left; margin: 1rem 0 0 0; 
+        li { 
+             list-style: none; float: left; width:100%;  padding:0.8rem 0; @include fBC();
+             span {
+                   @include DinNextLtProHeavy(); color: $white; font-size: 17px; 
+                  &:nth-of-type(1) { float: left; width: auto; }
+                  &:nth-of-type(2) { text-align: right; float: right;  width:80px; }
+             }
+        } 
+   }
+}
+
+
+
+
+
+
+
+@media only screen and (max-width:1255px) 
+{
+    
+    /* #################### screen 8 #################### */
+    .screen8 { 
+         padding:5rem 3rem 3rem 3rem; 
+         h2 { font-size: 36px; text-shadow:3px 3px 6px rgba(0,0,0,.7);  }
+         h3 {  margin: 0.5rem 0 1rem 0; font-size: 15px; }
+         ul { 
+              margin: 1rem 0 0 0; 
+              li { 
+                    padding:0.5rem 0;  
+                   span {
+                        font-size: 15px; 
+                        &:nth-of-type(2) { width: 70px; }
+                   }
+              } 
+         }
+     }
+
+
+}
+
+
+@media only screen and (max-width:767px) 
+{
+     
+   /* #################### screen 8 #################### */
+   .screen8 { 
+        padding:4rem 2rem 2rem 2rem; 
+        h2 { font-size: 28px;  }
+        h3 {  margin: 0.5rem 0 1rem 0; font-size: 15px; }
+        ul { 
+             margin: 1rem 0 0 0; 
+             li { 
+                   padding:0.4rem 0;  
+                  span {
+                       font-size: 15px; 
+                  }
+             } 
+        }
+    }
+
+}
+
+@media only screen and (max-width:479px) 
+{
+     
+   /* #################### screen 8 #################### */
+   .screen8 { 
+         padding:2.8rem 1rem 1.5rem 1rem; 
+        h2 { font-size: 24px;  }
+        h3 {  margin: 0.5rem 0 1rem 0; font-size: 13px; }
+        ul { 
+             margin: 0.5rem 0 0 0; 
+             li { 
+                   padding:0.5rem 0;  
+                  span {
+                       font-size: 13px; 
+                  }
+             } 
+        }
+    }
+
+    
+}
