@@ -145,3 +145,50 @@ function timeCounter()
 }
 timeCounter();
 /* time counter ===== end  */
+
+
+
+/* winner slider ===== start  */
+$(function($) 
+{
+    if($(".winnerSlider").length > 0)
+    {
+        $('.winnerSlider').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            speed: 1000,
+            autoplay: true,
+            autoplaySpeed: 0,
+            cssEase: 'linear',
+            dots: false,
+            arrows: false,
+            vertical: true,
+            infinite: true,
+            adaptiveHeight: false,
+            centerMode: true,
+            centerPadding: '0',
+            initialSlide:0,
+            buttons: false,
+            pauseOnHover: false,
+            pauseOnFocus: false,
+            accessibility: false,
+            draggable: false,
+            swipe: false,
+            touchMove: false
+        });
+
+        var random_number = Math.floor((Math.random() * 10) + 1);
+        var rand_num = random_number + "000";
+        var rn =  parseInt(rand_num);
+        console.log(random_number, rand_num, rn);
+        setInterval(() => {
+            $('.winnerSlider').slick('slickSetOption', {
+                'autoplay': false
+            }, false);
+        }, rn); 
+
+    }
+});
+
+
+/* winner slider ===== end  */

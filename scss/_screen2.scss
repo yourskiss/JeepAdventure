@@ -2,11 +2,14 @@
     width: 100%; float: left; margin: 0; padding: 3rem; @include fBC(); 
     &.mainbigwithpadding {  padding: 0 2rem; }
     .spincontainer {
-        width: 55%; float: left; padding:4rem 10% 5rem 10%; background: url('../images/spin-bg.png') no-repeat center center; background-size: 100% 100%;
-        ul { 
-               width: 100%; float: left; height: 380px; padding:0; overflow: hidden; 
-               li {
-                    @include fSC(); height: 33.3%; list-style:none; width:100%; float: left; text-align: left; color: $brown; font-size: 42px; @include DinNextLtProMedium(); text-transform: uppercase;
+        width: 55%; float: left; padding:7rem 10% 5rem 10%; background: url('../images/spin-bg.png') no-repeat center center; background-size: 100% 100%;
+        .winnerSlider { 
+               width: 100%; float: left; height: 320px; padding:0; overflow: hidden; 
+               .slick-list { height: 100% !important; }
+               .slick-track { height: auto; }
+               .slick-slide { height: auto; padding: 1.5rem 0; @include fCC();  } 
+               .winnerItem {
+                    @include fSC();   list-style:none; width:100%; height: 100%; float: left; text-align: left; color: $brown; font-size: 42px; @include DinNextLtProMedium(); text-transform: uppercase;
                     b { font-weight: normal;  }
                     span { 
                          margin-left: 0.5rem; font-size: 20px; color: $brown2; 
@@ -17,6 +20,12 @@
                          span { color: $green3;  }
                     }
                }
+               .slick-slide.slick-current.slick-center {
+                    .winnerItem {
+                         color: $green3; 
+                         span { color: $green3;  }
+                    }
+                }
         }
     }
     .mainwrapper {
@@ -73,9 +82,9 @@
 {
      .mainbig { 
           .spincontainer {
-              ul { 
-                    height: 330px; 
-                    li {
+              .winnerSlider { 
+                    height: 280px; 
+                    .winnerItem {
                           font-size: 32px; 
                          span { font-size: 18px;  }
                     }
@@ -92,10 +101,10 @@
           padding: 3rem 1.5rem; 
           &.mainbigwithpadding {  padding: 0 1rem; }
           .spincontainer {
-              width: 55%;  padding:3rem 10% 3rem 10%;  
-              ul { 
-                     height: 280px; 
-                     li {
+              width: 55%;  padding:5rem 10% 3rem 10%;  
+              .winnerSlider { 
+                     height: 230px; 
+                     .winnerItem {
                           font-size: 20px; 
                           span { 
                                margin-left: 0.3rem; font-size: 14px; 
@@ -140,8 +149,10 @@
           padding: 3rem; @include fSC(); flex-direction: column-reverse;
           &.mainbigwithpadding {  padding:0 3rem 3rem 3rem; }
           .spincontainer {
-              width: 100%;  padding:3rem 17%;  
-              ul { height: 260px; }
+              width: 100%;  padding:5rem 17%;  
+              .winnerSlider { 
+                    height: 210px; 
+               }
           }
           .mainwrapper {
                 width: 100%; margin-bottom: 1rem; 
@@ -158,9 +169,10 @@
           &.mainbigwithpadding {  padding:0 1rem 3rem 1rem; }
           .spincontainer {
               width: 100%;  padding:3rem 17%;  
-              ul { 
-               height: 230px; 
-               li { justify-content: center; flex-direction: column; }
+              .winnerSlider { 
+                    height: 200px; 
+                    .slick-slide {  padding: 1rem 0; }
+                    .winnerItem { display: flex !important; justify-content: center; flex-direction: column; }
                }
           }
           .mainwrapper {
@@ -176,10 +188,10 @@
      .mainbig { 
           .spincontainer {
                 padding:2rem 16%;  
-              ul { 
+                .winnerSlider { 
                     height: 200px;
-                     li {
-                          font-size:18px; justify-content: center; flex-direction: column;
+                     .winnerItem {
+                          font-size:18px;  
                           span { 
                                margin-left: 0.2rem; font-size: 12px; 
                           }
