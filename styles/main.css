@@ -712,10 +712,6 @@ template {
   width: 100%;
   float: left;
   margin-top: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
 }
 .screen1 .meridianForm .meridianField {
   float: left;
@@ -768,6 +764,10 @@ template {
 }
 .screen1 .meridianForm .meridianField.mf50 {
   width: 48%;
+}
+.screen1 .meridianForm .meridianField.mf50_right {
+  width: 48%;
+  float: right;
 }
 .screen1 .meridianForm .meridianField.mf25 {
   width: 50%;

@@ -253,19 +253,27 @@ $(function($)
             swipe: false,
             touchMove: false
         });
-
-        var random_number = Math.floor((Math.random() * 10) + 1);
-        var rand_num = random_number + "000";
-        var rn =  parseInt(rand_num);
-        console.log(random_number, rand_num, rn);
-        setInterval(() => {
-            $('.winnerSlider').slick('slickSetOption', {
-                'autoplay': false
-            }, false);
-        }, rn); 
-
     }
 });
 
+function stopWinnerScroll()
+{
+    /*
+        var random_number = Math.floor((Math.random() * 10) + 1);
+        var rand_num = random_number + "000";
+        var rn =  parseInt(rand_num);
+        console.log(random_number, rand_num, rn); 
+        setTimeout(() => { }, 1000);
+    */
+        $('.winnerSlider').slick('slickSetOption', {
+            'autoplay': false
+        }, false);  
+}
+function startWinnerScroll()
+{
+        $('.winnerSlider').slick('slickSetOption', {
+            'autoplay': true
+        }, true);
+}
 
 /* winner slider ===== end  */

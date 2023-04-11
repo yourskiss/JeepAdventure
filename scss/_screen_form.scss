@@ -9,7 +9,7 @@
          i.fa-inr { font-size: 90%; line-height: 1; font-weight: 400; }
     }
      .meridianForm { 
-         width: 100%; float: left; margin-top: 1rem; @include fBS(); flex-wrap: wrap;
+         width: 100%; float: left; margin-top: 1rem; 
          .meridianField {
               float: left; text-align: center; margin-top: 1.5rem;
               .mf_input { 
@@ -22,6 +22,7 @@
               .mf_error { display: none; margin-top: 0.7rem; float: left; width: 100%; text-align: center; @include DinNextLtProMedium(); color: $red; font-size: 16px;  }
               &.mf100 { width:100%;}
               &.mf50 { width:48%; }
+              &.mf50_right { width:48%; float:right; }
               &.mf25 { width:50%; margin-left: 25%; margin-bottom: 1rem; }
               &.mf75 {   width:75%; margin: 1rem 12.5%; }
               &.mf33 {   width:50%; margin:2rem 25%; }
