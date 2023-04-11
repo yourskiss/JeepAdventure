@@ -12,13 +12,6 @@
     font-style: normal;
     font-stretch:normal;
 }
-@font-face {
-    font-family: 'MyriadProRegular';
-    src: url('../fonts/myriadpro-regular.woff2') format('woff2'), url('../fonts/myriadpro-regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-stretch:normal;
-}
  
  
 @mixin DinNextLtProHeavy 
@@ -30,10 +23,5 @@
 {
     font-family:'DinNextLtProMedium', Arial, sans-serif;
     font-weight: 500;
-}
-@mixin MyriadProRegular 
-{
-    font-family:'MyriadProRegular', Arial, sans-serif;
-    font-weight: 400;
 }
  
