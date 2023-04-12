@@ -8,7 +8,7 @@
             list-style: none; float: left; width:32%;  padding:1rem 0; border-radius: 15px 15px 0 0;  @include DinNextLtProHeavy(); color: $blue2; font-size: 32px; line-height: 1; cursor: pointer; background-color: $white5; text-align: center; border: solid 2px $white5; border-bottom: none;
             &.active { color:$white; background-color: transparent; user-select: none; pointer-events: none;}
         } 
-        dt { float: left; width: 2%; border-bottom: solid 2px $white5; }
+        dt { float: left; width: 2.01%; border-bottom: solid 2px $white5; }
     }
    ul { 
         display:none; width: 100%; float: left; padding: 2rem; border: solid 2px $white5; border-top:none; border-radius:0 0 15px 15px;

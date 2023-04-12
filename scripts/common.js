@@ -168,6 +168,24 @@ function uniqueIdValidation()
 
 
 
+/* showHideWrongMsg  === start */
+function showHideWrongMsg(val)
+{
+    if(val == 'show')
+    {
+        $("#somethingwentwrong").fadeIn(300);
+    }
+    else if(val == 'hide')
+    {
+        $("#somethingwentwrong").fadeOut(300);
+    }
+    else 
+    {
+        // nothing
+    }
+}
+/* showHideWrongMsg === end */
+
 
 
 /* weekly winner  === start */
@@ -241,9 +259,13 @@ $(function($)
             arrows: false,
             vertical: true,
             infinite: true,
+           // loop:true, 
+           useTransform: false,
             adaptiveHeight: false,
+            variableWidth: false,
             centerMode: true,
             centerPadding: '0',
+            focusOnSelect: true,
             initialSlide:0,
             buttons: false,
             pauseOnHover: false,
@@ -256,24 +278,16 @@ $(function($)
     }
 });
 
-function stopWinnerScroll()
+function stopWinnerScroll() // stop sliding
 {
-    /*
-        var random_number = Math.floor((Math.random() * 10) + 1);
-        var rand_num = random_number + "000";
-        var rn =  parseInt(rand_num);
-        console.log(random_number, rand_num, rn); 
-        setTimeout(() => { }, 1000);
-    */
         $('.winnerSlider').slick('slickSetOption', {
             'autoplay': false
         }, false);  
 }
-function startWinnerScroll()
+function startWinnerScroll()  // start sliding
 {
         $('.winnerSlider').slick('slickSetOption', {
             'autoplay': true
         }, true);
 }
-
 /* winner slider ===== end  */

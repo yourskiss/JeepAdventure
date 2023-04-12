@@ -1,36 +1,71 @@
+
+.megadrawcontainer {
+     position: absolute; left:0; bottom: 3rem; width: 100%; float: left; padding:0 3% 0 6%;   
+     section { 
+          width: 100%; float: left; @include fCC();
+          h5 { 
+               z-index: 2; width: 310px; float: left; padding: 0.7rem; border-radius: 10px; border: solid 2px $white; background: $black; color: $green4; text-decoration: none;  text-align: center; font-size: 18px; @include DinNextLtProMedium(); text-transform: uppercase;  box-shadow: 0px 5px 5px 5px rgba(0,0,0,.4);
+          }
+          h6 { 
+               width: calc(100% - 300px); margin-left:-10px; float: left; padding: 0.7rem 2rem; border-radius: 5px; border:0; background: $black;  text-align: left; color: $green5; font-size: 18px; @include DinNextLtProMedium(); text-transform: uppercase;  
+          }
+     }
+}
+
+
 .mainbig { 
-    width: 100%; float: left; margin: 0; padding: 3rem; @include fBC(); 
-    &.mainbigwithpadding {  padding: 0 2rem; }
+    width: 100%; float: left; margin: 0;  padding:3rem 3rem 10rem 3rem; min-height: 75vh; @include fBC(); flex-wrap: wrap; background: url('../images/star-bg.png') no-repeat; background-position: right center; background-size: 45% 100% ;  
+    &.mainbigNoBG { background: none; padding: 3rem; }
     .spincontainer {
-        width: 55%; float: left; padding:7rem 10% 5rem 10%; background: url('../images/spin-bg.png') no-repeat center center; background-size: 100% 100%;
-        .winnerSlider { 
-               width: 100%; float: left; height: 320px; padding:0; overflow: hidden; 
-               .slick-list { height: 100% !important; }
-               .slick-track { height: auto; }
-               .slick-slide { height: auto; padding: 1.5rem 0; @include fCC();  } 
-               .winnerItem {
-                    @include fSC();   list-style:none; width:100%; height: 100%; float: left; text-align: left; color: $brown; font-size: 42px; @include DinNextLtProMedium(); text-transform: uppercase;
-                    b { font-weight: normal;  }
-                    span { 
-                         margin-left: 0.5rem; font-size: 20px; color: $brown2; 
-                         b { font-weight: normal; }
-                    }
-                    &.active { 
-                         color: $green3;  @include outT();
-                         span { color: $green3; @include outT(); }
-                    }
+        width: 55%; float: left; 
+        .megadreabg { 
+               width: 100%; padding:5rem 20%; overflow: hidden; float: left;  background: url('../images/spin-bg.png') no-repeat center center; background-size: 100% 100%;
+               .winnerSlider { 
+                         width: 100%; float: left;  height: 310px;  padding:0; overflow: hidden; 
+                         .slick-list { height: 100% !important; 
+                              -webkit-transform: translate3d(0, 0, 0);transform: translate3d(0, 0, 0);
+                              -webkit-backface-visibility: hidden; backface-visibility: hidden; 
+                         }
+                         .slick-track { height: auto; 
+                              -webkit-transform: translate3d(0, 0, 0);transform: translate3d(0, 0, 0);
+                              -webkit-backface-visibility: hidden; backface-visibility: hidden; 
+                         }
+                         .slick-slide { height: auto; padding: 1.6rem 0; @include fSC(); background-color: #fff;  @include outT(); } 
+                         .slick-cloned {
+                              -webkit-transform: translate3d(0, 0, 0);
+                             transform: translate3d(0, 0, 0);
+                           }
+                         .winnerItem {
+                              @include fSC();   list-style:none; width:100%; height: 100%; float: left; text-align: left; color: $brown; font-size: 42px; @include DinNextLtProMedium(); text-transform: uppercase;
+                              b { font-weight: normal;  }
+                              span { 
+                                   margin-left: 0.5rem; font-size: 20px; color: $brown2;  @include inT();
+                                   b { font-weight: normal; }
+                              }
+                              &.active { 
+                                   color: $green3;  @include outT();
+                                   span { color: $green3; @include outT(); }
+                              }
+                         }
+                         .slick-slide.slick-current.slick-center.slick-active {
+                              background-color: #f30; @include inT();
+                              .winnerItem {
+                                   color: $green3; @include inT();
+                                   span { color: $green3;  @include inT(); }
+                              }
+                         }
                }
-               .slick-slide.slick-current.slick-center {
-                    .winnerItem {
-                         color: $green3; @include inT();
-                         span { color: $green3;  @include inT(); }
-                    }
-                }
-        }
+          }
+        .megadrawwinner { 
+               width: 100%; float: left; margin-top: 2rem; text-align: center;
+               .megadrawBTN { 
+                    display: inline-block; padding: 0.7rem; border-radius: 10px; border: solid 2px $white; background: $black; color: $green4; text-decoration: none; cursor: pointer;  text-align: center; font-size: 14px; @include DinNextLtProMedium(); text-transform: uppercase; @include outT(); box-shadow: 0px 5px 5px 5px rgba(0,0,0,.4);
+                    &:hover { color: $white;  @include inT(); }
+               }
+          }
     }
     .mainwrapper {
-         max-width: 100%; width: 43%;  float: right; margin: 0; padding:0; 
-         &.bgstar { width: 45%; padding: 8rem 3rem 8rem 2rem;  background: url('../images/star-bg.png') no-repeat; background-position: left -2rem top 0; background-size: cover; }
+         max-width: 100%; width: 43%;  float: right; padding:0; margin: 0;
          .mainheader { 
               margin-bottom: -60px;
               img {  max-width: 170px;  }
@@ -74,23 +109,34 @@
               }
          }
     }
+
 }
 
 
 
 @media only screen and (max-width:1565px) 
 {
+
+     .megadrawcontainer {
+          section { 
+               h5 { width: 290px;  font-size: 16px; }
+               h6 { width: calc(100% - 280px); font-size: 16px; }
+          }
+     }
+
      .mainbig { 
           .spincontainer {
-              .winnerSlider { 
-                    height: 280px; 
-                    .winnerItem {
-                          font-size: 32px; 
-                         span { font-size: 18px;  }
-                    }
-              }
+               .megadreabg  {
+                    .winnerSlider { 
+                         height: 280px; 
+                         .winnerItem {
+                               font-size: 32px; 
+                              span { font-size: 18px;  }
+                         }
+                   }
+               }
+              
           }
- 
       }
 }
 
@@ -98,23 +144,25 @@
 @media only screen and (max-width:1300px) 
 {
      .mainbig { 
-          padding: 3rem 1.5rem; 
-          &.mainbigwithpadding {  padding: 0 1rem; }
+          padding:4rem 1.5rem 7rem 1.5rem;
+          &.mainbigNoBG {  padding:4rem 1.5rem 4rem 1.5rem;  }
           .spincontainer {
-              width: 55%;  padding:5rem 10% 3rem 10%;  
-              .winnerSlider { 
-                     height: 230px; 
-                     .winnerItem {
-                          font-size: 20px; 
-                          span { 
-                               margin-left: 0.3rem; font-size: 14px; 
-                          }
-                     }
-              }
+              width: 55%;  
+              .megadreabg  {
+                    padding:5rem 20%;  
+                    .winnerSlider { 
+                         height: 230px; 
+                         .winnerItem {
+                              font-size: 20px; 
+                              span { 
+                                   margin-left: 0.3rem; font-size: 14px; 
+                              }
+                         }
+                    }
+               }
           }
           .mainwrapper {
                 width: 43%;  
-               &.bgstar { width: 45%; padding: 8rem 3rem 8rem 2rem;    }
                .mainheader { 
                     margin-bottom: -2rem;
                     img {  max-width: 140px;  }
@@ -145,19 +193,30 @@
 
 @media only screen and (max-width:1023px) 
 {
+     .megadrawcontainer {
+          position: static; padding:0 2rem 2rem 2rem;
+          section { 
+               flex-direction: column; justify-content: center;
+               h5 { width: 290px;    }
+               h6 { width: 100%; margin: 0; padding: 0.7rem; text-align: center; }
+          }
+     }
+
      .mainbig { 
-          padding: 3rem; @include fSC(); flex-direction: column-reverse;
-          &.mainbigwithpadding {  padding:0 3rem 3rem 3rem; }
+          width: 100%; float: left; margin: 0;  padding:3rem; min-height: 75vh;  @include fSC(); flex-direction: column-reverse; background-position: center top; background-size: 100% 60%;  
+          &.mainbigNoBG {   padding: 3rem; }
           .spincontainer {
-              width: 100%;  padding:5rem 17%;  
-              .winnerSlider { 
-                    height: 210px; 
+              width: 100%;  
+              .megadreabg  {
+               padding:4rem 17%;  
+               .winnerSlider { 
+                         height: 220px; 
+                    }
                }
           }
           .mainwrapper {
-                width: 100%; margin-bottom: 1rem; 
-               &.bgstar {  margin-bottom: 0; width: 100%; padding: 5rem 3rem;  background-size: 100% 100%;  }
- 
+                width: 100%; margin-bottom: 2rem; 
+                &.bgstar { padding:3rem 0;  }
           }
       }
 }
@@ -166,17 +225,16 @@
 {
      .mainbig { 
           padding: 3rem 1rem;  
-          &.mainbigwithpadding {  padding:0 1rem 3rem 1rem; }
+          &.mainbigNoBG {  padding:3rem 1rem; }
           .spincontainer {
-              width: 100%;  padding:3rem 17%;  
-              .winnerSlider { 
-                    height: 200px; 
-                    .slick-slide {  padding: 1rem 0; }
-                    .winnerItem { display: flex !important; justify-content: center; flex-direction: column; }
+              .megadreabg  {
+                    padding:3rem 17%;  
+                    .winnerSlider { 
+                         height: 200px; 
+                         .slick-slide {  padding: 1rem 0; justify-content: center;  }
+                         .winnerItem { display: flex !important; justify-content: center; flex-direction: column; }
+                    }
                }
-          }
-          .mainwrapper {
-               &.bgstar {  padding: 4rem 2rem;  }
           }
       }
 }
@@ -187,20 +245,22 @@
 {
      .mainbig { 
           .spincontainer {
+               .megadreabg  {
                 padding:2rem 16%;  
-                .winnerSlider { 
-                    height: 200px;
-                     .winnerItem {
-                          font-size:18px;  
-                          span { 
-                               margin-left: 0.2rem; font-size: 12px; 
-                          }
-                     }
-              }
+                    .winnerSlider { 
+                         height: 200px;
+                         .winnerItem {
+                              font-size:18px;  
+                              span { 
+                                   margin-left: 0.2rem; font-size: 12px; 
+                              }
+                         }
+                    }
+               }
           }
           .mainwrapper {
                padding:0;   
-               &.bgstar {   padding:3rem 0;    }
+               &.bgstar {padding: 1rem 0 0 0;}
                .mainheader { 
                     margin-bottom: -2rem;
                     img {  max-width: 120px;  }

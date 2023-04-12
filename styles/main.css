@@ -509,6 +509,106 @@ template {
   display: none;
 }
 
+/* ########################## alert msg ########################## */
+.msgcontainer {
+  display: none;
+  z-index: 9;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+}
+.msgcontainer article {
+  display: block;
+  z-index: 1;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000000;
+  background: rgba(0, 0, 0, 0.8784313725);
+}
+.msgcontainer section {
+  display: block;
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 95%;
+  max-width: 480px;
+  height: auto;
+  max-height: 90%;
+  background: #ffffff;
+  border-radius: 0;
+  margin: 0 auto;
+  padding: 3rem;
+}
+.msgcontainer section h2 {
+  width: 100%;
+  float: left;
+  text-align: center;
+  color: #000000;
+  line-height: 1.4;
+  font-size: 36px;
+  font-family: "DinNextLtProHeavy", Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.msgcontainer section aside {
+  width: 100%;
+  float: left;
+  margin-top: 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.msgcontainer section aside .tryagainBTN {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 1rem 2.5rem;
+  text-align: center;
+  background: linear-gradient(120deg, rgb(101, 101, 101) 0%, rgb(250, 250, 250) 40%, rgb(250, 250, 250) 65%, rgb(101, 101, 101) 100%);
+  font-family: "DinNextLtProHeavy", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #1a223c;
+  border: none;
+  box-shadow: 0px 5px 3px 3px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s ease-out;
+  border-radius: 15px;
+  text-decoration: none;
+  letter-spacing: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.msgcontainer section aside .tryagainBTN:hover {
+  color: #000000;
+  transition: all 0.5s ease-in;
+}
+
+@media only screen and (max-width: 1023px) {
+  /* ########################## alert msg ########################## */
+  .msgcontainer section {
+    max-width: 320px;
+    padding: 2rem;
+  }
+  .msgcontainer section h2 {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+  .msgcontainer section aside {
+    margin-top: 1.5rem;
+  }
+  .msgcontainer section aside .tryagainBTN {
+    padding: 0.8rem 1.5rem;
+    font-size: 18px;
+  }
+}
 .mainwrapper {
   display: flow-root;
   position: relative;
@@ -1427,7 +1527,7 @@ template {
 }
 .screen9 dl dt {
   float: left;
-  width: 2%;
+  width: 2.01%;
   border-bottom: solid 2px #d0d0d0;
 }
 .screen9 ul {
@@ -1521,46 +1621,119 @@ template {
     font-size: 12px;
   }
 }
-.mainbig {
+.megadrawcontainer {
+  position: absolute;
+  left: 0;
+  bottom: 3rem;
   width: 100%;
   float: left;
-  margin: 0;
-  padding: 3rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 0 3% 0 6%;
 }
-.mainbig.mainbigwithpadding {
-  padding: 0 2rem;
-}
-.mainbig .spincontainer {
-  width: 55%;
-  float: left;
-  padding: 7rem 10% 5rem 10%;
-  background: url("../images/spin-bg.png") no-repeat center center;
-  background-size: 100% 100%;
-}
-.mainbig .spincontainer .winnerSlider {
+.megadrawcontainer section {
   width: 100%;
   float: left;
-  height: 320px;
-  padding: 0;
-  overflow: hidden;
-}
-.mainbig .spincontainer .winnerSlider .slick-list {
-  height: 100% !important;
-}
-.mainbig .spincontainer .winnerSlider .slick-track {
-  height: auto;
-}
-.mainbig .spincontainer .winnerSlider .slick-slide {
-  height: auto;
-  padding: 1.5rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.mainbig .spincontainer .winnerSlider .winnerItem {
+.megadrawcontainer section h5 {
+  z-index: 2;
+  width: 310px;
+  float: left;
+  padding: 0.7rem;
+  border-radius: 10px;
+  border: solid 2px #ffffff;
+  background: #000000;
+  color: #7c9e40;
+  text-decoration: none;
+  text-align: center;
+  font-size: 18px;
+  font-family: "DinNextLtProMedium", Arial, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.4);
+}
+.megadrawcontainer section h6 {
+  width: calc(100% - 300px);
+  margin-left: -10px;
+  float: left;
+  padding: 0.7rem 2rem;
+  border-radius: 5px;
+  border: 0;
+  background: #000000;
+  text-align: left;
+  color: #30be19;
+  font-size: 18px;
+  font-family: "DinNextLtProMedium", Arial, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.mainbig {
+  width: 100%;
+  float: left;
+  margin: 0;
+  padding: 3rem 3rem 10rem 3rem;
+  min-height: 75vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: url("../images/star-bg.png") no-repeat;
+  background-position: right center;
+  background-size: 45% 100%;
+}
+.mainbig.mainbigNoBG {
+  background: none;
+  padding: 3rem;
+}
+.mainbig .spincontainer {
+  width: 55%;
+  float: left;
+}
+.mainbig .spincontainer .megadreabg {
+  width: 100%;
+  padding: 5rem 20%;
+  overflow: hidden;
+  float: left;
+  background: url("../images/spin-bg.png") no-repeat center center;
+  background-size: 100% 100%;
+}
+.mainbig .spincontainer .megadreabg .winnerSlider {
+  width: 100%;
+  float: left;
+  height: 310px;
+  padding: 0;
+  overflow: hidden;
+}
+.mainbig .spincontainer .megadreabg .winnerSlider .slick-list {
+  height: 100% !important;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.mainbig .spincontainer .megadreabg .winnerSlider .slick-track {
+  height: auto;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.mainbig .spincontainer .megadreabg .winnerSlider .slick-slide {
+  height: auto;
+  padding: 1.6rem 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #fff;
+  transition: all 0.5s ease-out;
+}
+.mainbig .spincontainer .megadreabg .winnerSlider .slick-cloned {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.mainbig .spincontainer .megadreabg .winnerSlider .winnerItem {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1575,46 +1748,71 @@ template {
   font-weight: 500;
   text-transform: uppercase;
 }
-.mainbig .spincontainer .winnerSlider .winnerItem b {
+.mainbig .spincontainer .megadreabg .winnerSlider .winnerItem b {
   font-weight: normal;
 }
-.mainbig .spincontainer .winnerSlider .winnerItem span {
+.mainbig .spincontainer .megadreabg .winnerSlider .winnerItem span {
   margin-left: 0.5rem;
   font-size: 20px;
   color: #7f644e;
+  transition: all 0.5s ease-in;
 }
-.mainbig .spincontainer .winnerSlider .winnerItem span b {
+.mainbig .spincontainer .megadreabg .winnerSlider .winnerItem span b {
   font-weight: normal;
 }
-.mainbig .spincontainer .winnerSlider .winnerItem.active {
+.mainbig .spincontainer .megadreabg .winnerSlider .winnerItem.active {
   color: #59e642;
   transition: all 0.5s ease-out;
 }
-.mainbig .spincontainer .winnerSlider .winnerItem.active span {
+.mainbig .spincontainer .megadreabg .winnerSlider .winnerItem.active span {
   color: #59e642;
   transition: all 0.5s ease-out;
 }
-.mainbig .spincontainer .winnerSlider .slick-slide.slick-current.slick-center .winnerItem {
+.mainbig .spincontainer .megadreabg .winnerSlider .slick-slide.slick-current.slick-center.slick-active {
+  background-color: #f30;
+  transition: all 0.5s ease-in;
+}
+.mainbig .spincontainer .megadreabg .winnerSlider .slick-slide.slick-current.slick-center.slick-active .winnerItem {
   color: #59e642;
   transition: all 0.5s ease-in;
 }
-.mainbig .spincontainer .winnerSlider .slick-slide.slick-current.slick-center .winnerItem span {
+.mainbig .spincontainer .megadreabg .winnerSlider .slick-slide.slick-current.slick-center.slick-active .winnerItem span {
   color: #59e642;
+  transition: all 0.5s ease-in;
+}
+.mainbig .spincontainer .megadrawwinner {
+  width: 100%;
+  float: left;
+  margin-top: 2rem;
+  text-align: center;
+}
+.mainbig .spincontainer .megadrawwinner .megadrawBTN {
+  display: inline-block;
+  padding: 0.7rem;
+  border-radius: 10px;
+  border: solid 2px #ffffff;
+  background: #000000;
+  color: #7c9e40;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: 14px;
+  font-family: "DinNextLtProMedium", Arial, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 0.5s ease-out;
+  box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.4);
+}
+.mainbig .spincontainer .megadrawwinner .megadrawBTN:hover {
+  color: #ffffff;
   transition: all 0.5s ease-in;
 }
 .mainbig .mainwrapper {
   max-width: 100%;
   width: 43%;
   float: right;
-  margin: 0;
   padding: 0;
-}
-.mainbig .mainwrapper.bgstar {
-  width: 45%;
-  padding: 8rem 3rem 8rem 2rem;
-  background: url("../images/star-bg.png") no-repeat;
-  background-position: left -2rem top 0;
-  background-size: cover;
+  margin: 0;
 }
 .mainbig .mainwrapper .mainheader {
   margin-bottom: -60px;
@@ -1750,43 +1948,49 @@ template {
 }
 
 @media only screen and (max-width: 1565px) {
-  .mainbig .spincontainer .winnerSlider {
+  .megadrawcontainer section h5 {
+    width: 290px;
+    font-size: 16px;
+  }
+  .megadrawcontainer section h6 {
+    width: calc(100% - 280px);
+    font-size: 16px;
+  }
+  .mainbig .spincontainer .megadreabg .winnerSlider {
     height: 280px;
   }
-  .mainbig .spincontainer .winnerSlider .winnerItem {
+  .mainbig .spincontainer .megadreabg .winnerSlider .winnerItem {
     font-size: 32px;
   }
-  .mainbig .spincontainer .winnerSlider .winnerItem span {
+  .mainbig .spincontainer .megadreabg .winnerSlider .winnerItem span {
     font-size: 18px;
   }
 }
 @media only screen and (max-width: 1300px) {
   .mainbig {
-    padding: 3rem 1.5rem;
+    padding: 4rem 1.5rem 7rem 1.5rem;
   }
-  .mainbig.mainbigwithpadding {
-    padding: 0 1rem;
+  .mainbig.mainbigNoBG {
+    padding: 4rem 1.5rem 4rem 1.5rem;
   }
   .mainbig .spincontainer {
     width: 55%;
-    padding: 5rem 10% 3rem 10%;
   }
-  .mainbig .spincontainer .winnerSlider {
+  .mainbig .spincontainer .megadreabg {
+    padding: 5rem 20%;
+  }
+  .mainbig .spincontainer .megadreabg .winnerSlider {
     height: 230px;
   }
-  .mainbig .spincontainer .winnerSlider .winnerItem {
+  .mainbig .spincontainer .megadreabg .winnerSlider .winnerItem {
     font-size: 20px;
   }
-  .mainbig .spincontainer .winnerSlider .winnerItem span {
+  .mainbig .spincontainer .megadreabg .winnerSlider .winnerItem span {
     margin-left: 0.3rem;
     font-size: 14px;
   }
   .mainbig .mainwrapper {
     width: 43%;
-  }
-  .mainbig .mainwrapper.bgstar {
-    width: 45%;
-    padding: 8rem 3rem 8rem 2rem;
   }
   .mainbig .mainwrapper .mainheader {
     margin-bottom: -2rem;
@@ -1830,71 +2034,90 @@ template {
   }
 }
 @media only screen and (max-width: 1023px) {
+  .megadrawcontainer {
+    position: static;
+    padding: 0 2rem 2rem 2rem;
+  }
+  .megadrawcontainer section {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .megadrawcontainer section h5 {
+    width: 290px;
+  }
+  .megadrawcontainer section h6 {
+    width: 100%;
+    margin: 0;
+    padding: 0.7rem;
+    text-align: center;
+  }
   .mainbig {
+    width: 100%;
+    float: left;
+    margin: 0;
     padding: 3rem;
+    min-height: 75vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column-reverse;
+    background-position: center top;
+    background-size: 100% 60%;
   }
-  .mainbig.mainbigwithpadding {
-    padding: 0 3rem 3rem 3rem;
+  .mainbig.mainbigNoBG {
+    padding: 3rem;
   }
   .mainbig .spincontainer {
     width: 100%;
-    padding: 5rem 17%;
   }
-  .mainbig .spincontainer .winnerSlider {
-    height: 210px;
+  .mainbig .spincontainer .megadreabg {
+    padding: 4rem 17%;
+  }
+  .mainbig .spincontainer .megadreabg .winnerSlider {
+    height: 220px;
   }
   .mainbig .mainwrapper {
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
   .mainbig .mainwrapper.bgstar {
-    margin-bottom: 0;
-    width: 100%;
-    padding: 5rem 3rem;
-    background-size: 100% 100%;
+    padding: 3rem 0;
   }
 }
 @media only screen and (max-width: 599px) {
   .mainbig {
     padding: 3rem 1rem;
   }
-  .mainbig.mainbigwithpadding {
-    padding: 0 1rem 3rem 1rem;
+  .mainbig.mainbigNoBG {
+    padding: 3rem 1rem;
   }
-  .mainbig .spincontainer {
-    width: 100%;
+  .mainbig .spincontainer .megadreabg {
     padding: 3rem 17%;
   }
-  .mainbig .spincontainer .winnerSlider {
+  .mainbig .spincontainer .megadreabg .winnerSlider {
     height: 200px;
   }
-  .mainbig .spincontainer .winnerSlider .slick-slide {
+  .mainbig .spincontainer .megadreabg .winnerSlider .slick-slide {
     padding: 1rem 0;
+    justify-content: center;
   }
-  .mainbig .spincontainer .winnerSlider .winnerItem {
+  .mainbig .spincontainer .megadreabg .winnerSlider .winnerItem {
     display: flex !important;
     justify-content: center;
     flex-direction: column;
   }
-  .mainbig .mainwrapper.bgstar {
-    padding: 4rem 2rem;
-  }
 }
 @media only screen and (max-width: 479px) {
-  .mainbig .spincontainer {
+  .mainbig .spincontainer .megadreabg {
     padding: 2rem 16%;
   }
-  .mainbig .spincontainer .winnerSlider {
+  .mainbig .spincontainer .megadreabg .winnerSlider {
     height: 200px;
   }
-  .mainbig .spincontainer .winnerSlider .winnerItem {
+  .mainbig .spincontainer .megadreabg .winnerSlider .winnerItem {
     font-size: 18px;
   }
-  .mainbig .spincontainer .winnerSlider .winnerItem span {
+  .mainbig .spincontainer .megadreabg .winnerSlider .winnerItem span {
     margin-left: 0.2rem;
     font-size: 12px;
   }
@@ -1902,7 +2125,7 @@ template {
     padding: 0;
   }
   .mainbig .mainwrapper.bgstar {
-    padding: 3rem 0;
+    padding: 1rem 0 0 0;
   }
   .mainbig .mainwrapper .mainheader {
     margin-bottom: -2rem;
