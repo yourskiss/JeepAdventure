@@ -1726,12 +1726,7 @@ template {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background-color: #fff;
   transition: all 0.5s ease-out;
-}
-.mainbig .spincontainer .megadreabg .winnerSlider .slick-cloned {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
 }
 .mainbig .spincontainer .megadreabg .winnerSlider .winnerItem {
   display: flex;
@@ -1768,16 +1763,20 @@ template {
   color: #59e642;
   transition: all 0.5s ease-out;
 }
-.mainbig .spincontainer .megadreabg .winnerSlider .slick-slide.slick-current.slick-center.slick-active {
-  background-color: #f30;
-  transition: all 0.5s ease-in;
-}
-.mainbig .spincontainer .megadreabg .winnerSlider .slick-slide.slick-current.slick-center.slick-active .winnerItem {
+.mainbig .spincontainer .megadreabg .winnerSlider .slick-slide.slick-current.slick-active .winnerItem {
   color: #59e642;
   transition: all 0.5s ease-in;
 }
-.mainbig .spincontainer .megadreabg .winnerSlider .slick-slide.slick-current.slick-center.slick-active .winnerItem span {
+.mainbig .spincontainer .megadreabg .winnerSlider .slick-slide.slick-current.slick-active .winnerItem span {
   color: #59e642;
+  transition: all 0.5s ease-in;
+}
+.mainbig .spincontainer .megadreabg .winnerSlider.ws2 .slick-slide.slick-current.slick-active .winnerItem {
+  color: #ffffff;
+  transition: all 0.5s ease-in;
+}
+.mainbig .spincontainer .megadreabg .winnerSlider.ws2 .slick-slide.slick-current.slick-active .winnerItem span {
+  color: #ffffff;
   transition: all 0.5s ease-in;
 }
 .mainbig .spincontainer .megadrawwinner {

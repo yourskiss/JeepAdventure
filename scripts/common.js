@@ -260,10 +260,10 @@ $(function($)
             vertical: true,
             infinite: true,
            // loop:true, 
-           useTransform: false,
+           useTransform: true,
             adaptiveHeight: false,
             variableWidth: false,
-            centerMode: true,
+            centerMode: false,
             centerPadding: '0',
             focusOnSelect: true,
             initialSlide:0,
@@ -275,6 +275,8 @@ $(function($)
             swipe: false,
             touchMove: false
         });
+
+ 
     }
 });
 

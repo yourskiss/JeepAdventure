@@ -30,11 +30,8 @@
                               -webkit-transform: translate3d(0, 0, 0);transform: translate3d(0, 0, 0);
                               -webkit-backface-visibility: hidden; backface-visibility: hidden; 
                          }
-                         .slick-slide { height: auto; padding: 1.6rem 0; @include fSC(); background-color: #fff;  @include outT(); } 
-                         .slick-cloned {
-                              -webkit-transform: translate3d(0, 0, 0);
-                             transform: translate3d(0, 0, 0);
-                           }
+                         .slick-slide { height: auto; padding: 1.6rem 0; @include fSC();   @include outT(); } 
+ 
                          .winnerItem {
                               @include fSC();   list-style:none; width:100%; height: 100%; float: left; text-align: left; color: $brown; font-size: 42px; @include DinNextLtProMedium(); text-transform: uppercase;
                               b { font-weight: normal;  }
@@ -47,13 +44,20 @@
                                    span { color: $green3; @include outT(); }
                               }
                          }
-                         .slick-slide.slick-current.slick-center.slick-active {
-                              background-color: #f30; @include inT();
+                         .slick-slide.slick-current.slick-active {
                               .winnerItem {
                                    color: $green3; @include inT();
                                    span { color: $green3;  @include inT(); }
                               }
                          }
+                    &.ws2 { 
+                         .slick-slide.slick-current.slick-active { 
+                              .winnerItem {
+                                   color: $white; @include inT();
+                                   span { color: $white;  @include inT(); }
+                              }
+                         }
+                    }
                }
           }
         .megadrawwinner { 
