@@ -281,11 +281,10 @@ $(function($)
             arrows: false,
             vertical: true,
             infinite: true,
-           // loop:true, 
            useTransform: true,
             adaptiveHeight: false,
             variableWidth: false,
-            centerMode: false,
+            centerMode: true,
             centerPadding: '0',
             focusOnSelect: true,
             initialSlide:0,
@@ -296,11 +295,23 @@ $(function($)
             draggable: false,
             swipe: false,
             touchMove: false
-        });
-
- 
+        }).on('beforeChange', function(event, slick, currentSlide, nextSlide){ 
+            $(".slick-slide").each(function()
+            {
+                var mio_attr = $(this).attr('data-slick-index');
+                if(mio_attr == currentSlide + 1)
+                {
+                  $(this).addClass('slk_active');
+                }
+                else
+                {
+                    $(this).removeClass('slk_active');
+                }
+              });              
+         });
     }
 });
+ 
 
 function stopWinnerScroll() // stop sliding
 {
