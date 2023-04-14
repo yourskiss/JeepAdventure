@@ -44,14 +44,36 @@ function isAlphaNumeric(e)
 // only AlphaNumeric  === end
     
 
+ // disable enter key  === start
+$(document).on('keyup keypress', 'input[type="text"], input[type="submit"]', function(e) {
+  if(e.keyCode == 13) 
+  {
+    e.preventDefault();
+    return false;
+  }
+});
+ // disable enter key  === end
+
+
+
 /* form validation === start */
 function formValidation()
 {
     // debugger;
+    let emailReg = new RegExp('[a-z0-9._-]+@[a-z0-9]+\.[a-z]{2,7}');
     $(".mf_error").hide().html('');
     if($("#fullname").val() == '')
     {
         $("#error_fullname").show().html('Please enter your name');
+        return false;
+    }
+    else if($("#emailid").val() == '')
+    {
+        $("#error_emailid").show().html('Please enter your email address');
+        return false;
+    }
+    else if (!emailReg.test($("#emailid").val())) {
+        $("#error_emailid").show().html('Please enter valid email address');
         return false;
     }
     else if($("#mobilenumber").val() == '')

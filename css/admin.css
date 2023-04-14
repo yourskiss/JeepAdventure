@@ -1,0 +1,366 @@
+
+
+.participate-header {
+    width: 100%;
+    float: left;
+    margin: 2rem 0;
+    text-align: center;
+}
+.participate-header img { 
+    max-width:100%;
+    float:none;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+
+ .participate-nav {
+    width: 100%;
+    float: left;
+    margin:0 0 2rem 0;
+    text-align: center;
+} 
+.participate-nav ul { 
+    width: 100%;
+    float: left; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.participate-nav ul li {
+    list-style: none;
+    margin: 0 0.4rem;
+    text-align: left;
+    font-family:Arial,sans-serif;
+    font-weight: 500;
+    color: #2c3f5a;
+    font-size: 14px;
+}
+.participate-nav ul li a { 
+    text-decoration: none;
+      color: #2c3f5a;
+ }
+.participate-nav ul li a:hover { 
+    text-decoration: none;
+      color: #f30;
+ }
+
+.participate-footer {
+    width: 100%;
+    float: left;
+    margin: 2rem 0;
+    text-align: center;
+}
+.participate-footer p { 
+    width: 100%;
+    float: left;
+    margin:0;
+    text-align: center;
+    font-family:Arial,sans-serif;
+    font-weight: normal;
+    color: #2c3f5a;
+    font-size: 14px;
+ }
+
+
+
+.participatewrap {
+	width: 100%;
+	float: left;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ .participate-inner {
+    width: 95%;
+    max-width: 1256px;
+    margin: 0 auto;
+    float: none;
+    display: inline-block;
+}
+
+
+.participate-clearboth { 
+    width: 100%;
+    float: left;
+    height: 2rem;
+    clear: both;
+    display: block;
+ }
+
+ 
+.participate-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    padding:0;
+    float: left;
+}
+.participate-field {
+    float: left;
+    margin: 1rem 0;
+    width: 100%;
+    text-align: center;
+}
+.participate-field h2 {
+    width: 100%;
+    float: left;
+    margin:0;
+    text-align: center;
+    font-family:Arial,sans-serif;
+    font-weight: bold;
+    color: #2c3f5a;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.participate-field h3 {
+    width: 100%;
+    float: left;
+    margin: 0 0 0.4rem 0;
+    text-align: left;
+    font-family:Arial,sans-serif;
+    font-weight: 500;
+    color: #2c3f5a;
+    font-size: 16px;
+}
+.participate-field p {
+    width: 100%;
+    float: left;
+    margin: 0 0 0.4rem 0;
+    text-align: left;
+    font-family:Arial,sans-serif;
+    font-weight: 500;
+    color: #2c3f5a;
+    font-size: 14px;
+}
+.participate-input {
+    width: 100%;
+    float: left;
+    background-color: #fff;
+    padding: 0.8rem;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    text-align: left;
+    font-family: Arial,sans-serif;
+    font-weight: 500;
+    color: #2c3f5a;
+    font-size: 14px;
+}
+.participate-select {
+    width: 100%;
+    float: left;
+    background-color: #fff;
+    padding: 0.8rem;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    text-align: left;
+    font-family:Arial,sans-serif;
+    font-weight: 500;
+    color: #2c3f5a;
+    font-size: 12px;
+    text-indent: 2px;
+    text-overflow: "";
+    background: #fff url(../images/down-arrow.png) no-repeat;
+    background-position: right 7px center;
+    appearance: none;
+}
+.participate-textarea {
+    width: 100%;
+    float: left;
+    background-color: #fff;
+    padding: 0.8rem;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    text-align: left;
+    font-family: Arial,sans-serif;
+    font-weight: 500;
+    color: #2c3f5a;
+    font-size: 14px;
+    resize: none;
+    height: 90px;
+}
+.participate-errormsg {
+    display: none;
+    width: 100%;
+    float: left;
+    margin: 0.4rem 0 0 0;
+    text-align: left;
+    font-family: Arial,sans-serif;
+    font-weight: 500;
+    color: #2c3f5a;
+    font-size: 12px;
+}
+.participate-submit {
+    display: inline-block;
+    overflow: hidden;
+    width: auto;
+    height: auto;
+    border:none;
+    float: none;
+    margin: 0 10px;
+    padding: 0.7rem 1.4rem;
+    background-color: #2c3f5a;
+    font-family:Arial,sans-serif;
+    font-weight: 600;
+    line-height: 1;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    transition: all .4s ease-out;
+    cursor: pointer;
+}
+.participate-submit:hover { background: #fff; color: #2c3f5a; transition: all .4s ease-in;}
+
+
+
+
+.participate-table-head {
+            width: 100%;
+            float: left;
+            margin: 0 0 2rem 0;
+        }
+ 
+.participate-table-head  p {
+    width: 100%;
+    float: left;
+    margin:0;
+    text-align: center;
+    font-family:Arial,sans-serif;
+    font-weight: 500;
+    color: #2c3f5a;
+    font-size: 14px;
+}
+
+.participate-table-head  aside { 
+    width: 100%;
+    float: left;
+    margin:0;
+    text-align: left; 
+}
+
+        .participate-back-button {
+            padding:1rem;
+            height: auto;
+            width: auto;
+            float: left;
+            background-color: #2c3f5a;
+            border:none;
+            font-family:Arial,sans-serif;
+            line-height: 1;
+            font-size: 14px;
+            font-weight: 400;
+            color: #fff;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.5s ease-out;
+        }
+
+            .participate-back-button:hover {
+                background-color: #fff; color: #2c3f5a;
+                transition: all 0.5s ease-in;
+            }
+.participate-dropdown {
+    width:auto;
+    float: right;
+    padding: 1rem 2.5rem 1rem 1rem;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    text-align: left;
+    font-family:Arial,sans-serif;
+    font-weight: 400;
+    color: #2c3f5a;
+    font-size: 14px;
+    text-indent: 2px;
+    text-overflow: "";
+    border: solid 1px #2c3f5a;
+    background: #fff url(../images/down-arrow.png) no-repeat;
+    background-position: right 10px center;
+    appearance: none;
+}
+
+
+
+        .participate-table-body {
+            width: 100%;
+            float: left;
+            padding: 0;
+        }
+
+        .participate-table-body h3 {
+    width: 100%;
+    float: left;
+    margin:0 0 1rem 0;
+    text-align: center;
+    font-family:Arial,sans-serif;
+    font-weight: bold;
+    color: #2c3f5a;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+        .participate-table {
+            width: 100%;
+            float: left;
+            border-collapse: collapse;
+            border: solid 1px #000;
+            background: #fff;
+        }
+
+            .participate-table th {
+                padding: 0.5rem;
+                border-collapse: collapse;
+                border: solid 1px #000;
+                background-color: #2c3f5a;
+                text-align: center;
+                font-family: Arial,sans-serif;
+                line-height: 1;
+                font-size: 14px;
+                font-weight: 400;
+                color: #fff;
+            }
+
+            .participate-table td {
+                padding: 0.5rem;
+                border-collapse: collapse;
+                border: solid 1px #000;
+                background-color: transparent;
+                text-align: left;
+                font-family:Arial,sans-serif;
+                line-height: 1;
+                font-size: 14px;
+                font-weight: 400;
+                color: #2c3f5a;
+            }
+
+                .participate-table td a {
+                    text-decoration: underline;
+                    color: #2c3f5a;
+                }
+
+                    .participate-table td a:hover {
+                        text-decoration: none;
+                        color: #2c3f5a;
+                    }
+
+                .participate-table td table, .participate-table th table {
+                    border: none;
+                }
+
+                    .participate-table td table td, .participate-table th table td {
+                        padding: 0;
+                        border: none;
+                    }
+
+                    .participate-table td table th, .participate-table th table th {
+                        padding: 0;
+                        border: none;
+                    }
