@@ -20,6 +20,13 @@
   font-style: normal;
   font-stretch: normal;
 }
+@font-face {
+  font-family: "DinNextLtProBold";
+  src: url("../fonts/dinnextltpro-bold.woff2") format("woff2"), url("../fonts/dinnextltpro-bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+}
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 html {
   line-height: 1.15; /* 1 */
@@ -253,6 +260,52 @@ template {
   display: none;
 }
 
+/* ################### Loader ################### */
+.pageloader {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #000000;
+  background: rgba(0, 0, 0, 0.7);
+  text-align: center;
+}
+.pageloader div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /* slick-theme 1.9.0 */
 .slick-loading .slick-list {
   background: transparent;
@@ -1693,7 +1746,7 @@ template {
 }
 .mainbig .spincontainer .megadreabg {
   width: 100%;
-  padding: 5rem 20%;
+  padding: 3rem 20% 7rem 20%;
   overflow: hidden;
   float: left;
   background: url("../images/spin-bg.png") no-repeat center center;
@@ -1721,8 +1774,8 @@ template {
   backface-visibility: hidden;
 }
 .mainbig .spincontainer .megadreabg .winnerSlider .slick-slide {
-  height: auto;
-  padding: 1.6rem 0;
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1735,6 +1788,7 @@ template {
   list-style: none;
   width: 100%;
   height: 100%;
+  padding: 1.6rem 0;
   float: left;
   text-align: left;
   color: #644b37;
@@ -1749,34 +1803,16 @@ template {
 .mainbig .spincontainer .megadreabg .winnerSlider .winnerItem span {
   margin-left: 0.5rem;
   font-size: 20px;
-  color: #7f644e;
-  transition: all 0.5s ease-in;
 }
 .mainbig .spincontainer .megadreabg .winnerSlider .winnerItem span b {
   font-weight: normal;
 }
-.mainbig .spincontainer .megadreabg .winnerSlider .winnerItem.active {
-  color: #59e642;
-  transition: all 0.5s ease-out;
-}
-.mainbig .spincontainer .megadreabg .winnerSlider .winnerItem.active span {
-  color: #59e642;
-  transition: all 0.5s ease-out;
-}
-.mainbig .spincontainer .megadreabg .winnerSlider .slick-slide.slick-current.slick-active .winnerItem {
-  color: #59e642;
-  transition: all 0.5s ease-in;
-}
-.mainbig .spincontainer .megadreabg .winnerSlider .slick-slide.slick-current.slick-active .winnerItem span {
-  color: #59e642;
-  transition: all 0.5s ease-in;
-}
-.mainbig .spincontainer .megadreabg .winnerSlider.ws2 .slick-slide.slick-current.slick-active .winnerItem {
+.mainbig .spincontainer .megadreabg .winnerSlider .slick-slide.slk_active .winnerItem {
   color: #ffffff;
   transition: all 0.5s ease-in;
 }
-.mainbig .spincontainer .megadreabg .winnerSlider.ws2 .slick-slide.slick-current.slick-active .winnerItem span {
-  color: #ffffff;
+.mainbig .spincontainer .megadreabg .winnerSlider.ws2 .slick-slide.slk_active .winnerItem {
+  color: #59e642;
   transition: all 0.5s ease-in;
 }
 .mainbig .spincontainer .megadrawwinner {
@@ -2097,10 +2133,10 @@ template {
     height: 200px;
   }
   .mainbig .spincontainer .megadreabg .winnerSlider .slick-slide {
-    padding: 1rem 0;
     justify-content: center;
   }
   .mainbig .spincontainer .megadreabg .winnerSlider .winnerItem {
+    padding: 1rem 0;
     display: flex !important;
     justify-content: center;
     flex-direction: column;
@@ -2173,52 +2209,6 @@ body {
   background-size: cover;
 }
 
-/* ################### Loader ################### */
-.pageloader {
-  display: none;
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 99;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background: #000000;
-  background: rgba(0, 0, 0, 0.7);
-  text-align: center;
-}
-.pageloader div {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  border: 16px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid #3498db;
-  width: 120px;
-  height: 120px;
-  -webkit-animation: spin 2s linear infinite; /* Safari */
-  animation: spin 2s linear infinite;
-}
-
-/* Safari */
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 .main {
   position: relative;
   width: 92%;

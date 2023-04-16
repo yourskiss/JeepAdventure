@@ -19,7 +19,7 @@
     .spincontainer {
         width: 55%; float: left; 
         .megadreabg { 
-               width: 100%; padding:5rem 20%; overflow: hidden; float: left;  background: url('../images/spin-bg.png') no-repeat center center; background-size: 100% 100%;
+               width: 100%; padding:3rem 20% 7rem 20%; overflow: hidden; float: left;  background: url('../images/spin-bg.png') no-repeat center center; background-size: 100% 100%;
                .winnerSlider { 
                          width: 100%; float: left;  height: 310px;  padding:0; overflow: hidden; 
                          .slick-list { height: 100% !important; 
@@ -30,31 +30,25 @@
                               -webkit-transform: translate3d(0, 0, 0);transform: translate3d(0, 0, 0);
                               -webkit-backface-visibility: hidden; backface-visibility: hidden; 
                          }
-                         .slick-slide { height: auto; padding: 1.6rem 0; @include fSC();   @include outT(); } 
+                         .slick-slide { margin: 0; padding: 0;  @include fSC(); @include outT(); } 
  
                          .winnerItem {
-                              @include fSC();   list-style:none; width:100%; height: 100%; float: left; text-align: left; color: $brown; font-size: 42px; @include DinNextLtProMedium(); text-transform: uppercase;
+                              @include fSC();   list-style:none; width:100%; height: 100%; padding: 1.6rem 0;  float: left; text-align: left; color: $brown; font-size: 42px; @include DinNextLtProMedium(); text-transform: uppercase;
                               b { font-weight: normal;  }
                               span { 
-                                   margin-left: 0.5rem; font-size: 20px; color: $brown2;  @include inT();
+                                   margin-left: 0.5rem; font-size: 20px;  
                                    b { font-weight: normal; }
                               }
-                              &.active { 
-                                   color: $green3;  @include outT();
-                                   span { color: $green3; @include outT(); }
-                              }
                          }
-                         .slick-slide.slick-current.slick-active {
+                         .slick-slide.slk_active {
                               .winnerItem {
-                                   color: $green3; @include inT();
-                                   span { color: $green3;  @include inT(); }
+                                   color: $white; @include inT();
                               }
                          }
                     &.ws2 { 
-                         .slick-slide.slick-current.slick-active { 
+                         .slick-slide.slk_active {
                               .winnerItem {
-                                   color: $white; @include inT();
-                                   span { color: $white;  @include inT(); }
+                                   color: $green3; @include inT();
                               }
                          }
                     }
@@ -235,8 +229,8 @@
                     padding:3rem 17%;  
                     .winnerSlider { 
                          height: 200px; 
-                         .slick-slide {  padding: 1rem 0; justify-content: center;  }
-                         .winnerItem { display: flex !important; justify-content: center; flex-direction: column; }
+                         .slick-slide {  justify-content: center;  }
+                         .winnerItem {  padding: 1rem 0; display: flex !important; justify-content: center; flex-direction: column; }
                     }
                }
           }
