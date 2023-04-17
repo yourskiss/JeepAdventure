@@ -703,7 +703,7 @@ template {
   width: 100%;
   float: left;
   border-radius: 25px;
-  background: url("../images/container-bg.jpg") no-repeat center center;
+  background: url("../images/container-bg.png") no-repeat center center;
   background-size: cover;
   box-shadow: inset 8px 8px 10px 0 rgba(0, 0, 0, 0.6), -4px -4px 0px 0px rgba(107, 107, 107, 0.4), 4px 4px 0px 0px rgba(138, 138, 138, 0.4), 3px -3px 0px 0px rgba(138, 138, 138, 0.4), -3px 3px 0px 0px rgba(138, 138, 138, 0.4);
 }
@@ -720,7 +720,7 @@ template {
   font-family: "DinNextLtProHeavy", Arial, sans-serif;
   font-weight: 700;
   font-size: 30px;
-  color: #1a223c;
+  color: #302622;
   border: none;
   box-shadow: 0px 5px 3px 3px rgba(0, 0, 0, 0.3);
   transition: all 0.5s ease-out;
@@ -1098,7 +1098,7 @@ template {
   text-transform: none;
   font-family: "DinNextLtProMedium", Arial, sans-serif;
   font-weight: 500;
-  color: #78963e;
+  color: #bea04f;
   font-size: 32px;
   line-height: 1.4;
   letter-spacing: 2px;
@@ -1406,7 +1406,7 @@ template {
 }
 /* #################### screen 8 #################### */
 .screen8 {
-  padding: 6rem 15rem 4rem 15rem;
+  padding: 6rem 10rem 4rem 10rem;
 }
 .screen8 h2 {
   width: 100%;
@@ -1468,9 +1468,9 @@ template {
   width: auto;
 }
 .screen8 ul li span:nth-of-type(2) {
-  text-align: right;
+  text-align: left;
   float: right;
-  width: 80px;
+  width: 70px;
 }
 
 @media only screen and (max-width: 1255px) {
@@ -1674,59 +1674,11 @@ template {
     font-size: 12px;
   }
 }
-.megadrawcontainer {
-  position: absolute;
-  left: 0;
-  bottom: 3rem;
-  width: 100%;
-  float: left;
-  padding: 0 3% 0 6%;
-}
-.megadrawcontainer section {
-  width: 100%;
-  float: left;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.megadrawcontainer section h5 {
-  z-index: 2;
-  width: 310px;
-  float: left;
-  padding: 0.7rem;
-  border-radius: 10px;
-  border: solid 2px #ffffff;
-  background: #000000;
-  color: #7c9e40;
-  text-decoration: none;
-  text-align: center;
-  font-size: 18px;
-  font-family: "DinNextLtProMedium", Arial, sans-serif;
-  font-weight: 500;
-  text-transform: uppercase;
-  box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.4);
-}
-.megadrawcontainer section h6 {
-  width: calc(100% - 300px);
-  margin-left: -10px;
-  float: left;
-  padding: 0.7rem 2rem;
-  border-radius: 5px;
-  border: 0;
-  background: #000000;
-  text-align: left;
-  color: #30be19;
-  font-size: 18px;
-  font-family: "DinNextLtProMedium", Arial, sans-serif;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
 .mainbig {
   width: 100%;
   float: left;
   margin: 0;
-  padding: 3rem 3rem 10rem 3rem;
+  padding: 4rem 3rem;
   min-height: 75vh;
   display: flex;
   justify-content: space-between;
@@ -1827,7 +1779,7 @@ template {
   border-radius: 10px;
   border: solid 2px #ffffff;
   background: #000000;
-  color: #7c9e40;
+  color: #bea04f;
   text-decoration: none;
   cursor: pointer;
   text-align: center;
@@ -1841,6 +1793,54 @@ template {
 .mainbig .spincontainer .megadrawwinner .megadrawBTN:hover {
   color: #ffffff;
   transition: all 0.5s ease-in;
+}
+.mainbig .spincontainer .megadrawcontainer {
+  width: 100%;
+  float: left;
+  padding: 3rem 0 0 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.mainbig .spincontainer .megadrawcontainer h5 {
+  z-index: 2;
+  width: 250px;
+  float: left;
+  padding: 0.7rem;
+  border-radius: 10px;
+  border: solid 2px #ffffff;
+  background: #000000;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  font-size: 16px;
+  font-family: "DinNextLtProMedium", Arial, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.4);
+}
+.mainbig .spincontainer .megadrawcontainer section {
+  width: calc(100% - 250px);
+  margin-left: -10px;
+  float: left;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 0;
+  background: #000000;
+  background: rgba(0, 0, 0, 0.6);
+}
+.mainbig .spincontainer .megadrawcontainer section .weeklywinnerlist {
+  width: 100%;
+  float: left;
+}
+.mainbig .spincontainer .megadrawcontainer section .weeklywinnerlist .weklyitem {
+  padding: 0 0.5rem;
+  text-align: left;
+  color: #bea04f;
+  font-size: 14px;
+  font-family: "DinNextLtProMedium", Arial, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 .mainbig .mainwrapper {
   max-width: 100%;
@@ -1887,7 +1887,7 @@ template {
   font-family: "DinNextLtProMedium", Arial, sans-serif;
   font-weight: 500;
   display: block;
-  color: #7c9e41;
+  color: #bea04f;
 }
 .mainbig .mainwrapper .maincontainer .screen6 h3 {
   width: 100%;
@@ -1906,7 +1906,7 @@ template {
 }
 .mainbig .mainwrapper .maincontainer .screen6 h3 span {
   display: block;
-  color: #7c9e41;
+  color: #bea04f;
 }
 .mainbig .mainwrapper .maincontainer .screen6 h4 {
   width: 100%;
@@ -1931,7 +1931,7 @@ template {
   line-height: 1.5;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #7c9e41;
+  color: #bea04f;
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
 }
 .mainbig .mainwrapper .maincontainer .screen6 h6 {
@@ -1983,14 +1983,6 @@ template {
 }
 
 @media only screen and (max-width: 1565px) {
-  .megadrawcontainer section h5 {
-    width: 290px;
-    font-size: 16px;
-  }
-  .megadrawcontainer section h6 {
-    width: calc(100% - 280px);
-    font-size: 16px;
-  }
   .mainbig .spincontainer .megadreabg .winnerSlider {
     height: 280px;
   }
@@ -2000,13 +1992,19 @@ template {
   .mainbig .spincontainer .megadreabg .winnerSlider .winnerItem span {
     font-size: 18px;
   }
+  .mainbig .spincontainer .megadrawcontainer h5 {
+    font-size: 14px;
+  }
+  .mainbig .spincontainer .megadrawcontainer section {
+    font-size: 12px;
+  }
 }
 @media only screen and (max-width: 1300px) {
   .mainbig {
-    padding: 4rem 1.5rem 7rem 1.5rem;
+    padding: 4rem 1.5rem;
   }
   .mainbig.mainbigNoBG {
-    padding: 4rem 1.5rem 4rem 1.5rem;
+    padding: 3rem 1.5rem;
   }
   .mainbig .spincontainer {
     width: 55%;
@@ -2069,23 +2067,6 @@ template {
   }
 }
 @media only screen and (max-width: 1023px) {
-  .megadrawcontainer {
-    position: static;
-    padding: 0 2rem 2rem 2rem;
-  }
-  .megadrawcontainer section {
-    flex-direction: column;
-    justify-content: center;
-  }
-  .megadrawcontainer section h5 {
-    width: 290px;
-  }
-  .megadrawcontainer section h6 {
-    width: 100%;
-    margin: 0;
-    padding: 0.7rem;
-    text-align: center;
-  }
   .mainbig {
     width: 100%;
     float: left;
@@ -2110,6 +2091,20 @@ template {
   }
   .mainbig .spincontainer .megadreabg .winnerSlider {
     height: 220px;
+  }
+  .mainbig .spincontainer .megadrawcontainer {
+    padding: 3rem 1rem 1rem 1rem;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .mainbig .spincontainer .megadrawcontainer h5 {
+    width: 290px;
+  }
+  .mainbig .spincontainer .megadrawcontainer section {
+    width: 100%;
+    margin: 0;
+    padding: 0.7rem;
+    text-align: center;
   }
   .mainbig .mainwrapper {
     width: 100%;
@@ -2205,7 +2200,7 @@ body {
   line-height: 1.2;
   letter-spacing: normal;
   color: #ffffff;
-  background: url("../images/body-bg.jpg") no-repeat center center;
+  background: url("../images/home-body-bg.jpg") no-repeat center center;
   background-size: cover;
 }
 
@@ -2218,13 +2213,17 @@ body {
   margin: 4rem auto;
   padding: 0;
   border-radius: 25px;
-  background: url("../images/main-bg.jpg") no-repeat center center;
-  background-size: cover;
-  box-shadow: 0px 10px 10px 10px rgba(0, 0, 0, 0.3), inset -5px -5px 0px 0px rgba(219, 219, 219, 0.7), inset 5px 5px 0px 0px rgba(187, 187, 187, 0.7), inset 5px -5px 0px 0px rgba(187, 187, 187, 0.7), inset -5px 5px 0px 0px rgba(187, 187, 187, 0.7);
+  background: url("../images/mainbg1.jpg") no-repeat center center;
+  background-size: 100% 100%;
+  box-shadow: 0px 10px 10px 10px rgba(0, 0, 0, 0.3), inset -3px -3px 0px 0px rgba(192, 212, 200, 0.5), inset 3px 3px 0px 0px rgba(192, 212, 200, 0.5), inset 3px -3px 0px 0px rgba(136, 134, 113, 0.5), inset -3px 3px 0px 0px rgba(136, 134, 113, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+.main.main2 {
+  background: url("../images/mainbg2.jpg") no-repeat center center;
+  background-size: 100% 100%;
 }
 
 .mainlogo {
@@ -2274,6 +2273,14 @@ body {
     right: 1rem;
     bottom: 1rem;
     font-size: 15px;
+  }
+}
+@media only screen and (max-width: 1255px) {
+  .main {
+    background-size: cover;
+  }
+  .main.main2 {
+    background-size: cover;
   }
 }
 @media only screen and (max-width: 767px) {

@@ -16,10 +16,12 @@
 @import "_screen_megadraw.scss";
 
 
-body {  margin:0;  padding:0; font-family:'DinNextLtProMedium', Arial, sans-serif; font-weight: 400; line-height:1.2; letter-spacing: normal; color: $white;  background: url('../images/body-bg.jpg') no-repeat center center; background-size:cover; }
+body {  margin:0;  padding:0; font-family:'DinNextLtProMedium', Arial, sans-serif; font-weight: 400; line-height:1.2; letter-spacing: normal; color: $white;  background: url('../images/home-body-bg.jpg') no-repeat center center; background-size:cover; }
  
-.main {  position: relative; width: 92%; max-width: 1800px; min-height: calc(100vh - 8rem);  float:none; margin:4rem auto; padding:0; border-radius: 25px; background: url('../images/main-bg.jpg') no-repeat center center; background-size:cover;  box-shadow:0px 10px 10px 10px rgba(0,0,0,0.3), inset -5px -5px 0px 0px rgba(219,219,219,0.7), inset 5px 5px 0px 0px rgba(187,187,187,0.7),  inset  5px -5px 0px 0px rgba(187,187,187,0.7), inset -5px 5px 0px 0px rgba(187,187,187,0.7);  @include fCC(); flex-wrap: wrap;   
-  }
+.main {  position: relative; width: 92%; max-width: 1800px; min-height: calc(100vh - 8rem);  float:none; margin:4rem auto; padding:0; border-radius: 25px; background: url('../images/mainbg1.jpg') no-repeat center center; background-size: 100% 100%; box-shadow:0px 10px 10px 10px rgba(0,0,0,0.3), inset -3px -3px 0px 0px rgba(192,212,200,0.5), inset 3px 3px 0px 0px rgba(192,212,200,0.5),  inset  3px -3px 0px 0px rgba(136,134,113,0.5), inset -3px 3px 0px 0px rgba(136,134,113,0.5);  @include fCC(); flex-wrap: wrap;
+  &.main2 { background: url('../images/mainbg2.jpg') no-repeat center center; background-size: 100% 100%;  }
+}
+
 .mainlogo { z-index:8; position: absolute; right: 1.5rem; top: 1.5rem; max-width: 112px; border: 0; }
 .maintnc { 
   z-index:8; position: absolute; right: 1.5rem; bottom: 1.5rem;  text-align: right; text-transform: none;  @include DinNextLtProHeavy(); color: $black; font-size: 16px; line-height: 1;  letter-spacing: 1px; @include outT(); text-decoration: underline;
@@ -34,6 +36,14 @@ body {  margin:0;  padding:0; font-family:'DinNextLtProMedium', Arial, sans-seri
   .mainlogo { right: 1rem; top: 1rem; max-width: 100px; }
   .maintnc { right: 1rem; bottom: 1rem; font-size: 15px;  }
 
+}
+
+@media only screen and (max-width:1255px) 
+{
+  .main {  background-size: cover;
+    &.main2 { background-size: cover;  }
+  }
+  
 }
 
 @media only screen and (max-width:767px) 

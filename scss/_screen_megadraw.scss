@@ -1,21 +1,7 @@
 
-.megadrawcontainer {
-     position: absolute; left:0; bottom: 3rem; width: 100%; float: left; padding:0 3% 0 6%;   
-     section { 
-          width: 100%; float: left; @include fCC();
-          h5 { 
-               z-index: 2; width: 310px; float: left; padding: 0.7rem; border-radius: 10px; border: solid 2px $white; background: $black; color: $green4; text-decoration: none;  text-align: center; font-size: 18px; @include DinNextLtProMedium(); text-transform: uppercase;  box-shadow: 0px 5px 5px 5px rgba(0,0,0,.4);
-          }
-          h6 { 
-               width: calc(100% - 300px); margin-left:-10px; float: left; padding: 0.7rem 2rem; border-radius: 5px; border:0; background: $black;  text-align: left; color: $green5; font-size: 18px; @include DinNextLtProMedium(); text-transform: uppercase;  
-          }
-     }
-}
-
-
 .mainbig { 
-    width: 100%; float: left; margin: 0;  padding:3rem 3rem 10rem 3rem; min-height: 75vh; @include fBC(); flex-wrap: wrap; background: url('../images/star-bg.png') no-repeat; background-position: right center; background-size: 45% 100% ;  
-    &.mainbigNoBG { background: none; padding: 3rem; }
+    width: 100%; float: left; margin: 0;  padding:4rem 3rem; min-height: 75vh; @include fBC(); flex-wrap: wrap; background: url('../images/star-bg.png') no-repeat; background-position: right center; background-size: 45% 100% ;  
+    &.mainbigNoBG { background: none; padding: 3rem;   }
     .spincontainer {
         width: 55%; float: left; 
         .megadreabg { 
@@ -57,9 +43,22 @@
         .megadrawwinner { 
                width: 100%; float: left; margin-top: 2rem; text-align: center;
                .megadrawBTN { 
-                    display: inline-block; padding: 0.7rem; border-radius: 10px; border: solid 2px $white; background: $black; color: $green4; text-decoration: none; cursor: pointer;  text-align: center; font-size: 14px; @include DinNextLtProMedium(); text-transform: uppercase; @include outT(); box-shadow: 0px 5px 5px 5px rgba(0,0,0,.4);
+                    display: inline-block; padding: 0.7rem; border-radius: 10px; border: solid 2px $white; background: $black; color: $yellow; text-decoration: none; cursor: pointer;  text-align: center; font-size: 14px; @include DinNextLtProMedium(); text-transform: uppercase; @include outT(); box-shadow: 0px 5px 5px 5px rgba(0,0,0,.4);
                     &:hover { color: $white;  @include inT(); }
                }
+          }
+          .megadrawcontainer {
+               width: 100%; float: left;  padding:3rem 0 0 2rem;   @include fSC();
+                    h5 { 
+                         z-index: 2; width: 250px; float: left; padding: 0.7rem; border-radius: 10px; border: solid 2px $white; background: $black; color: $white; text-decoration: none;  text-align: center; font-size: 16px; @include DinNextLtProMedium(); text-transform: uppercase;  box-shadow: 0px 5px 5px 5px rgba(0,0,0,.4);
+                    }
+                    section { 
+                         width: calc(100% - 250px); margin-left:-10px; float: left; padding:0.5rem; border-radius: 5px; border:0; background: $black; background:rgba(0,0,0,0.6);
+                         .weeklywinnerlist {
+                              width: 100%; float: left;
+                              .weklyitem { padding: 0 0.5rem; text-align: left; color: $yellow; font-size: 14px; @include DinNextLtProMedium(); text-transform: uppercase;   }
+                         }
+                    }
           }
     }
     .mainwrapper {
@@ -79,18 +78,18 @@
                    h2 { 
                         width: 100%; float: left; text-align: center; font-size: 20px;  line-height: 1.5; letter-spacing: 1px;
                         b { font-weight: normal; @include DinNextLtProHeavy(); color: $white; text-shadow:3px 3px 3px rgba(0,0,0,.4);  text-transform: uppercase; }
-                        span { @include DinNextLtProMedium(); display: block; color: $green2; }
+                        span { @include DinNextLtProMedium(); display: block; color: $yellow; }
                     }
                    h3 { 
                         width: 100%; margin: 0.5rem 0 0 0; float: left; text-align: center; @include DinNextLtProMedium(); font-size: 20px; line-height: 1.5;  letter-spacing: 1px;
                         b { font-weight: normal; color: $white; }
-                        span {  display: block; color: $green2; }
+                        span {  display: block; color: $yellow; }
                    }
                    h4 { 
                         width: 100%; float: left; text-align: center; font-size: 18px; line-height: 1.5; letter-spacing: 1px; text-transform: uppercase;  color: $white;  @include DinNextLtProHeavy(); text-shadow:3px 3px 3px rgba(0,0,0,.4);
                     }
                    h5 { 
-                        width: 100%;  float: left; text-align: center; @include DinNextLtProMedium(); font-size: 18px; line-height: 1.5;  letter-spacing: 1px;  text-transform: uppercase; color: $green2; text-shadow:3px 3px 3px rgba(0,0,0,.4);
+                        width: 100%;  float: left; text-align: center; @include DinNextLtProMedium(); font-size: 18px; line-height: 1.5;  letter-spacing: 1px;  text-transform: uppercase; color: $yellow; text-shadow:3px 3px 3px rgba(0,0,0,.4);
                    }
                    h6 { 
                         width: 100%; margin:1rem 0; float: left; text-align: center; 
@@ -115,12 +114,7 @@
 @media only screen and (max-width:1565px) 
 {
 
-     .megadrawcontainer {
-          section { 
-               h5 { width: 290px;  font-size: 16px; }
-               h6 { width: calc(100% - 280px); font-size: 16px; }
-          }
-     }
+
 
      .mainbig { 
           .spincontainer {
@@ -133,7 +127,10 @@
                          }
                    }
                }
-              
+               .megadrawcontainer {
+                    h5 { font-size: 14px; }
+                    section {  font-size: 12px; }
+               }
           }
       }
 }
@@ -142,8 +139,8 @@
 @media only screen and (max-width:1300px) 
 {
      .mainbig { 
-          padding:4rem 1.5rem 7rem 1.5rem;
-          &.mainbigNoBG {  padding:4rem 1.5rem 4rem 1.5rem;  }
+          padding:4rem 1.5rem;
+          &.mainbigNoBG {  padding:3rem 1.5rem;  }
           .spincontainer {
               width: 55%;  
               .megadreabg  {
@@ -191,14 +188,7 @@
 
 @media only screen and (max-width:1023px) 
 {
-     .megadrawcontainer {
-          position: static; padding:0 2rem 2rem 2rem;
-          section { 
-               flex-direction: column; justify-content: center;
-               h5 { width: 290px;    }
-               h6 { width: 100%; margin: 0; padding: 0.7rem; text-align: center; }
-          }
-     }
+
 
      .mainbig { 
           width: 100%; float: left; margin: 0;  padding:3rem; min-height: 75vh;  @include fSC(); flex-direction: column-reverse; background-position: center top; background-size: 100% 60%;  
@@ -210,6 +200,11 @@
                .winnerSlider { 
                          height: 220px; 
                     }
+               }
+               .megadrawcontainer {
+                     padding:3rem 1rem 1rem 1rem;flex-direction: column; justify-content: center;
+                         h5 { width: 290px;    }
+                         section { width: 100%; margin: 0; padding: 0.7rem; text-align: center; }
                }
           }
           .mainwrapper {

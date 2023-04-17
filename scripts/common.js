@@ -268,6 +268,36 @@ timeCounter();
 /* winner slider ===== start  */
 $(function($) 
 {
+    if($(".weeklywinnerlist").length > 0)
+    {
+        $('.weeklywinnerlist').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            speed: 2000,
+            autoplay: true,
+            autoplaySpeed: 0,
+            cssEase: 'linear',
+            dots: false,
+            arrows: false,
+            vertical: false,
+            infinite: true,
+            useTransform: true,
+            adaptiveHeight: false,
+            variableWidth: true,
+            centerMode: false,
+            centerPadding: '0',
+            focusOnSelect: true,
+            initialSlide:0,
+            buttons: false,
+            pauseOnHover: false,
+            pauseOnFocus: false,
+            accessibility: false,
+            draggable: false,
+            swipe: false,
+            touchMove: false
+        });
+    }
+    
     if($(".winnerSlider").length > 0)
     {
         $('.winnerSlider').slick({
