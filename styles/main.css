@@ -1797,7 +1797,7 @@ template {
 .mainbig .spincontainer .megadrawcontainer {
   width: 100%;
   float: left;
-  padding: 3rem 0 0 2rem;
+  padding: 3rem 0 0 2.5rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1813,7 +1813,7 @@ template {
   color: #ffffff;
   text-decoration: none;
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
   font-family: "DinNextLtProMedium", Arial, sans-serif;
   font-weight: 500;
   text-transform: uppercase;
