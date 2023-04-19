@@ -482,7 +482,7 @@ template {
 }
 @media only screen and (max-width: 1300px) {
   .homenotapplicable, .mainnotapplicable {
-    right: -7%;
+    right: -10%;
     bottom: 37%;
   }
 }
@@ -497,7 +497,7 @@ template {
     bottom: 1rem;
   }
   .homenotapplicable, .mainnotapplicable {
-    right: -11%;
+    right: -12%;
     bottom: 35%;
   }
 }
@@ -684,7 +684,7 @@ body {
 }
 @media only screen and (max-width: 479px) {
   .mainwrapper {
-    padding: 2.5rem 1rem;
+    padding: 2.5rem 1rem 3.5rem 1rem;
   }
   .mainwrapper .mainheader {
     margin-bottom: -2rem;

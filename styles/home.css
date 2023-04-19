@@ -482,7 +482,7 @@ template {
 }
 @media only screen and (max-width: 1300px) {
   .homenotapplicable, .mainnotapplicable {
-    right: -7%;
+    right: -10%;
     bottom: 37%;
   }
 }
@@ -497,7 +497,7 @@ template {
     bottom: 1rem;
   }
   .homenotapplicable, .mainnotapplicable {
-    right: -11%;
+    right: -12%;
     bottom: 35%;
   }
 }
@@ -709,7 +709,7 @@ body {
     float: left;
     width: 100%;
     min-height: calc(100vh - 2rem);
-    padding: 2rem 1rem 4rem 1rem;
+    padding: 2rem 1rem 3.5rem 1rem;
     margin: 0;
     overflow: hidden;
   }
