@@ -425,15 +425,15 @@ template {
   font-family: "DinNextLtProHeavy", Arial, sans-serif;
   font-weight: 700;
   color: #000000;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1;
   letter-spacing: 1px;
   transition: all 0.5s ease-out;
-  text-decoration: underline;
+  text-decoration: none;
 }
 .maintnc:hover {
   color: #ffffff;
-  text-decoration: none;
+  text-decoration: underline;
   transition: all 0.5s ease-in;
 }
 
@@ -447,15 +447,15 @@ template {
   font-family: "DinNextLtProMedium", Arial, sans-serif;
   font-weight: 500;
   color: #ffffff;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1;
   letter-spacing: 1px;
   transition: all 0.5s ease-out;
-  text-decoration: underline;
+  text-decoration: none;
 }
 .hometnc:hover {
   color: #ffffff;
-  text-decoration: none;
+  text-decoration: underline;
   transition: all 0.5s ease-in;
 }
 
@@ -475,12 +475,10 @@ template {
   .maintnc {
     right: 1rem;
     bottom: 1rem;
-    font-size: 15px;
   }
   .hometnc {
     right: 1rem;
     bottom: 1rem;
-    font-size: 13px;
   }
 }
 @media only screen and (max-width: 1023px) {
@@ -497,12 +495,10 @@ template {
   .maintnc {
     right: 0.7rem;
     bottom: 0.7rem;
-    font-size: 14px;
   }
   .hometnc {
     right: 0.7rem;
     bottom: 0.7rem;
-    font-size: 12px;
   }
 }
 @media only screen and (min-width: 500px) and (max-width: 1000px) and (orientation: landscape) {
@@ -1037,15 +1033,15 @@ body {
   .spincontainer .megadreabg .winnerSlider .slick-slide .winnerItem {
     padding: 5% 10%;
   }
-  .spincontainer .megadreabg .megadrawcontainer {
+  .spincontainer .megadrawcontainer {
     padding: 3rem 1rem 1rem 1rem;
     flex-direction: column;
     justify-content: center;
   }
-  .spincontainer .megadreabg .megadrawcontainer h5 {
+  .spincontainer .megadrawcontainer h5 {
     width: 290px;
   }
-  .spincontainer .megadreabg .megadrawcontainer section {
+  .spincontainer .megadrawcontainer section {
     width: 100%;
     margin: 0;
     padding: 0.7rem;

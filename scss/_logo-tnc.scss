@@ -1,11 +1,11 @@
 .mainlogo { z-index:8; position: absolute; right: 1.5rem; top: 1.5rem; max-width: 112px; border: 0; }
 .maintnc { 
-  z-index:8; position: absolute; right: 1.5rem; bottom: 1.5rem;  text-align: right; text-transform: none;  @include DinNextLtProHeavy(); color: $black; font-size: 16px; line-height: 1;  letter-spacing: 1px; @include outT(); text-decoration: underline;
-  &:hover { color: $white; text-decoration: none; @include inT();  }
+  z-index:8; position: absolute; right: 1.5rem; bottom: 1.5rem;  text-align: right; text-transform: none;  @include DinNextLtProHeavy(); color: $black; font-size: 12px; line-height: 1;  letter-spacing: 1px; @include outT(); text-decoration: none;
+  &:hover { color: $white; text-decoration:underline; @include inT();  }
 }
 .hometnc { 
-  z-index:8; position: absolute; right: 1.5rem; bottom: 1.5rem;  text-align: right; text-transform: none; @include DinNextLtProMedium();  color: $white; font-size: 14px; line-height: 1;  letter-spacing: 1px; @include outT(); text-decoration: underline;
-  &:hover { color: $white; text-decoration: none; @include inT();  }
+  z-index:8; position: absolute; right: 1.5rem; bottom: 1.5rem;  text-align: right; text-transform: none; @include DinNextLtProMedium();  color: $white; font-size:12px; line-height: 1;  letter-spacing: 1px; @include outT(); text-decoration: none;
+  &:hover { color: $white; text-decoration: underline; @include inT();  }
 }
 
 
@@ -19,8 +19,8 @@
 {
 
   .mainlogo { right: 0.7rem; top: 0.7rem; max-width: 90px; }
-  .maintnc { right: 1rem; bottom: 1rem; font-size: 15px;  }
-  .hometnc { right: 1rem; bottom: 1rem; font-size: 13px;  }
+  .maintnc { right: 1rem; bottom: 1rem;  }
+  .hometnc { right: 1rem; bottom: 1rem; }
  
  
 }
@@ -36,8 +36,8 @@
 @media only screen and (max-width:479px) 
 {
   .mainlogo { right: 0.5rem; top:0.5rem;  max-width: 60px; }
-  .maintnc { right: 0.7rem; bottom: 0.7rem; font-size: 14px;  }
-  .hometnc { right: 0.7rem; bottom: 0.7rem; font-size: 12px;  }
+  .maintnc { right: 0.7rem; bottom: 0.7rem; }
+  .hometnc { right: 0.7rem; bottom: 0.7rem; }
   
 }
 
