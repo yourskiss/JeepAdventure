@@ -415,29 +415,7 @@ template {
   border: 0;
 }
 
-.maintnc {
-  z-index: 8;
-  position: absolute;
-  right: 1.5rem;
-  bottom: 1.5rem;
-  text-align: right;
-  text-transform: none;
-  font-family: "DinNextLtProHeavy", Arial, sans-serif;
-  font-weight: 700;
-  color: #000000;
-  font-size: 12px;
-  line-height: 1;
-  letter-spacing: normal;
-  transition: all 0.5s ease-out;
-  text-decoration: none;
-}
-.maintnc:hover {
-  color: #ffffff;
-  text-decoration: underline;
-  transition: all 0.5s ease-in;
-}
-
-.hometnc {
+.maintnc, .hometnc {
   z-index: 8;
   position: absolute;
   right: 1.5rem;
@@ -446,24 +424,67 @@ template {
   text-transform: none;
   font-family: "DinNextLtProMedium", Arial, sans-serif;
   font-weight: 500;
-  color: #ffffff;
+  color: #000000;
   font-size: 12px;
   line-height: 1;
   letter-spacing: normal;
   transition: all 0.5s ease-out;
-  text-decoration: none;
-}
-.hometnc:hover {
-  color: #ffffff;
   text-decoration: underline;
+}
+.maintnc:hover, .hometnc:hover {
+  color: #ffffff;
+  text-decoration: none;
   transition: all 0.5s ease-in;
 }
 
+.hometnc {
+  color: #ffffff;
+  font-size: 12px;
+}
+.hometnc:hover {
+  color: #ffffff;
+}
+
+.homenotapplicable, .mainnotapplicable {
+  z-index: 8;
+  position: absolute;
+  right: -6%;
+  bottom: 40%;
+  transform: rotate(-90deg);
+  text-align: left;
+  font-family: "DinNextLtProMedium", Arial, sans-serif;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: normal;
+}
+
+.mainnotapplicable {
+  color: #000000;
+}
+
+@media only screen and (max-width: 1681px) {
+  .homenotapplicable, .mainnotapplicable {
+    right: -7%;
+    bottom: 36%;
+  }
+}
 @media only screen and (max-width: 1565px) {
   .mainlogo {
     right: 1rem;
     top: 1rem;
     max-width: 100px;
+  }
+  .homenotapplicable, .mainnotapplicable {
+    right: -8%;
+    bottom: 38%;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .homenotapplicable, .mainnotapplicable {
+    right: -7%;
+    bottom: 37%;
   }
 }
 @media only screen and (max-width: 1255px) {
@@ -472,18 +493,28 @@ template {
     top: 0.7rem;
     max-width: 90px;
   }
-  .maintnc {
+  .maintnc, .hometnc {
     right: 1rem;
     bottom: 1rem;
   }
-  .hometnc {
-    right: 1rem;
-    bottom: 1rem;
+  .homenotapplicable, .mainnotapplicable {
+    right: -11%;
+    bottom: 35%;
   }
 }
 @media only screen and (max-width: 1023px) {
   .mainlogo {
     max-width: 70px;
+  }
+  .maintnc, .hometnc {
+    font-size: 10px;
+  }
+  .homenotapplicable, .mainnotapplicable {
+    right: auto;
+    left: 1rem;
+    bottom: 1rem;
+    transform: none;
+    font-size: 10px;
   }
 }
 @media only screen and (max-width: 479px) {
@@ -492,13 +523,17 @@ template {
     top: 0.5rem;
     max-width: 60px;
   }
-  .maintnc {
-    right: 0.7rem;
-    bottom: 0.7rem;
+  .maintnc, .hometnc {
+    right: 0.5rem;
+    bottom: 0.5rem;
   }
-  .hometnc {
-    right: 0.7rem;
-    bottom: 0.7rem;
+  .homenotapplicable, .mainnotapplicable {
+    right: auto;
+    left: 0;
+    bottom: 2rem;
+    transform: none;
+    width: 100%;
+    text-align: center;
   }
 }
 @media only screen and (min-width: 500px) and (max-width: 1000px) and (orientation: landscape) {
