@@ -4,13 +4,13 @@
 @import "_fonts.scss"; 
 @import "_normalize.scss";
 @import "_loader.scss";
-
-
-body {  margin:0;  padding:0; font-family:'DinNextLtProMedium', Arial, sans-serif; font-weight: 400; line-height:1.2; letter-spacing: normal; color: $white;  background: url('../images/home-body-bg.jpg') no-repeat center center; background-size:cover; }
-
+@import "_popup.scss";
+@import "_logo-tnc.scss";
+@import "_body.scss";
+ 
 .main {  position: relative; width: 94%; max-width: 1800px;  float:none; margin:2rem auto; padding:0; border-radius: 25px; background: url('../images/home-main-bg-desktop.jpg') no-repeat center center; background-size:cover;   @include fCC(); flex-wrap: wrap;   box-shadow:0px 10px 10px 10px rgba(0,0,0,0.5);
   }
-.mainlogo { z-index:8; position: absolute; right: 1.5rem; top: 1.5rem; max-width: 112px; border: 0; }
+
 .mainwrapper { min-height: calc(100vh - 4rem); padding:3rem 4rem; width: 100%; float:left; @include fBC(); flex-wrap: wrap; flex-direction: column; }
 
 .home-header { 
@@ -37,8 +37,7 @@ body {  margin:0;  padding:0; font-family:'DinNextLtProMedium', Arial, sans-seri
 }
 @media only screen and (max-width:1565px) 
 {
-  .mainwrapper {  padding:3rem 3rem 2rem 3rem;  }
-  .mainlogo { right: 1rem; top: 1rem; max-width: 100px; }
+  .mainwrapper {  padding:3rem;  }
   .home-header { 
       img { max-width: 970px; }
   } 
@@ -60,6 +59,7 @@ body {  margin:0;  padding:0; font-family:'DinNextLtProMedium', Arial, sans-seri
 @media only screen and (max-width:1255px) 
 {
   .mainlogo { right:0.5rem; top:0.5rem; max-width: 80px; }
+  .hometnc { right: 1rem; bottom: 1rem; font-size: 13px;  }
   .home-header { 
     img { max-width: 820px; }
   } 
@@ -81,7 +81,7 @@ body {  margin:0;  padding:0; font-family:'DinNextLtProMedium', Arial, sans-seri
         }
     }
     
-    .mainwrapper {  padding:3rem 2rem 2rem 2rem; }
+    .mainwrapper {  padding:3rem 2rem; }
 }
 
 @media only screen and (max-width:767px) 
@@ -92,8 +92,7 @@ body {  margin:0;  padding:0; font-family:'DinNextLtProMedium', Arial, sans-seri
 @media only screen and (max-width:479px) 
 {
     .main { float: left; width: 94%; margin:1rem 3%; padding: 0;  border-radius: 15px;  background:#6c8b86 url('../images/home-main-bg-mobile.jpg') no-repeat center bottom;  background-size:100% auto;  }
-    .mainlogo { right: 0.5rem; top:0.5rem;  max-width:50px; }
-    .mainwrapper {  float: left; width: 100%; min-height: calc(100vh - 2rem);  padding:2rem 1rem 1.5rem 1rem; margin: 0; overflow: hidden;  }
+    .mainwrapper {  float: left; width: 100%; min-height: calc(100vh - 2rem);  padding:2rem 1rem 2.5rem 1rem; margin: 0; overflow: hidden;  }
     .home-header { 
       img { width: 100%; max-width: 80%;  }
       .home-header-web { display: none; }
@@ -116,7 +115,6 @@ body {  margin:0;  padding:0; font-family:'DinNextLtProMedium', Arial, sans-seri
 @media only screen and (min-width:500px) and (max-width:1000px) and (orientation : landscape) 
 {
   .main { margin:1rem auto; background:#18101b url('../images/home-main-bg-ipad-landscape.jpg') no-repeat center center;  background-size:100% 100%;  }
-  .mainlogo { max-width: 50px; }
   .home-header { 
     img { max-width: 120px; }
     .home-header-web { display: none; }

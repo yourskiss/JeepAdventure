@@ -1,0 +1,73 @@
+* { margin:0; padding:0; box-sizing:border-box; line-height:1; } 
+@import "_var.scss";
+@import "_mixin.scss"; 
+@import "_fonts.scss"; 
+@import "_normalize.scss";
+@import "_loader.scss";
+@import "_popup.scss";
+@import "_logo-tnc.scss";
+@import "_body.scss";
+
+@import "_slick.scss";
+@import "_megadraw_spin.scss";
+@import "_megadraw_container.scss";
+
+
+ 
+.main {  position: relative; width: 92%; max-width: 1800px; min-height: calc(100vh - 8rem);  float:none; margin:4rem auto; padding:0; border-radius: 25px; background: url('../images/mainbg2.jpg') no-repeat center center; background-size: 100% 100%; box-shadow:0px 10px 10px 10px rgba(0,0,0,0.3), inset -3px -3px 0px 0px rgba(192,212,200,0.5), inset 3px 3px 0px 0px rgba(192,212,200,0.5),  inset  3px -3px 0px 0px rgba(136,134,113,0.5), inset -3px 3px 0px 0px rgba(136,134,113,0.5);  @include fCC(); flex-wrap: wrap; }
+
+.mainbig { 
+  width: 100%; float: left; margin: 0;  padding:4rem 3rem; min-height: 75vh; @include fBC(); flex-wrap: wrap; background: url('../images/star-bg.png') no-repeat; background-position: right center; background-size: 45% 100% ;  
+  &.mainbigNoBG { background: none; padding: 3rem;   }
+}
+
+
+
+@media only screen and (max-width:1300px) 
+{
+
+     .mainbig { 
+          padding:4rem 1.5rem;
+          &.mainbigNoBG {  padding:3rem 1.5rem;  }
+     }
+}
+ 
+@media only screen and (max-width:1255px) 
+{
+
+  .main { width: 94%; min-height: calc(100vh - 6rem); margin:3rem auto;  box-shadow:0px 7px 7px 7px rgba(0,0,0,0.3), inset -3px -3px 0px 0px rgba(219,219,219,0.7), inset 3px 3px 0px 0px rgba(187,187,187,0.7),  inset  3px -3px 0px 0px rgba(187,187,187,0.7), inset -3px 3px 0px 0px rgba(187,187,187,0.7); }
+ 
+}
+
+@media only screen and (max-width:1023px) 
+{
+
+  .main {  background-size: cover;  }
+  .mainbig { 
+      width: 100%; float: left; margin: 0;  padding:3rem; min-height: 75vh;  @include fSC(); flex-direction: column-reverse; background-position: center top; background-size: 100% 60%;  
+      &.mainbigNoBG {   padding: 3rem; }
+  }
+  
+}
+
+@media only screen and (max-width:767px) 
+{
+  .main { width: 96%; min-height: calc(100vh - 4rem); margin:2rem auto; border-radius: 20px; }
+ 
+}
+
+@media only screen and (max-width:599px) 
+{
+     .mainbig { 
+          padding: 3rem 1rem;  
+          &.mainbigNoBG {  padding:3rem 1rem; }
+     }
+}
+
+@media only screen and (max-width:479px) 
+{
+  .main {  min-height: calc(100vh - 2rem); margin:1rem auto; border-radius: 15px; }
+ 
+}
+
+ 
