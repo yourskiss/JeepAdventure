@@ -15,7 +15,7 @@
 
 .home-header { 
     width: 100%;  float:left; text-align: center;
-    img { width: 100%; max-width:1400px; float:none; margin: 0 auto; border: 0; margin-left: 1rem; }
+    img { width: 100%; max-width:1380px; float:none; margin: 0 auto; border: 0; margin-left: 1rem; }
     .home-header-web { display: inline-block; }
     .home-header-ipad { display: none; }
     .home-header-mob { display: none; }
@@ -114,7 +114,7 @@
 {
   .main { margin:1rem auto; background:#18101b url('../images/home-main-bg-ipad-landscape.jpg') no-repeat center center;  background-size:100% 100%;  }
   .home-header { 
-    img { max-width: 120px; }
+    img { max-width: 75%; }
     .home-header-web { display: none; }
     .home-header-ipad { display: inline-block;}
   } 

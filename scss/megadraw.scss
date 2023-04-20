@@ -14,7 +14,7 @@
 
 
  
-.main {  position: relative; width: 92%; max-width: 1800px; min-height: calc(100vh - 8rem);  float:none; margin:4rem auto; padding:0; border-radius: 25px; background: url('../images/mainbg2.jpg') no-repeat center center; background-size: 100% 100%; box-shadow:0px 10px 10px 10px rgba(0,0,0,0.3), inset -3px -3px 0px 0px rgba(192,212,200,0.5), inset 3px 3px 0px 0px rgba(192,212,200,0.5),  inset  3px -3px 0px 0px rgba(136,134,113,0.5), inset -3px 3px 0px 0px rgba(136,134,113,0.5);  @include fCC(); flex-wrap: wrap; }
+.main {  position: relative; width: 92%; max-width: 1800px; min-height: calc(100vh - 8rem);  float:none; margin:4rem auto; padding:0; border-radius: 25px; background: url('../images/mainbg2.jpg') no-repeat; background-position: right bottom; background-size:cover; box-shadow:0px 10px 10px 10px rgba(0,0,0,0.3), inset -3px -3px 0px 0px rgba(192,212,200,0.5), inset 3px 3px 0px 0px rgba(192,212,200,0.5),  inset  3px -3px 0px 0px rgba(136,134,113,0.5), inset -3px 3px 0px 0px rgba(136,134,113,0.5);  @include fCC(); flex-wrap: wrap; }
 
 .mainbig { 
   width: 100%; float: left; margin: 0;  padding:4rem 3rem; min-height: 75vh; @include fBC(); flex-wrap: wrap; background: url('../images/star-bg.png') no-repeat; background-position: right center; background-size: 45% 100% ;  
@@ -42,7 +42,7 @@
 @media only screen and (max-width:1023px) 
 {
 
-  .main {  background-size: cover;  }
+  
   .mainbig { 
       width: 100%; float: left; margin: 0;  padding:3rem; min-height: 75vh;  @include fSC(); flex-direction: column-reverse; background-position: center top; background-size: 100% 60%;  
       &.mainbigNoBG {   padding: 3rem; }
@@ -58,6 +58,7 @@
 
 @media only screen and (max-width:599px) 
 {
+   
      .mainbig { 
           padding: 3rem 1rem;  
           &.mainbigNoBG {  padding:3rem 1rem; }

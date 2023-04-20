@@ -588,7 +588,7 @@ body {
 }
 .home-header img {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1380px;
   float: none;
   margin: 0 auto;
   border: 0;
@@ -743,7 +743,7 @@ body {
     background-size: 100% 100%;
   }
   .home-header img {
-    max-width: 120px;
+    max-width: 75%;
   }
   .home-header .home-header-web {
     display: none;

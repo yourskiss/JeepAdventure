@@ -22,7 +22,7 @@
 
 
  
-.main {  position: relative; width: 92%; max-width: 1800px; min-height: calc(100vh - 8rem);  float:none; margin:4rem auto; padding:0; border-radius: 25px; background: url('../images/mainbg1.jpg') no-repeat center center; background-size: 100% 100%; box-shadow:0px 10px 10px 10px rgba(0,0,0,0.3), inset -3px -3px 0px 0px rgba(192,212,200,0.5), inset 3px 3px 0px 0px rgba(192,212,200,0.5),  inset  3px -3px 0px 0px rgba(136,134,113,0.5), inset -3px 3px 0px 0px rgba(136,134,113,0.5);  @include fCC(); flex-wrap: wrap; }
+.main {  position: relative; width: 92%; max-width: 1800px; min-height: calc(100vh - 8rem);  float:none; margin:4rem auto; padding:0; border-radius: 25px; background-image: url('../images/mainbg1.jpg'); background-repeat: no-repeat; background-position:center center; background-size:cover; box-shadow:0px 10px 10px 10px rgba(0,0,0,0.3), inset -3px -3px 0px 0px rgba(192,212,200,0.5), inset 3px 3px 0px 0px rgba(192,212,200,0.5),  inset  3px -3px 0px 0px rgba(136,134,113,0.5), inset -3px 3px 0px 0px rgba(136,134,113,0.5);  @include fCC(); flex-wrap: wrap; }
 
 
  
