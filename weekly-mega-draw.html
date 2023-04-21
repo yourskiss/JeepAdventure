@@ -124,10 +124,7 @@
                     <aside>
                         <span class="set_button disabled" id="tmrCount">
                             Next spin in 
-                            <b id="tmrDays" style="display: none;">0</b>
-                            <b id="tmrHours" style="display: none;">0</b>
-                            <b id="tmrMinutes">0</b>:
-                            <b id="tmrSeconds">0</b>
+                            <b id="countdown">6:0</b>
                         </span>
                     </aside>
                 </section>
@@ -163,9 +160,9 @@
 <!-- loader === end -->
  
  
-
-
- 
+<input type="hidden" value="1:00" id="timecounter" />
+<input type="hidden" value="0" id="counter" />
+<input type="hidden" value="61" id="secondscount" />
  
 
 <script src="scripts/jquery-min.js"></script>
@@ -173,44 +170,29 @@
 <script src="scripts/common.js"></script>
 
 <script>
-
-/* time counter ===== start */
-function timeCounter()
-{
-    var tmrCount = $('#tmrCount');
-    $.each(tmrCount, function(key, val) 
-    {
-        var getDate = new Date();	//$(this).attr('data-id');
-        getDate.setHours(getDate.getMinutes() + 6);
-        setInterval(() => {
-            var endTime = new Date(getDate);			
-            endTime = (Date.parse(endTime) / 1000);
-            var currentTime = new Date();
-            currentTime = (Date.parse(currentTime) / 1000);
-            var leftTime = endTime - currentTime;
-            var days = Math.floor(leftTime / 86400); 
-            var hours = Math.floor((leftTime - (days * 86400)) / 3600);
-            var minutes = Math.floor((leftTime - (days * 86400) - (hours * 3600 )) / 60);
-            var seconds = Math.floor((leftTime - (days * 86400) - (hours * 3600) - (minutes * 60)));
-            if (hours < "10") { hours = "0" + hours; }
-            if (minutes < "10") { minutes = "0" + minutes; }
-            if (seconds < "10") { seconds = "0" + seconds; }
-            $(val).find('#tmrDays').html(days);
-            if(days>0){ $(val).find('#tmrHours').html(parseInt(hours)+parseInt(parseInt(days)*parseInt(24))); }
-            else{ $(val).find('#tmrHours').html(hours); }
-            $(val).find('#tmrMinutes').html(minutes);
-            $(val).find('#tmrSeconds').html(seconds);	
-        }, 1000); 
-    });
+var checkcount = 0;
+var timer2 = '1:01'; 
+var mt = 61;
+var timeInterval = setInterval(timers, 1000)
+function timers(){
+    var timer = timer2.split(':');
+    var minutes = parseInt(timer[0], 10);
+    var seconds = parseInt(timer[1], 10);
+    --seconds;
+    minutes = (seconds < 0) ? --minutes : minutes;
+    seconds = (seconds < 0) ? 59 : seconds;
+    seconds = (seconds < 10) ? '0' + seconds : seconds;
+     minutes = (minutes < 10) ?  minutes : minutes;
+    $('#countdown').html(minutes + ':' + seconds);
+    if (minutes < 0) clearInterval(timeInterval);
+    if ((seconds <= 0) && (minutes <= 0)) clearInterval(timeInterval);
+    timer2 = minutes + ':' + seconds;
+    mt--; 
+    console.log(timer2, mt);
 }
-timeCounter();
-/* time counter ===== end  */
 
 
-
-
-/* winner slider ===== start  */
-   
+ 
         $('.winnerSlider').slick({
             slidesToShow: 3,
             slidesToScroll: 1,
@@ -250,8 +232,8 @@ timeCounter();
                 }   
              }); 
         });
-          /*
-          .on('afterChange', function() {
+        /*
+        .on('afterChange', function() {
                     var dataindex = $('.slick-current').attr("data-slick-index");
                     var val = $('.slick-current').attr('data-val');
                     var winnertype = $('.slick-current').attr('data-winnertype');
@@ -262,27 +244,134 @@ timeCounter();
                     var bookingid = $('.slick-current').attr('data-bookingid');
                   //  console.log(dataindex, val, winnertype, name, locaition, bookingid)   
                   
-                if(dataindex == 1 && !$('.slick-current').hasClass('nomoreselection') || dataindex == 2 && !$('.slick-current').hasClass('nomoreselection') || dataindex == 3 && !$('.slick-current').hasClass('nomoreselection') || dataindex == 4  && !$('.slick-current').hasClass('nomoreselection') || dataindex == 5 && !$('.slick-current').hasClass('nomoreselection'))
+                if(dataindex == 1 && val == 'True' && !$('.slick-current').hasClass('nomoreselection') && mt <= 61 && mt > 49)
                 {
+                    // debugger; 
                     $('.slick-current').addClass('nomoreselection');
-                    stopWinnerScroll();
                     $('#ltrusername').text(name);
                     $('#ltrbookingid').text(bookingid);
                     $('#ltrprice').text(wt);
-                    setTimeout(startWinnerScroll, 2000);
+                    
+                    if(checkcount == 0)
+                    {
+                        stopWinnerScroll();
+                        clearInterval(timeInterval); 
+                        setTimeout(function(){
+                            startWinnerScroll();
+                            timers();
+                        }, 3000);
+                        checkcount++;
+                    }
+                    
+
+                    
                 }
-                if(dataindex == 0 && !$('.slick-current').hasClass('nomoreselection'))
+                if(dataindex == 2 && val == 'True'  && !$('.slick-current').hasClass('nomoreselection')  && mt <= 49 && mt > 39)
                 {
-                    $('.slick-current').addClass('nomoreselection slk_active');
-                    stopWinnerScroll();
+                     debugger; 
+                    $('.slick-current').addClass('nomoreselection');
                     $('#ltrusername').text(name);
                     $('#ltrbookingid').text(bookingid);
                     $('#ltrprice').text(wt);
+                    
+                    if(checkcount == 1)
+                    {
+                        stopWinnerScroll();
+                        clearInterval(timeInterval); 
+                    
+                        setTimeout(function(){
+                            startWinnerScroll();
+                            timers();
+                        }, 3000);
+                        checkcount++;
+                    }
                 }
+                if(dataindex == 3 && val == 'True' && !$('.slick-current').hasClass('nomoreselection')  && mt <= 39 && mt > 29)
+                {
+                     debugger; 
+                    $('.slick-current').addClass('nomoreselection');
+                    $('#ltrusername').text(name);
+                    $('#ltrbookingid').text(bookingid);
+                    $('#ltrprice').text(wt);
+                    if(checkcount == 2)
+                    {
+                        stopWinnerScroll();
+                        clearInterval(timeInterval); 
+                        setTimeout(function(){
+                            startWinnerScroll();
+                            timers();
+                        }, 3000);
+                        checkcount++;
+                    }
+                    
+                    
+                }
+                if(dataindex == 4 && val == 'True' && !$('.slick-current').hasClass('nomoreselection')  && mt <= 29 && mt > 19)
+                {
+                     debugger; 
+                    $('.slick-current').addClass('nomoreselection');    
+                    $('#ltrusername').text(name);
+                    $('#ltrbookingid').text(bookingid);
+                    $('#ltrprice').text(wt);
+                    if(checkcount == 3)
+                    {
+                        stopWinnerScroll();
+                        clearInterval(timeInterval); 
+                        setTimeout(function(){
+                            startWinnerScroll();
+                            timers();
+                        }, 3000);
+                        checkcount++;
+                    }
+                    
+                }
+                if(dataindex == 5 && val == 'True' && !$('.slick-current').hasClass('nomoreselection')  && mt <= 19 && mt > 9)
+                {
+                    debugger; 
+                    $('.slick-current').addClass('nomoreselection');
+                    $('#ltrusername').text(name);
+                    $('#ltrbookingid').text(bookingid);
+                    $('#ltrprice').text(wt);
+                    if(checkcount == 4)
+                    {
+                        stopWinnerScroll();
+                        clearInterval(timeInterval); 
+                        setTimeout(function(){
+                            startWinnerScroll();
+                            timers();
+                        }, 3000);
+                        checkcount++;
+                    }
+                    
+                }
+                if(dataindex == 0 && val == 'True' && !$('.slick-current').hasClass('nomoreselection')  && mt <= 9 && mt > 0)
+                {
+                    debugger; 
+                    $('.slick-current').addClass('nomoreselection slk_active');
+                    $('#ltrusername').text(name);
+                    $('#ltrbookingid').text(bookingid);
+                    $('#ltrprice').text(wt);
+                    if(checkcount == 5)
+                    {
+                        stopWinnerScroll();
+                        clearInterval(timeInterval); 
+                        checkcount++;
+                        // clearInterval(ScrollInterval); 
+                    }
+                }
+                console.log(dataindex, checkcount);
         });
         */
+        
 
-const myInterval = setInterval(function(){
+
+ 
+ 
+
+
+
+
+const ScrollInterval = setInterval(function(){
     var dataindex = $('.slick-current').attr("data-slick-index");
     var val = $('.slick-current').attr('data-val');
     var winnertype = $('.slick-current').attr('data-winnertype');
@@ -291,30 +380,126 @@ const myInterval = setInterval(function(){
     var name = $('.slick-current').attr('data-name');
     var locaition = $('.slick-current').attr('data-locaition');
     var bookingid = $('.slick-current').attr('data-bookingid');
-    console.log(dataindex, val, winnertype, name, locaition, bookingid);
-
-                if(dataindex == 1 && !$('.slick-current').hasClass('nomoreselection') || dataindex == 2 && !$('.slick-current').hasClass('nomoreselection') || dataindex == 3 && !$('.slick-current').hasClass('nomoreselection') || dataindex == 4  && !$('.slick-current').hasClass('nomoreselection') || dataindex == 5 && !$('.slick-current').hasClass('nomoreselection'))
-                {
-                    $('.slick-current').addClass('nomoreselection');
-                    stopWinnerScroll();
-                    $('#ltrusername').text(name);
-                    $('#ltrbookingid').text(bookingid);
-                    $('#ltrprice').text(wt);
-                    setTimeout(startWinnerScroll, 2000);
-                }
-
-                if(dataindex == 0 && !$('.slick-current').hasClass('nomoreselection'))
-                {
-                    $('.slick-current').addClass('nomoreselection slk_active');
-                    stopWinnerScroll();
-                    $('#ltrusername').text(name);
-                    $('#ltrbookingid').text(bookingid);
-                    $('#ltrprice').text(wt);
-                    clearInterval(myInterval);
-                }
-
-}, 1000);
+    // console.log(dataindex, val, winnertype, name, locaition, bookingid);
  
+                if(dataindex == 1 && val == 'True' && !$('.slick-current').hasClass('nomoreselection')) // && mt <= 61 && mt > 49)
+                {
+                    // debugger; 
+                    $('.slick-current').addClass('nomoreselection');
+                    $('#ltrusername').text(name);
+                    $('#ltrbookingid').text(bookingid);
+                    $('#ltrprice').text(wt);
+                    
+                    if(checkcount == 0)
+                    {
+                        stopWinnerScroll();
+                        clearInterval(timeInterval); 
+                        setTimeout(function(){
+                            startWinnerScroll();
+                            timers();
+                        }, 3000);
+                        checkcount++;
+                    }
+                    
+
+                    
+                }
+                if(dataindex == 2 && val == 'True'  && !$('.slick-current').hasClass('nomoreselection')) //  && mt <= 49 && mt > 39)
+                {
+                    // debugger; 
+                    $('.slick-current').addClass('nomoreselection');
+                    $('#ltrusername').text(name);
+                    $('#ltrbookingid').text(bookingid);
+                    $('#ltrprice').text(wt);
+                    
+                    if(checkcount == 1)
+                    {
+                        stopWinnerScroll();
+                        clearInterval(timeInterval); 
+                    
+                        setTimeout(function(){
+                            startWinnerScroll();
+                            timers();
+                        }, 3000);
+                        checkcount++;
+                    }
+                }
+                if(dataindex == 3 && val == 'True' && !$('.slick-current').hasClass('nomoreselection')) //  && mt <= 39 && mt > 29)
+                {
+                    // debugger; 
+                    $('.slick-current').addClass('nomoreselection');
+                    $('#ltrusername').text(name);
+                    $('#ltrbookingid').text(bookingid);
+                    $('#ltrprice').text(wt);
+                    if(checkcount == 2)
+                    {
+                        stopWinnerScroll();
+                        clearInterval(timeInterval); 
+                        setTimeout(function(){
+                            startWinnerScroll();
+                            timers();
+                        }, 3000);
+                        checkcount++;
+                    }
+                    
+                    
+                }
+                if(dataindex == 4 && val == 'True' && !$('.slick-current').hasClass('nomoreselection')) //  && mt <= 29 && mt > 19)
+                {
+                    // debugger; 
+                    $('.slick-current').addClass('nomoreselection');    
+                    $('#ltrusername').text(name);
+                    $('#ltrbookingid').text(bookingid);
+                    $('#ltrprice').text(wt);
+                    if(checkcount == 3)
+                    {
+                        stopWinnerScroll();
+                        clearInterval(timeInterval); 
+                        setTimeout(function(){
+                            startWinnerScroll();
+                            timers();
+                        }, 3000);
+                        checkcount++;
+                    }
+                    
+                }
+                if(dataindex == 5 && val == 'True' && !$('.slick-current').hasClass('nomoreselection')) //  && mt <= 19 && mt > 9)
+                {
+                    //debugger; 
+                    $('.slick-current').addClass('nomoreselection');
+                    $('#ltrusername').text(name);
+                    $('#ltrbookingid').text(bookingid);
+                    $('#ltrprice').text(wt);
+                    if(checkcount == 4)
+                    {
+                        stopWinnerScroll();
+                        clearInterval(timeInterval); 
+                        setTimeout(function(){
+                            startWinnerScroll();
+                            timers();
+                        }, 3000);
+                        checkcount++;
+                    }
+                    
+                }
+                if(dataindex == 0 && val == 'True' && !$('.slick-current').hasClass('nomoreselection')) //  && mt <= 9 && mt > 0)
+                {
+                   // debugger; 
+                    $('.slick-current').addClass('nomoreselection slk_active');
+                    $('#ltrusername').text(name);
+                    $('#ltrbookingid').text(bookingid);
+                    $('#ltrprice').text(wt);
+                    if(checkcount == 5)
+                    {
+                        stopWinnerScroll();
+                        clearInterval(timeInterval); 
+                        checkcount++;
+                        clearInterval(ScrollInterval); 
+                    }
+                }
+                console.log(dataindex, checkcount);
+}, 1000);
+
 
  
 
