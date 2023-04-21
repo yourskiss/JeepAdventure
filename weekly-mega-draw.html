@@ -59,12 +59,12 @@
                         <h4>Kumar D</h4>
                         <p>Delhi <span>OR-000134733</span></p>
                     </div>
-                    <div class="slick-slide winnerItem" data-val="True" data-winnertype="1 Lakh Price Winner" data-name="ASHISH SHARMA" data-locaition="uk" data-bookingid="OR-000132621">
-                        <h4>ASHISH SHARMA</h4>
+                    <div class="slick-slide winnerItem" data-val="True" data-winnertype="1 Lakh Price Winner" data-name="Ram SHARMA" data-locaition="uk" data-bookingid="OR-000132621">
+                        <h4>Ram SHARMA</h4>
                         <p>Delhi <span>OR-000132621</span></p>
                     </div>
-                    <div class="slick-slide winnerItem" data-val="True" data-winnertype="1 Lakh Price Winner" data-name="Minal" data-locaition="uk" data-bookingid="OR-000135475">
-                        <h4>Minal</h4>
+                    <div class="slick-slide winnerItem" data-val="True" data-winnertype="1 Lakh Price Winner" data-name="Syam Kumar" data-locaition="uk" data-bookingid="OR-000135475">
+                        <h4>Syam Kumar</h4>
                         <p>Delhi <span>OR-000135475</span></p>
                     </div>
 
@@ -113,7 +113,7 @@
             <div class="maincontainer">
                 <section class="screen6">
                     <h4>
-                        Congratulations to <span id="ltrusername">Nishant</span> <br> (Booking ID <span id="ltrbookingid">OR-3232323</span>)<br> you’ve won ₹ <span id="ltrprice">1 Lakh</span> cashback!
+                        Congratulations to <span id="ltrusername"></span> <br> (Booking ID <span id="ltrbookingid"></span>)<br> you’ve won ₹ <span id="ltrprice"></span>  Lakh cashback!
                     </h4>
                     <h6>
                         <img src="images/star2.png" alt="jeep" />
@@ -123,7 +123,11 @@
                     </h5>
                     <aside>
                         <span class="set_button disabled" id="tmrCount">
-                            Next spin in <b id="tmrDays" style="display: none;">0</b><b id="tmrHours">0</b>:<b id="tmrMinutes">0</b>:<b id="tmrSeconds">0</b>
+                            Next spin in 
+                            <b id="tmrDays" style="display: none;">0</b>
+                            <b id="tmrHours" style="display: none;">0</b>
+                            <b id="tmrMinutes">0</b>:
+                            <b id="tmrSeconds">0</b>
                         </span>
                     </aside>
                 </section>
@@ -177,7 +181,7 @@ function timeCounter()
     $.each(tmrCount, function(key, val) 
     {
         var getDate = new Date();	//$(this).attr('data-id');
-        getDate.setHours(getDate.getHours() + 6);
+        getDate.setHours(getDate.getMinutes() + 6);
         setInterval(() => {
             var endTime = new Date(getDate);			
             endTime = (Date.parse(endTime) / 1000);
@@ -201,6 +205,134 @@ function timeCounter()
 }
 timeCounter();
 /* time counter ===== end  */
+
+
+
+
+/* winner slider ===== start  */
+   
+        $('.winnerSlider').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            speed: 1000,
+            autoplay: true,
+            autoplaySpeed: 0,
+            cssEase: 'linear',
+            dots: false,
+            arrows: false,
+            vertical: true,
+            infinite: true,
+            useTransform: true,
+            adaptiveHeight: false,
+            variableWidth: false,
+            centerMode: true,
+            centerPadding: '0',
+            focusOnSelect: true,
+            initialSlide:0,
+            buttons: false,
+            pauseOnHover: false,
+            pauseOnFocus: false,
+            accessibility: false,
+            draggable: false,
+            swipe: false,
+            touchMove: false
+        }).on('beforeChange', function(event, slick, currentSlide, nextSlide){ 
+            $(".slick-slide").each(function()
+            {
+                var mio_attr = $(this).attr('data-slick-index');
+                if(mio_attr == currentSlide + 1)
+                {
+                  $(this).addClass('slk_active');
+                }
+                else
+                {
+                    $(this).removeClass('slk_active');
+                }   
+             }); 
+        });
+          /*
+          .on('afterChange', function() {
+                    var dataindex = $('.slick-current').attr("data-slick-index");
+                    var val = $('.slick-current').attr('data-val');
+                    var winnertype = $('.slick-current').attr('data-winnertype');
+                    var winnertype2 = winnertype.split(' ');
+                    var wt = winnertype2[0];
+                    var name = $('.slick-current').attr('data-name');
+                    var locaition = $('.slick-current').attr('data-locaition');
+                    var bookingid = $('.slick-current').attr('data-bookingid');
+                  //  console.log(dataindex, val, winnertype, name, locaition, bookingid)   
+                  
+                if(dataindex == 1 && !$('.slick-current').hasClass('nomoreselection') || dataindex == 2 && !$('.slick-current').hasClass('nomoreselection') || dataindex == 3 && !$('.slick-current').hasClass('nomoreselection') || dataindex == 4  && !$('.slick-current').hasClass('nomoreselection') || dataindex == 5 && !$('.slick-current').hasClass('nomoreselection'))
+                {
+                    $('.slick-current').addClass('nomoreselection');
+                    stopWinnerScroll();
+                    $('#ltrusername').text(name);
+                    $('#ltrbookingid').text(bookingid);
+                    $('#ltrprice').text(wt);
+                    setTimeout(startWinnerScroll, 2000);
+                }
+                if(dataindex == 0 && !$('.slick-current').hasClass('nomoreselection'))
+                {
+                    $('.slick-current').addClass('nomoreselection slk_active');
+                    stopWinnerScroll();
+                    $('#ltrusername').text(name);
+                    $('#ltrbookingid').text(bookingid);
+                    $('#ltrprice').text(wt);
+                }
+        });
+        */
+
+const myInterval = setInterval(function(){
+    var dataindex = $('.slick-current').attr("data-slick-index");
+    var val = $('.slick-current').attr('data-val');
+    var winnertype = $('.slick-current').attr('data-winnertype');
+    var winnertype2 = winnertype.split(' ');
+    var wt = winnertype2[0];
+    var name = $('.slick-current').attr('data-name');
+    var locaition = $('.slick-current').attr('data-locaition');
+    var bookingid = $('.slick-current').attr('data-bookingid');
+    console.log(dataindex, val, winnertype, name, locaition, bookingid);
+
+                if(dataindex == 1 && !$('.slick-current').hasClass('nomoreselection') || dataindex == 2 && !$('.slick-current').hasClass('nomoreselection') || dataindex == 3 && !$('.slick-current').hasClass('nomoreselection') || dataindex == 4  && !$('.slick-current').hasClass('nomoreselection') || dataindex == 5 && !$('.slick-current').hasClass('nomoreselection'))
+                {
+                    $('.slick-current').addClass('nomoreselection');
+                    stopWinnerScroll();
+                    $('#ltrusername').text(name);
+                    $('#ltrbookingid').text(bookingid);
+                    $('#ltrprice').text(wt);
+                    setTimeout(startWinnerScroll, 2000);
+                }
+
+                if(dataindex == 0 && !$('.slick-current').hasClass('nomoreselection'))
+                {
+                    $('.slick-current').addClass('nomoreselection slk_active');
+                    stopWinnerScroll();
+                    $('#ltrusername').text(name);
+                    $('#ltrbookingid').text(bookingid);
+                    $('#ltrprice').text(wt);
+                    clearInterval(myInterval);
+                }
+
+}, 1000);
+ 
+
+ 
+
+function stopWinnerScroll() // stop sliding
+{
+        $('.winnerSlider').slick('slickSetOption', {
+            'autoplay': false
+        }, false);  
+}
+function startWinnerScroll()  // start sliding
+{
+        $('.winnerSlider').slick('slickSetOption', {
+            'autoplay': true
+        }, true);
+}
+
+ 
+
 </script>
 </body>
 </html>
