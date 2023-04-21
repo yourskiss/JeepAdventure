@@ -41,30 +41,31 @@
 
         <div class="spincontainer">
             <div class="megadreabg">
-                <ul class="weeklycontestwinners">
-                    <li class="active">
-                        <b>1 Rajat Kumar</b>
-                        <span>(Booking ID 520000)</span>
+                <ul class="weeklycontestwinners" id="weeklycontestwinners">
+                    <li data-val="True" data-winnertype="5 Lakhs Price Winner" data-name="Nishant Pandey" data-bookingid="OR-000135309">
+                        <b>Nishant Pandey</b>
+                        <span>OR-000135309</span>
                     </li>
-                    <li>
-                        <b>2 Sujit Singh</b>
-                        <span>(Booking ID 5242632)</span>
+                    <li data-val="True" data-winnertype="1 Lakh Price Winner" data-name="ASHISH SHARMA" data-bookingid="OR-000132621">
+                        <b>ASHISH SHARMA</b>
+                        <span>OR-000132621</span>
                     </li>
-                    <li>
-                        <b>3 Sujit Singh</b>
-                        <span>(Booking ID 5242632)</span>
+                    <li data-val="True" data-winnertype="1 Lakh Price Winner" data-name="Minal" data-bookingid="OR-000135475">
+                        <b>Minal</b>
+                        <span>OR-000135475</span>
                     </li>
-                    <li>
-                        <b>4 Sujit Singh</b>
-                        <span>(Booking ID 5242632)</span>
+                    
+                    <li data-val="True" data-winnertype="1 Lakh Price Winner" data-name="Kumar D" data-bookingid="OR-000134733">
+                        <b>Kumar D</b>
+                        <span>OR-000134733</span>
                     </li>
-                    <li>
-                        <b>5 Sujit Singh</b>
-                        <span>(Booking ID 5242632)</span>
+                    <li data-val="True" data-winnertype="1 Lakh Price Winner" data-name="ASHISH SHARMA" data-bookingid="OR-000132621">
+                        <b>ASHISH SHARMA</b>
+                        <span>OR-000132621</span>
                     </li>
-                    <li>
-                        <b>6 Sujit Singh</b>
-                        <span>(Booking ID 5242632)</span>
+                    <li data-val="True" data-winnertype="1 Lakh Price Winner" data-name="Minal" data-bookingid="OR-000135475">
+                        <b>Minal</b>
+                        <span>OR-000135475</span>
                     </li>
                 </ul>
             </div>
@@ -133,6 +134,17 @@
 <script src="scripts/slick.min.js"></script>
 <script src="scripts/common.js"></script>
 
+<script>
+    $('#weeklycontestwinners li').each(function()
+    {
+       var fivelakhwinner = $(this).attr('data-winnertype');
+       if(fivelakhwinner == '5 Lakhs Price Winner' || fivelakhwinner == '5 lakhs price winner')
+       {
+            $(this).addClass('active');
+       }
+    });
+
+</script>
  
 </body>
 </html>
