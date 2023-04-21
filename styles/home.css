@@ -325,7 +325,8 @@ template {
   height: 100%;
   width: 100%;
   background-color: #000000;
-  background: rgba(0, 0, 0, 0.8784313725);
+  background: url("../images/popup-bg.jpg") no-repeat center center;
+  background-size: cover;
 }
 .msgcontainer section {
   display: block;
@@ -338,21 +339,27 @@ template {
   max-width: 480px;
   height: auto;
   max-height: 90%;
-  background: #ffffff;
+  background: transparent;
+  border: 0;
   border-radius: 0;
   margin: 0 auto;
-  padding: 3rem;
+  padding: 0;
 }
 .msgcontainer section h2 {
+  border: solid 4px #ffffff;
+  border-radius: 20px;
+  margin: 0 auto;
+  padding: 3rem;
   width: 100%;
   float: left;
   text-align: center;
-  color: #000000;
+  color: #ffffff;
   line-height: 1.4;
   font-size: 36px;
   font-family: "DinNextLtProHeavy", Arial, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
+  box-shadow: inset 8px 8px 10px 0 rgba(0, 0, 0, 0.6), inset -8px -8px 10px 0 rgba(0, 0, 0, 0.6), -3px -3px 5px 0px rgba(0, 0, 0, 0.4), 3px 3px 5px 0px rgba(0, 0, 0, 0.4), 3px -3px 5px 0px rgba(0, 0, 0, 0.4), -3px 3px 5px 0px rgba(0, 0, 0, 0.4);
 }
 .msgcontainer section aside {
   width: 100%;
@@ -372,7 +379,7 @@ template {
   font-family: "DinNextLtProHeavy", Arial, sans-serif;
   font-weight: 700;
   font-size: 24px;
-  color: #1a223c;
+  color: #644b37;
   border: none;
   box-shadow: 0px 5px 3px 3px rgba(0, 0, 0, 0.3);
   transition: all 0.5s ease-out;
@@ -412,6 +419,7 @@ template {
   top: 1.5rem;
   max-width: 112px;
   border: 0;
+  cursor: pointer;
 }
 
 .maintnc, .hometnc {
@@ -621,16 +629,16 @@ body {
   box-shadow: 0px 10px 10px 10px rgba(0, 0, 0, 0.3);
   transition: all 0.5s ease-out;
   border-radius: 10px;
-  padding: 1rem 2rem;
+  padding: 1rem;
   margin: 0 0.4rem;
   text-transform: uppercase;
   font-family: "DinNextLtProBold", Arial, sans-serif;
   font-weight: 600;
   font-weight: 500;
   color: #ffffff;
-  font-size: 19px;
+  font-size: 18px;
   line-height: 1;
-  letter-spacing: 1px;
+  letter-spacing: normal;
   transition: all 0.5s ease-out;
   text-decoration: none;
 }
@@ -645,22 +653,24 @@ body {
 }
 @media only screen and (max-width: 1565px) {
   .mainwrapper {
-    padding: 3rem;
+    padding: 3rem 3rem 4rem 3rem;
   }
   .home-header img {
     max-width: 970px;
   }
 }
 @media only screen and (max-width: 1300px) {
+  .mainwrapper {
+    padding: 3rem;
+  }
   .home-header img {
     max-width: 880px;
   }
   .home-footer a {
     border-radius: 5px;
-    padding: 0.8rem 1rem;
-    margin: 0 0.3rem;
-    font-size: 16px;
-    letter-spacing: normal;
+    padding: 0.8rem;
+    margin: 0 0.4rem;
+    font-size: 14px;
   }
 }
 @media only screen and (max-width: 1255px) {
@@ -731,9 +741,9 @@ body {
   }
   .home-footer a {
     min-width: 280px;
-    font-size: 12px;
-    margin: 0.3rem 0;
-    padding: 0.6rem;
+    font-size: 11px;
+    margin: 0.2rem 0;
+    padding: 0.5rem;
   }
 }
 @media only screen and (min-width: 500px) and (max-width: 1000px) and (orientation: landscape) {
@@ -753,16 +763,17 @@ body {
   }
   .home-footer {
     flex-direction: row;
+    align-items: stretch;
   }
   .home-footer a {
-    min-width: 48%;
-    width: 48%;
-    font-size: 14px;
-    margin: 0 0.3rem;
+    min-width: 33%;
+    width: 33%;
+    font-size: 11px;
+    margin: 0 0.2rem;
     padding: 0.5rem;
   }
   .mainwrapper {
     min-height: calc(100vh - 2rem);
-    padding: 1rem 1rem 3rem 1rem;
+    padding: 1rem 1rem 2.5rem 1rem;
   }
 }

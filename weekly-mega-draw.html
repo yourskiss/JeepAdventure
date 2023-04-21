@@ -42,28 +42,54 @@
         <div class="spincontainer">
             <div class="megadreabg">
                 <div class="winnerSlider ws2">
-                    <div class="winnerItem">
-                        <b>1 Sujit Singh</b>
-                        <span>(Booking ID 5242632)</span>
+                    <div class="slick-slide winnerItem" data-val="True" data-winnertype="5 Lakhs Price Winner" data-name="Nishant Pandey" data-locaition="uk" data-bookingid="OR-000135309">
+                        <h4>Nishant Pandey</h4>
+                        <p>Delhi <span>OR-000135309</span></p>
                     </div>
-                    <div class="winnerItem">
-                        <b>2 Sujit Singh</b>
-                        <span>(Booking ID 5242632)</span>
+                    <div class="slick-slide winnerItem" data-val="True" data-winnertype="1 Lakh Price Winner" data-name="ASHISH SHARMA" data-locaition="uk" data-bookingid="OR-000132621">
+                        <h4>ASHISH SHARMA</h4>
+                        <p>Delhi <span>OR-000132621</span></p>
                     </div>
-                    <div class="winnerItem">
-                        <b>3 Sujit Singh</b>
-                        <span>(Booking ID 5242632)</span>
+                    <div class="slick-slide winnerItem" data-val="True" data-winnertype="1 Lakh Price Winner" data-name="Minal" data-locaition="uk" data-bookingid="OR-000135475">
+                        <h4>Minal</h4>
+                        <p>Delhi <span>OR-000135475</span></p>
                     </div>
-                    <div class="winnerItem">
-                        <b>4 Sujit Singh</b>
-                        <span>(Booking ID 5242632)</span>
+                    
+                    <div class="slick-slide winnerItem" data-val="True" data-winnertype="1 Lakh Price Winner" data-name="Kumar D" data-locaition="uk" data-bookingid="OR-000134733">
+                        <h4>Kumar D</h4>
+                        <p>Delhi <span>OR-000134733</span></p>
                     </div>
-                    <div class="winnerItem">
-                        <b>5 Sujit Singh</b>
-                        <span>(Booking ID 5242632)</span>
+                    <div class="slick-slide winnerItem" data-val="True" data-winnertype="1 Lakh Price Winner" data-name="ASHISH SHARMA" data-locaition="uk" data-bookingid="OR-000132621">
+                        <h4>ASHISH SHARMA</h4>
+                        <p>Delhi <span>OR-000132621</span></p>
                     </div>
+                    <div class="slick-slide winnerItem" data-val="True" data-winnertype="1 Lakh Price Winner" data-name="Minal" data-locaition="uk" data-bookingid="OR-000135475">
+                        <h4>Minal</h4>
+                        <p>Delhi <span>OR-000135475</span></p>
+                    </div>
+
+                    <div class="slick-slide winnerItem" data-val="false" data-winnertype="" data-name="Test test" data-locaition="uk" data-bookingid="OR-000001">
+                        <h4>Test Test 4</h4>
+                        <p>Delhi <span>OR-000001</span></p>
+                    </div>
+                    <div class="slick-slide winnerItem" data-val="false" data-winnertype="" data-name="Test test" data-locaition="uk" data-bookingid="OR-000001">
+                        <h4>Test Test 3</h4>
+                        <p>Delhi <span>OR-000001</span></p>
+                    </div>
+                    <div class="slick-slide winnerItem" data-val="false" data-winnertype="" data-name="Test test" data-locaition="uk" data-bookingid="OR-000001">
+                        <h4>Test Test 2</h4>
+                        <p>Delhi <span>OR-000001</span></p>
+                    </div>
+                    <div class="slick-slide winnerItem" data-val="false" data-winnertype="" data-name="Test test" data-locaition="uk" data-bookingid="OR-000001">
+                        <h4>Test Test 1</h4>
+                        <p>Delhi <span>OR-000001</span></p>
+                    </div>
+
+
+ 
                 </div>
             </div>
+            <!-- 
             <div class="megadrawcontainer">
                     <h5>THIS WEEK’S MEGA DRAW WINNERS </h5>
                     <section>
@@ -73,7 +99,8 @@
                             <div class="weklyitem">POONAM RAJPUT (BOOKING ID 48321323)</div>
                         </div>
                     </section>
-            </div>
+            </div> 
+            -->
         </div>
 
 
@@ -86,7 +113,7 @@
             <div class="maincontainer">
                 <section class="screen6">
                     <h4>
-                        Congratulations to Mr. Rajat Kumar <br> (Booking ID 5242632)<br> you’ve won ₹ 1 Lakh cashback!
+                        Congratulations to <span id="ltrusername">Nishant</span> <br> (Booking ID <span id="ltrbookingid">OR-3232323</span>)<br> you’ve won ₹ <span id="ltrprice">1 Lakh</span> cashback!
                     </h4>
                     <h6>
                         <img src="images/star2.png" alt="jeep" />
@@ -141,7 +168,40 @@
 <script src="scripts/slick.min.js"></script>
 <script src="scripts/common.js"></script>
 
- 
+<script>
+
+/* time counter ===== start */
+function timeCounter()
+{
+    var tmrCount = $('#tmrCount');
+    $.each(tmrCount, function(key, val) 
+    {
+        var getDate = new Date();	//$(this).attr('data-id');
+        getDate.setHours(getDate.getHours() + 6);
+        setInterval(() => {
+            var endTime = new Date(getDate);			
+            endTime = (Date.parse(endTime) / 1000);
+            var currentTime = new Date();
+            currentTime = (Date.parse(currentTime) / 1000);
+            var leftTime = endTime - currentTime;
+            var days = Math.floor(leftTime / 86400); 
+            var hours = Math.floor((leftTime - (days * 86400)) / 3600);
+            var minutes = Math.floor((leftTime - (days * 86400) - (hours * 3600 )) / 60);
+            var seconds = Math.floor((leftTime - (days * 86400) - (hours * 3600) - (minutes * 60)));
+            if (hours < "10") { hours = "0" + hours; }
+            if (minutes < "10") { minutes = "0" + minutes; }
+            if (seconds < "10") { seconds = "0" + seconds; }
+            $(val).find('#tmrDays').html(days);
+            if(days>0){ $(val).find('#tmrHours').html(parseInt(hours)+parseInt(parseInt(days)*parseInt(24))); }
+            else{ $(val).find('#tmrHours').html(hours); }
+            $(val).find('#tmrMinutes').html(minutes);
+            $(val).find('#tmrSeconds').html(seconds);	
+        }, 1000); 
+    });
+}
+timeCounter();
+/* time counter ===== end  */
+</script>
 </body>
 </html>
  

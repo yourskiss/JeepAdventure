@@ -326,7 +326,8 @@ template {
   height: 100%;
   width: 100%;
   background-color: #000000;
-  background: rgba(0, 0, 0, 0.8784313725);
+  background: url("../images/popup-bg.jpg") no-repeat center center;
+  background-size: cover;
 }
 .msgcontainer section {
   display: block;
@@ -339,21 +340,27 @@ template {
   max-width: 480px;
   height: auto;
   max-height: 90%;
-  background: #ffffff;
+  background: transparent;
+  border: 0;
   border-radius: 0;
   margin: 0 auto;
-  padding: 3rem;
+  padding: 0;
 }
 .msgcontainer section h2 {
+  border: solid 4px #ffffff;
+  border-radius: 20px;
+  margin: 0 auto;
+  padding: 3rem;
   width: 100%;
   float: left;
   text-align: center;
-  color: #000000;
+  color: #ffffff;
   line-height: 1.4;
   font-size: 36px;
   font-family: "DinNextLtProHeavy", Arial, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
+  box-shadow: inset 8px 8px 10px 0 rgba(0, 0, 0, 0.6), inset -8px -8px 10px 0 rgba(0, 0, 0, 0.6), -3px -3px 5px 0px rgba(0, 0, 0, 0.4), 3px 3px 5px 0px rgba(0, 0, 0, 0.4), 3px -3px 5px 0px rgba(0, 0, 0, 0.4), -3px 3px 5px 0px rgba(0, 0, 0, 0.4);
 }
 .msgcontainer section aside {
   width: 100%;
@@ -373,7 +380,7 @@ template {
   font-family: "DinNextLtProHeavy", Arial, sans-serif;
   font-weight: 700;
   font-size: 24px;
-  color: #1a223c;
+  color: #644b37;
   border: none;
   box-shadow: 0px 5px 3px 3px rgba(0, 0, 0, 0.3);
   transition: all 0.5s ease-out;
@@ -413,6 +420,7 @@ template {
   top: 1.5rem;
   max-width: 112px;
   border: 0;
+  cursor: pointer;
 }
 
 .maintnc, .hometnc {
@@ -865,60 +873,119 @@ body {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-.spincontainer .megadreabg .winnerSlider .slick-slide {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  transition: all 0.5s ease-out;
-}
-.spincontainer .megadreabg .winnerSlider .slick-slide div {
-  float: left;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-.spincontainer .megadreabg .winnerSlider .slick-slide .winnerItem {
+.spincontainer .megadreabg .winnerSlider .winnerItem {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   list-style: none;
   width: 100%;
-  height: 100%;
   padding: 5% 10%;
   margin: 0;
   border: 0;
   float: left;
   text-align: left;
-  color: #644b37;
-  font-size: 42px;
-  font-family: "DinNextLtProMedium", Arial, sans-serif;
-  font-weight: 500;
-  text-transform: uppercase;
   background-color: transparent;
   transition: all 0.5s ease-out;
 }
-.spincontainer .megadreabg .winnerSlider .slick-slide .winnerItem b {
-  font-weight: normal;
+.spincontainer .megadreabg .winnerSlider .winnerItem h4 {
+  width: auto;
+  float: left;
+  text-align: left;
+  color: #644b37;
+  font-size: 42px;
+  line-height: 1;
+  font-family: "DinNextLtProMedium", Arial, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 0.5s ease-out;
 }
-.spincontainer .megadreabg .winnerSlider .slick-slide .winnerItem span {
-  margin-left: 0.5rem;
-  font-size: 20px;
+.spincontainer .megadreabg .winnerSlider .winnerItem p {
+  padding: 0.3rem 0 0 0.5rem;
+  width: auto;
+  float: left;
+  text-align: left;
+  color: #644b37;
+  font-size: 16px;
+  line-height: 1;
+  font-family: "DinNextLtProMedium", Arial, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 0.5s ease-out;
 }
-.spincontainer .megadreabg .winnerSlider .slick-slide .winnerItem span b {
-  font-weight: normal;
+.spincontainer .megadreabg .winnerSlider .winnerItem p span {
+  display: block;
 }
-.spincontainer .megadreabg .winnerSlider.ws1 .slick-slide.slk_active .winnerItem {
+.spincontainer .megadreabg .winnerSlider .winnerItem.slk_active {
   background-color: #644b37;
-  color: #ffffff;
   transition: all 0.5s ease-in;
 }
-.spincontainer .megadreabg .winnerSlider.ws2 .slick-slide.slk_active .winnerItem {
+.spincontainer .megadreabg .winnerSlider .winnerItem.slk_active h4 {
+  color: #59e642;
+  transition: all 0.5s ease-in;
+}
+.spincontainer .megadreabg .winnerSlider .winnerItem.slk_active p {
+  color: #59e642;
+  transition: all 0.5s ease-in;
+}
+.spincontainer .megadreabg .weeklycontestwinners {
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  float: left;
+  height: 480px;
+  padding: 6% 9% 4% 9%;
+}
+.spincontainer .megadreabg .weeklycontestwinners li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+  width: 100%;
+  padding: 1rem 10%;
+  margin: 0;
+  border: 0;
+  float: left;
+  text-align: left;
+  background-color: transparent;
+  transition: all 0.5s ease-out;
+}
+.spincontainer .megadreabg .weeklycontestwinners li h4 {
+  width: auto;
+  float: left;
+  text-align: left;
+  color: #644b37;
+  font-size: 30px;
+  line-height: 1;
+  font-family: "DinNextLtProMedium", Arial, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 0.5s ease-out;
+}
+.spincontainer .megadreabg .weeklycontestwinners li p {
+  padding: 0.1rem 0 0 0.5rem;
+  width: auto;
+  float: left;
+  text-align: left;
+  color: #644b37;
+  font-size: 14px;
+  line-height: 1;
+  font-family: "DinNextLtProMedium", Arial, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 0.5s ease-out;
+}
+.spincontainer .megadreabg .weeklycontestwinners li p span {
+  display: block;
+}
+.spincontainer .megadreabg .weeklycontestwinners li.active {
   background-color: #644b37;
+  transition: all 0.5s ease-in;
+}
+.spincontainer .megadreabg .weeklycontestwinners li.active h4 {
+  color: #59e642;
+  transition: all 0.5s ease-in;
+}
+.spincontainer .megadreabg .weeklycontestwinners li.active p {
   color: #59e642;
   transition: all 0.5s ease-in;
 }
@@ -1010,12 +1077,28 @@ body {
     height: 350px;
     padding: 6% 9% 6% 9%;
   }
-  .spincontainer .megadreabg .winnerSlider .slick-slide .winnerItem {
+  .spincontainer .megadreabg .winnerSlider .winnerItem {
     padding: 5% 10%;
-    font-size: 30px;
   }
-  .spincontainer .megadreabg .winnerSlider .slick-slide .winnerItem span {
-    font-size: 18px;
+  .spincontainer .megadreabg .winnerSlider .winnerItem h4 {
+    font-size: 32px;
+  }
+  .spincontainer .megadreabg .winnerSlider .winnerItem p {
+    padding: 0rem 0 0 0.5rem;
+    font-size: 14px;
+  }
+  .spincontainer .megadreabg .weeklycontestwinners {
+    height: 430px;
+    padding: 6% 9% 6% 9%;
+  }
+  .spincontainer .megadreabg .weeklycontestwinners li {
+    padding: 1rem 10%;
+  }
+  .spincontainer .megadreabg .weeklycontestwinners li h4 {
+    font-size: 26px;
+  }
+  .spincontainer .megadreabg .weeklycontestwinners li p {
+    font-size: 12px;
   }
   .spincontainer .megadrawcontainer h5 {
     font-size: 14px;
@@ -1029,16 +1112,30 @@ body {
     width: 55%;
   }
   .spincontainer .megadreabg .winnerSlider {
-    height: 320px;
+    height: 400px;
     padding: 7% 9% 7% 9%;
   }
-  .spincontainer .megadreabg .winnerSlider .slick-slide .winnerItem {
+  .spincontainer .megadreabg .winnerSlider .winnerItem {
     padding: 5% 12%;
-    font-size: 22px;
   }
-  .spincontainer .megadreabg .winnerSlider .slick-slide .winnerItem span {
-    margin-left: 0.3rem;
-    font-size: 16px;
+  .spincontainer .megadreabg .weeklycontestwinners {
+    height: 430px;
+    padding: 7% 9% 6% 9%;
+  }
+  .spincontainer .megadreabg .weeklycontestwinners li {
+    padding: 0.75rem 10%;
+    flex-direction: column;
+  }
+  .spincontainer .megadreabg .weeklycontestwinners li h4 {
+    font-size: 18px;
+  }
+  .spincontainer .megadreabg .weeklycontestwinners li p {
+    padding: 0.1rem 0 0 0;
+    font-size: 12px;
+  }
+  .spincontainer .megadreabg .weeklycontestwinners li p span {
+    margin-left: 0.5rem;
+    display: inline-block;
   }
 }
 @media only screen and (max-width: 1255px) {
@@ -1046,13 +1143,27 @@ body {
     height: 300px;
     padding: 7% 9% 8% 9%;
   }
-  .spincontainer .megadreabg .winnerSlider .slick-slide .winnerItem {
-    padding: 6% 12%;
-    font-size: 18px;
+  .spincontainer .megadreabg .winnerSlider .winnerItem {
+    padding: 5% 12%;
+    display: flex !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
   }
-  .spincontainer .megadreabg .winnerSlider .slick-slide .winnerItem span {
-    margin-left: 0.3rem;
+  .spincontainer .megadreabg .winnerSlider .winnerItem h4 {
+    width: 1000%;
+    text-align: center;
+    font-size: 22px;
+  }
+  .spincontainer .megadreabg .winnerSlider .winnerItem p {
+    width: 1000%;
+    text-align: center;
     font-size: 14px;
+  }
+  .spincontainer .megadreabg .winnerSlider .winnerItem p span {
+    margin-left: 0.5rem;
+    display: inline-block;
   }
 }
 @media only screen and (max-width: 1023px) {
@@ -1062,10 +1173,10 @@ body {
     clear: both;
   }
   .spincontainer .megadreabg .winnerSlider {
-    height: 300px;
+    height: 340px;
     padding: 7% 9% 6% 9%;
   }
-  .spincontainer .megadreabg .winnerSlider .slick-slide .winnerItem {
+  .spincontainer .megadreabg .winnerSlider .winnerItem {
     padding: 5% 10%;
   }
   .spincontainer .megadrawcontainer {
@@ -1085,37 +1196,43 @@ body {
 }
 @media only screen and (max-width: 767px) {
   .spincontainer .megadreabg .winnerSlider {
-    height: 280px;
+    height: 300px;
     padding: 7% 9% 6% 9%;
   }
-  .spincontainer .megadreabg .winnerSlider .slick-slide .winnerItem {
+  .spincontainer .megadreabg .winnerSlider .winnerItem {
     padding: 6% 10%;
   }
 }
 @media only screen and (max-width: 599px) {
   .spincontainer .megadreabg .winnerSlider {
-    height: 270px;
+    height: 290px;
     padding: 7% 9% 6% 9%;
   }
-  .spincontainer .megadreabg .winnerSlider .slick-slide .winnerItem {
+  .spincontainer .megadreabg .winnerSlider .winnerItem {
     padding: 6% 12%;
-    display: flex !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .spincontainer .megadreabg .winnerSlider .slick-slide .winnerItem span {
-    display: block;
   }
 }
 @media only screen and (max-width: 479px) {
   .spincontainer .megadreabg .winnerSlider {
-    height: 250px;
+    height: 270px;
     padding: 7% 9% 6% 9%;
   }
-  .spincontainer .megadreabg .winnerSlider .slick-slide .winnerItem {
+  .spincontainer .megadreabg .winnerSlider .winnerItem {
     padding: 6% 12%;
+  }
+  .spincontainer .megadreabg .weeklycontestwinners {
+    height: 410px;
+    padding: 10% 9% 6% 9%;
+  }
+  .spincontainer .megadreabg .weeklycontestwinners li {
+    padding: 0.75rem 10%;
+    flex-direction: column;
+  }
+  .spincontainer .megadreabg .weeklycontestwinners li h4 {
+    font-size: 18px;
+  }
+  .spincontainer .megadreabg .weeklycontestwinners li p {
+    font-size: 12px;
   }
 }
 .mainwrapper {

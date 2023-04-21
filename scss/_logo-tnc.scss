@@ -1,4 +1,4 @@
-.mainlogo { z-index:8; position: absolute; right: 1.5rem; top: 1.5rem; max-width: 112px; border: 0; }
+.mainlogo { z-index:8; position: absolute; right: 1.5rem; top: 1.5rem; max-width: 112px; border: 0; cursor: pointer; }
 .maintnc, .hometnc { 
   z-index:8; position: absolute; right: 1.5rem; bottom: 1.5rem;  text-align: right; text-transform: none;  @include DinNextLtProMedium(); color: $black; font-size: 12px; line-height: 1;  letter-spacing: normal; @include outT(); text-decoration:underline;
   &:hover { color: $white; text-decoration: none; @include inT();  }

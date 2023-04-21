@@ -325,7 +325,8 @@ template {
   height: 100%;
   width: 100%;
   background-color: #000000;
-  background: rgba(0, 0, 0, 0.8784313725);
+  background: url("../images/popup-bg.jpg") no-repeat center center;
+  background-size: cover;
 }
 .msgcontainer section {
   display: block;
@@ -338,21 +339,27 @@ template {
   max-width: 480px;
   height: auto;
   max-height: 90%;
-  background: #ffffff;
+  background: transparent;
+  border: 0;
   border-radius: 0;
   margin: 0 auto;
-  padding: 3rem;
+  padding: 0;
 }
 .msgcontainer section h2 {
+  border: solid 4px #ffffff;
+  border-radius: 20px;
+  margin: 0 auto;
+  padding: 3rem;
   width: 100%;
   float: left;
   text-align: center;
-  color: #000000;
+  color: #ffffff;
   line-height: 1.4;
   font-size: 36px;
   font-family: "DinNextLtProHeavy", Arial, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
+  box-shadow: inset 8px 8px 10px 0 rgba(0, 0, 0, 0.6), inset -8px -8px 10px 0 rgba(0, 0, 0, 0.6), -3px -3px 5px 0px rgba(0, 0, 0, 0.4), 3px 3px 5px 0px rgba(0, 0, 0, 0.4), 3px -3px 5px 0px rgba(0, 0, 0, 0.4), -3px 3px 5px 0px rgba(0, 0, 0, 0.4);
 }
 .msgcontainer section aside {
   width: 100%;
@@ -372,7 +379,7 @@ template {
   font-family: "DinNextLtProHeavy", Arial, sans-serif;
   font-weight: 700;
   font-size: 24px;
-  color: #1a223c;
+  color: #644b37;
   border: none;
   box-shadow: 0px 5px 3px 3px rgba(0, 0, 0, 0.3);
   transition: all 0.5s ease-out;
@@ -412,6 +419,7 @@ template {
   top: 1.5rem;
   max-width: 112px;
   border: 0;
+  cursor: pointer;
 }
 
 .maintnc, .hometnc {
@@ -702,7 +710,7 @@ body {
     border-radius: 15px;
   }
   .mainwrapper .maincontainer section .meridian_button {
-    padding: 0.8rem 1.5rem;
+    padding: 0.8rem 1rem;
     font-size: 16px;
   }
 }
@@ -1067,14 +1075,15 @@ body {
   float: left;
   margin: 2rem 0 3rem 0;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 .screen4 ul li {
   list-style: none;
   float: left;
-  width: 31%;
-  padding: 0;
+  width: 30.3%;
+  margin: 0.5rem 1.5%;
   cursor: pointer;
   border: solid 3px #9fa2ad;
   border-radius: 20px;
@@ -1151,6 +1160,13 @@ body {
   .screen4 ul {
     margin: 1rem 0;
   }
+  .screen4 ul li {
+    width: 46%;
+    margin: 0.5rem 2%;
+    border-radius: 15px;
+    border-width: 2px;
+    box-shadow: 0px 3px 3px 3px rgba(0, 0, 0, 0.3);
+  }
   .screen4 ul li p {
     padding: 0.8rem 1.5rem;
     font-size: 18px;
@@ -1169,20 +1185,6 @@ body {
   .screen4 h2 {
     font-size: 22px;
   }
-  .screen4 ul {
-    margin: 1rem 0 0.5rem 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .screen4 ul li {
-    width: 70%;
-    margin: 0.3rem 0;
-    border-radius: 15px;
-    border-width: 2px;
-    box-shadow: 0px 3px 3px 3px rgba(0, 0, 0, 0.3);
-  }
   .screen4 aside .btnQuiz {
     height: 60px;
     width: 85px;
@@ -1198,6 +1200,10 @@ body {
   }
   .screen4 ul {
     margin: 1rem 0 0.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
   .screen4 ul li {
     width: 80%;
@@ -1441,7 +1447,7 @@ body {
   width: 100%;
   float: left;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
   align-items: stretch;
 }
@@ -1472,6 +1478,12 @@ body {
   float: left;
   width: 2.01%;
   border-bottom: solid 2px #d0d0d0;
+}
+.screen9 dl dt.week_1 {
+  width: 68.01%;
+}
+.screen9 dl dt.week_2 {
+  width: 34.01%;
 }
 .screen9 ul {
   display: none;

@@ -200,6 +200,7 @@ function showHideWrongMsg(val)
     else if(val == 'hide')
     {
         $("#somethingwentwrong").fadeOut(300);
+        $("#quiczAnswerKey li").removeClass('active');
     }
     else 
     {
@@ -232,6 +233,7 @@ $("#quiczAnswerKey li").click(function()
 
 
 /* time counter ===== start */
+/*
 function timeCounter()
 {
     var tmrCount = $('#tmrCount');
@@ -261,6 +263,7 @@ function timeCounter()
     });
 }
 timeCounter();
+*/
 /* time counter ===== end  */
 
 
