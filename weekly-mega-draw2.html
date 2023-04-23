@@ -299,7 +299,7 @@
 
 <script>
 var checkcount = 0;
-var mt = 360;
+var mt = 301;
 var countDownInterval = setInterval(countDownTimer, 1000);
 function countDownTimer(){
     mt--;
@@ -350,12 +350,13 @@ function countDownTimer(){
 var slideInterval = setInterval(slideTimer, 1000);
 function slideTimer()
 {
-                if(mt == 300  && checkcount == 0)
+                if(mt == 300  && checkcount == 0 )
                 {
+                    // debugger;
                     var win1_name = $("#win_1").attr('data-name');
                     var win1_locaition = $("#win_1").attr('data-locaition');
                     var win1_bookingid = $("#win_1").attr('data-bookingid');
-                    var win1_price = $("#win_1").attr('data-winnertype');
+                    var win1_price = 1;
                     var win1_val = "True";
                     $('.slick-current.slick-center').html($("#win_1").html()).addClass('itm').attr('data-name',win1_name).attr('data-locaition', win1_locaition).attr('data-bookingid',win1_bookingid).attr('data-val',win1_val).attr('data-winnertype',win1_price);
 
@@ -376,10 +377,11 @@ function slideTimer()
                 }
                 else if(mt == 240  && checkcount == 1 )
                 {
+                    // debugger;
                     var win2_name = $("#win_2").attr('data-name');
                     var win2_locaition = $("#win_2").attr('data-locaition');
                     var win2_bookingid = $("#win_2").attr('data-bookingid');
-                    var win2_price = $("#win_2").attr('data-winnertype');
+                    var win2_price = 1;
                     var win2_val = "True";
                     $('.slick-current.slick-center').html($("#win_2").html()).addClass('itm').attr('data-name',win2_name).attr('data-locaition', win2_locaition).attr('data-bookingid',win2_bookingid).attr('data-val',win2_val).attr('data-winnertype',win2_price);
 
@@ -399,10 +401,11 @@ function slideTimer()
                 }
                 else if(mt == 180  && checkcount == 2 )
                 {
+                    // debugger;
                     var win3_name = $("#win_3").attr('data-name');
                     var win3_locaition = $("#win_3").attr('data-locaition');
                     var win3_bookingid = $("#win_3").attr('data-bookingid');
-                    var win3_price = $("#win_3").attr('data-winnertype');
+                    var win3_price = 1;
                     var win3_val = "True";
                     $('.slick-current.slick-center').html($("#win_3").html()).addClass('itm').attr('data-name',win3_name).attr('data-locaition', win3_locaition).attr('data-bookingid',win3_bookingid).attr('data-val',win3_val).attr('data-winnertype',win3_price);
 
@@ -422,10 +425,11 @@ function slideTimer()
                 }
                 else if(mt == 120  && checkcount == 3)
                 {
+                    // debugger;
                     var win4_name = $("#win_4").attr('data-name');
                     var win4_locaition = $("#win_4").attr('data-locaition');
                     var win4_bookingid = $("#win_4").attr('data-bookingid');
-                    var win4_price = $("#win_4").attr('data-winnertype');
+                    var win4_price = 1;
                     var win4_val = "True";
                     $('.slick-current.slick-center').html($("#win_4").html()).addClass('itm').attr('data-name',win4_name).attr('data-locaition', win4_locaition).attr('data-bookingid',win4_bookingid).attr('data-val',win4_val).attr('data-winnertype',win4_price);
 
@@ -445,10 +449,11 @@ function slideTimer()
                 }
                 else if(mt == 60  && checkcount == 4 )
                 {
+                    // debugger;
                     var win5_name = $("#win_5").attr('data-name');
                     var win5_locaition = $("#win_5").attr('data-locaition');
                     var win5_bookingid = $("#win_5").attr('data-bookingid');
-                    var win5_price = $("#win_5").attr('data-winnertype');
+                    var win5_price = 1;
                     var win5_val = "True";
                     $('.slick-current.slick-center').html($("#win_5").html()).addClass('itm').attr('data-name',win5_name).attr('data-locaition', win5_locaition).attr('data-bookingid',win5_bookingid).attr('data-val',win5_val).attr('data-winnertype',win5_price);
 
@@ -468,10 +473,11 @@ function slideTimer()
                 }
                 else if(mt == 0 && checkcount == 5)
                 {
+                    // debugger;
                     var win6_name = $("#win_6").attr('data-name');
                     var win6_locaition = $("#win_6").attr('data-locaition');
                     var win6_bookingid = $("#win_6").attr('data-bookingid');
-                    var win6_price = $("#win_6").attr('data-winnertype');
+                    var win6_price = 5;
                     var win6_val = "True";
                     $('.slick-current.slick-center').html($("#win_6").html()).addClass('itm').attr('data-name',win6_name).attr('data-locaition', win6_locaition).attr('data-bookingid',win6_bookingid).attr('data-val',win6_val).attr('data-winnertype',win6_price);
 
