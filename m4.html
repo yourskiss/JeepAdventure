@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     
+    
+	<title>test</title>
+ 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .spincontainer{width:600px;float:left}
+        .spincontainer .megadreabg{position:relative;width:100%;overflow:hidden;float:left;overflow:hidden; background-color:#f30;}
+        .spincontainer .megadreabg .winnerSlider{z-index:2;position:relative;width:100%;float:left;height:600px;padding:1rem; }
+        .spincontainer .megadreabg .winnerSlider .slick-list{height:100% !important;-webkit-transform:translate3d(0, 0, 0);transform:translate3d(0, 0, 0);-webkit-backface-visibility:hidden;backface-visibility:hidden}
+        .spincontainer .megadreabg .winnerSlider .slick-track{height:auto;-webkit-transform:translate3d(0, 0, 0);transform:translate3d(0, 0, 0);-webkit-backface-visibility:hidden;backface-visibility:hidden}
+        .spincontainer .megadreabg .winnerSlider .winnerItem{display:flex;justify-content:flex-start;align-items:center;list-style:none;width:100%;padding:1rem 2rem;margin:0;border:0;float:left;text-align:left;background-color:rgba(0,0,0,0);transition:all .5s ease-out}
+        .spincontainer .megadreabg .winnerSlider .winnerItem h4{width:auto;float:left;text-align:left;color:#644b37;font-size:42px;line-height:1;font-family:"DinNextLtProMedium",Arial,sans-serif;font-weight:500;text-transform:uppercase;transition:all .5s ease-out}
+        .spincontainer .megadreabg .winnerSlider .winnerItem p{padding:.3rem 0 0 .5rem;width:auto;float:left;text-align:left;color:#644b37;font-size:16px;line-height:1;font-family:"DinNextLtProMedium",Arial,sans-serif;font-weight:500;text-transform:uppercase;transition:all .5s ease-out}
+        .spincontainer .megadreabg .winnerSlider .winnerItem p span{display:block}
+        .spincontainer .megadreabg .winnerSlider .winnerItem.slk_active{background-color:#644b37;transition:all .5s ease-in}
+        .spincontainer .megadreabg .winnerSlider .winnerItem.slk_active h4{color:#59e642;transition:all .5s ease-in}
+        .spincontainer .megadreabg .winnerSlider .winnerItem.slk_active p{color:#59e642;transition:all .5s ease-in}
+        
+         
+    </style>
+    
+</head>
+<body>
+ 
+<div style="display: none;">
+
+        <div  id="win_6" class="slide-item" data-val="True" data-winnertype="5 Lakhs Price Winner" data-name="K Singh" data-locaition="Uttarakhand" data-bookingid="OR-000135309">
+            <h4>K Singh</h4>
+            <p>Uttarakhand <span>OR-000135309</span></p>
+        </div>
+
+        <div id="win_1" class="slide-item" data-val="True" data-winnertype="1 Lakh Price Winner" data-name="Rohit Singh" data-locaition="Delhi" data-bookingid="OR-000132621">
+            <h4>Rohit Singh</h4>
+            <p>Delhi <span>OR-000132621</span></p>
+        </div>
+
+        <div  id="win_2" class="slide-item" data-val="True" data-winnertype="1 Lakh Price Winner" data-name="Minal" data-locaition="Delhi" data-bookingid="OR-000135475">
+            <h4>Minal</h4>
+            <p>Delhi <span>OR-000135475</span></p>
+        </div>
+  
+        <div id="win_3" class="slide-item" data-val="True" data-winnertype="1 Lakh Price Winner" data-name="Kumar D" data-locaition="Punjab" data-bookingid="OR-000134733">
+            <h4>Kumar D</h4>
+            <p>Punjab <span>OR-000134733</span></p>
+        </div>
+
+        <div  id="win_4" class="slide-item" data-val="True" data-winnertype="1 Lakh Price Winner" data-name="Ram SHARMA" data-locaition="Mumbai" data-bookingid="OR-000132789">
+            <h4>Ram SHARMA</h4>
+            <p>Mumbai <span>OR-000132789</span></p>
+        </div>
+
+        <div id="win_5" class="slide-item" data-val="True" data-winnertype="1 Lakh Price Winner" data-name="Syam Kumar" data-locaition="Agra" data-bookingid="OR-000135789">
+            <h4>Syam Kumar</h4>
+            <p>Agra <span>OR-000135789</span></p>
+        </div>
+
+</div>
+
+    
+        <div class="spincontainer">
+            <div class="megadreabg">
+                <div class="winnerSlider">
+
+                    <div class="winnerItem" data-val="false" data-winnertype="" data-name="Test test" data-locaition="uk" data-bookingid="OR-000001">
+                        <h4>Test Test 1</h4>
+                        <p>Delhi <span>OR-000001</span></p>
+                    </div>
+                    <div class="winnerItem" data-val="false" data-winnertype="" data-name="Test test" data-locaition="uk" data-bookingid="OR-000001">
+                        <h4>Test Test 2</h4>
+                        <p>Delhi <span>OR-000001</span></p>
+                    </div>
+                    <div class="winnerItem" data-val="false" data-winnertype="" data-name="Test test" data-locaition="uk" data-bookingid="OR-000001">
+                        <h4>Test Test 3</h4>
+                        <p>Delhi <span>OR-000001</span></p>
+                    </div>
+                    <div class="winnerItem" data-val="false" data-winnertype="" data-name="Test test" data-locaition="uk" data-bookingid="OR-000001">
+                        <h4>Test Test 4</h4>
+                        <p>Delhi <span>OR-000001</span></p>
+                    </div>
+                    <div class="winnerItem" data-val="false" data-winnertype="" data-name="Test test" data-locaition="uk" data-bookingid="OR-000001">
+                        <h4>Test Test 5</h4>
+                        <p>Delhi <span>OR-000001</span></p>
+                    </div>
+                    <div class="winnerItem" data-val="false" data-winnertype="" data-name="Test test" data-locaition="uk" data-bookingid="OR-000001">
+                        <h4>Test Test 6</h4>
+                        <p>Delhi <span>OR-000001</span></p>
+                    </div>
+                    <div class="winnerItem" data-val="false" data-winnertype="" data-name="Test test" data-locaition="uk" data-bookingid="OR-000001">
+                        <h4>Test Test 7</h4>
+                        <p>Delhi <span>OR-000001</span></p>
+                    </div>
+                    <div class="winnerItem" data-val="false" data-winnertype="" data-name="Test test" data-locaition="uk" data-bookingid="OR-000001">
+                        <h4>Test Test 8</h4>
+                        <p>Delhi <span>OR-000001</span></p>
+                    </div>
+                    <div class="winnerItem" data-val="false" data-winnertype="" data-name="Test test" data-locaition="uk" data-bookingid="OR-000001">
+                        <h4>Test Test 9</h4>
+                        <p>Delhi <span>OR-000001</span></p>
+                    </div>
+                    <div class="winnerItem" data-val="false" data-winnertype="" data-name="Test test" data-locaition="uk" data-bookingid="OR-000001">
+                        <h4>Test Test 10</h4>
+                        <p>Delhi <span>OR-000001</span></p>
+                    </div>
+                    <div class="winnerItem" data-val="false" data-winnertype="" data-name="Test test" data-locaition="uk" data-bookingid="OR-000001">
+                        <h4>Test Test 11</h4>
+                        <p>Delhi <span>OR-000001</span></p>
+                    </div>
+                    <div class="winnerItem" data-val="false" data-winnertype="" data-name="Test test" data-locaition="uk" data-bookingid="OR-000001">
+                        <h4>Test Test 12</h4>
+                        <p>Delhi <span>OR-000001</span></p>
+                    </div>
+                    <div class="winnerItem" data-val="false" data-winnertype="" data-name="Test test" data-locaition="uk" data-bookingid="OR-000001">
+                        <h4>Test Test 13</h4>
+                        <p>Delhi <span>OR-000001</span></p>
+                    </div>
+                    <div class="winnerItem" data-val="false" data-winnertype="" data-name="Test test" data-locaition="uk" data-bookingid="OR-000001">
+                        <h4>Test Test 14</h4>
+                        <p>Delhi <span>OR-000001</span></p>
+                    </div>
+                    <div class="winnerItem" data-val="false" data-winnertype="" data-name="Test test" data-locaition="uk" data-bookingid="OR-000001">
+                        <h4>Test Test 15</h4>
+                        <p>Delhi <span>OR-000001</span></p>
+                    </div>
+                    <div class="winnerItem" data-val="false" data-winnertype="" data-name="Test test" data-locaition="uk" data-bookingid="OR-000001">
+                        <h4>Test Test 16</h4>
+                        <p>Delhi <span>OR-000001</span></p>
+                    </div>
+                    <div class="winnerItem" data-val="false" data-winnertype="" data-name="Test test" data-locaition="uk" data-bookingid="OR-000001">
+                        <h4>Test Test 17</h4>
+                        <p>Delhi <span>OR-000001</span></p>
+                    </div>
+                    <div class="winnerItem" data-val="false" data-winnertype="" data-name="Test test" data-locaition="uk" data-bookingid="OR-000001">
+                        <h4>Test Test 18</h4>
+                        <p>Delhi <span>OR-000001</span></p>
+                    </div>
+                    <div class="winnerItem" data-val="false" data-winnertype="" data-name="Test test" data-locaition="uk" data-bookingid="OR-000001">
+                        <h4>Test Test 19</h4>
+                        <p>Delhi <span>OR-000001</span></p>
+                    </div>
+                    <div class="winnerItem" data-val="false" data-winnertype="" data-name="Test test" data-locaition="uk" data-bookingid="OR-000001">
+                        <h4>Test Test 20</h4>
+                        <p>Delhi <span>OR-000001</span></p>
+                    </div>
+                    <div class="winnerItem" data-val="false" data-winnertype="" data-name="Test test" data-locaition="uk" data-bookingid="OR-000001">
+                        <h4>Test Test 21</h4>
+                        <p>Delhi <span>OR-000001</span></p>
+                    </div>
+                    <div class="winnerItem" data-val="false" data-winnertype="" data-name="Test test" data-locaition="uk" data-bookingid="OR-000001">
+                        <h4>Test Test 22</h4>
+                        <p>Delhi <span>OR-000001</span></p>
+                    </div>
+                    <div class="winnerItem" data-val="false" data-winnertype="" data-name="Test test" data-locaition="uk" data-bookingid="OR-000001">
+                        <h4>Test Test 23</h4>
+                        <p>Delhi <span>OR-000001</span></p>
+                    </div>                    
+                    <div class="winnerItem" data-val="false" data-winnertype="" data-name="Test test" data-locaition="uk" data-bookingid="OR-000001">
+                        <h4>Test Test 24</h4>
+                        <p>Delhi <span>OR-000001</span></p>
+                    </div>
+                    <div class="winnerItem" data-val="false" data-winnertype="" data-name="Test test" data-locaition="uk" data-bookingid="OR-000001">
+                        <h4>Test Test 25</h4>
+                        <p>Delhi <span>OR-000001</span></p>
+                    </div>
+                    <div class="winnerItem" data-val="false" data-winnertype="" data-name="Test test" data-locaition="uk" data-bookingid="OR-000001">
+                        <h4>Test Test 26</h4>
+                        <p>Delhi <span>OR-000001</span></p>
+                    </div>
+                    <div class="winnerItem" data-val="false" data-winnertype="" data-name="Test test" data-locaition="uk" data-bookingid="OR-000001">
+                        <h4>Test Test 27</h4>
+                        <p>Delhi <span>OR-000001</span></p>
+                    </div>
+                    <div class="winnerItem" data-val="false" data-winnertype="" data-name="Test test" data-locaition="uk" data-bookingid="OR-000001">
+                        <h4>Test Test 28</h4>
+                        <p>Delhi <span>OR-000001</span></p>
+                    </div>
+                    <div class="winnerItem" data-val="false" data-winnertype="" data-name="Test test" data-locaition="uk" data-bookingid="OR-000001">
+                        <h4>Test Test 29</h4>
+                        <p>Delhi <span>OR-000001</span></p>
+                    </div>
+                    <div class="winnerItem" data-val="false" data-winnertype="" data-name="Test test" data-locaition="uk" data-bookingid="OR-000001">
+                        <h4>Test Test 30</h4>
+                        <p>Delhi <span>OR-000001</span></p>
+                    </div>
+                    <div class="winnerItem" data-val="false" data-winnertype="" data-name="Test test" data-locaition="uk" data-bookingid="OR-000001">
+                        <h4>Test Test 31</h4>
+                        <p>Delhi <span>OR-000001</span></p>
+                    </div>
+                    <div class="winnerItem" data-val="false" data-winnertype="" data-name="Test test" data-locaition="uk" data-bookingid="OR-000001">
+                        <h4>Test Test 32</h4>
+                        <p>Delhi <span>OR-000001</span></p>
+                    </div>
+
+
+ 
+                </div>
+
+            </div>
+        </div>
+
+
+
+        
+    <div style="float: right; width:300px; background: #59e642;">
+        <h1><span id="mtcounter"></span> ======== <span id="timer2"></span></h1>
+        <h2 id="ltrusername"></h2>
+        <h2 id="ltrbookingid"></h2>
+        <h2 id="ltrprice"></h2>
+        <h2 id="ltrlocation"></h2>
+    </div>
+
+ 
+ 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+
+
+var checkcount = 0;
+var mt = 301;
+var countDownInterval = setInterval(countDownTimer, 1000);
+function countDownTimer(){
+    mt--;
+}       
+ 
+        $('.winnerSlider').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            speed: 1000,
+            autoplay: true,
+            autoplaySpeed: 0,
+            cssEase: 'linear',
+            dots: false,
+            arrows: false,
+            vertical: true,
+            infinite: true,
+            useTransform: true,
+            adaptiveHeight: false,
+            variableWidth: false,
+            centerMode: true,
+            centerPadding: '0',
+            focusOnSelect: true,
+            initialSlide:0,
+            buttons: false,
+            pauseOnHover: false,
+            pauseOnFocus: false,
+            accessibility: false,
+            draggable: false,
+            swipe: false,
+            touchMove: false
+        }).on('beforeChange', function(event, slick, currentSlide, nextSlide){ 
+            $(".slick-slide").each(function()
+            {
+                var mio_attr = $(this).attr('data-slick-index');
+                if(mio_attr == currentSlide + 1)
+                {
+                  $(this).addClass('slk_active');
+                }
+                else
+                {
+                    $(this).removeClass('slk_active');
+                }   
+             }); 
+             
+        });
+
+
+var slideInterval = setInterval(slideTimer, 1000);
+function slideTimer()
+{
+                if(mt == 300  && checkcount == 0 )
+                {
+                    // debugger;
+                    var win1_name = $("#win_1").attr('data-name');
+                    var win1_locaition = $("#win_1").attr('data-locaition');
+                    var win1_bookingid = $("#win_1").attr('data-bookingid');
+                    var win1_price = 1;
+                    var win1_val = "True";
+                    $('.slick-current.slick-center').html($("#win_1").html()).addClass('itm').attr('data-name',win1_name).attr('data-locaition', win1_locaition).attr('data-bookingid',win1_bookingid).attr('data-val',win1_val).attr('data-winnertype',win1_price);
+
+                        $("#ltrusername").html(win1_name);
+                        $("#ltrbookingid").html(win1_bookingid);
+                        $("#ltrlocation").html(win1_locaition);
+                        $("#ltrprice").html(win1_price);
+
+                        clearInterval(countDownInterval);     
+                        stopWinnerScroll();
+                        checkcount++;
+                        setTimeout(function() 
+                        {
+                            countDownInterval = setInterval(countDownTimer, 1000);
+                            startWinnerScroll();
+                        }, 5000); 
+                        
+                }
+                else if(mt == 240  && checkcount == 1 )
+                {
+                    // debugger;
+                    var win2_name = $("#win_2").attr('data-name');
+                    var win2_locaition = $("#win_2").attr('data-locaition');
+                    var win2_bookingid = $("#win_2").attr('data-bookingid');
+                    var win2_price = 1;
+                    var win2_val = "True";
+                    $('.slick-current.slick-center').html($("#win_2").html()).addClass('itm').attr('data-name',win2_name).attr('data-locaition', win2_locaition).attr('data-bookingid',win2_bookingid).attr('data-val',win2_val).attr('data-winnertype',win2_price);
+
+                        $("#ltrusername").html(win2_name);
+                        $("#ltrbookingid").html(win2_bookingid);
+                        $("#ltrlocation").html(win2_locaition);
+                        $("#ltrprice").html(win2_price);
+                        
+                        clearInterval(countDownInterval);     
+                        stopWinnerScroll();
+                        checkcount++;
+                        setTimeout(function() 
+                        {
+                            countDownInterval = setInterval(countDownTimer, 1000);
+                            startWinnerScroll();
+                        }, 5000); 
+                }
+                else if(mt == 180  && checkcount == 2 )
+                {
+                    // debugger;
+                    var win3_name = $("#win_3").attr('data-name');
+                    var win3_locaition = $("#win_3").attr('data-locaition');
+                    var win3_bookingid = $("#win_3").attr('data-bookingid');
+                    var win3_price = 1;
+                    var win3_val = "True";
+                    $('.slick-current.slick-center').html($("#win_3").html()).addClass('itm').attr('data-name',win3_name).attr('data-locaition', win3_locaition).attr('data-bookingid',win3_bookingid).attr('data-val',win3_val).attr('data-winnertype',win3_price);
+
+                        $("#ltrusername").html(win3_name);
+                        $("#ltrbookingid").html(win3_bookingid);
+                        $("#ltrlocation").html(win3_locaition);
+                        $("#ltrprice").html(win3_price);
+                        
+                        clearInterval(countDownInterval);     
+                        stopWinnerScroll();
+                        checkcount++;
+                        setTimeout(function() 
+                        {
+                            countDownInterval = setInterval(countDownTimer, 1000);
+                            startWinnerScroll();
+                        }, 5000); 
+                }
+                else if(mt == 120  && checkcount == 3)
+                {
+                    // debugger;
+                    var win4_name = $("#win_4").attr('data-name');
+                    var win4_locaition = $("#win_4").attr('data-locaition');
+                    var win4_bookingid = $("#win_4").attr('data-bookingid');
+                    var win4_price = 1;
+                    var win4_val = "True";
+                    $('.slick-current.slick-center').html($("#win_4").html()).addClass('itm').attr('data-name',win4_name).attr('data-locaition', win4_locaition).attr('data-bookingid',win4_bookingid).attr('data-val',win4_val).attr('data-winnertype',win4_price);
+
+                        $("#ltrusername").html(win4_name);
+                        $("#ltrbookingid").html(win4_bookingid);
+                        $("#ltrlocation").html(win4_locaition);
+                        $("#ltrprice").html(win4_price);
+                        
+                        clearInterval(countDownInterval);     
+                        stopWinnerScroll();
+                        checkcount++;
+                        setTimeout(function() 
+                        {
+                            countDownInterval = setInterval(countDownTimer, 1000);
+                            startWinnerScroll();
+                        }, 5000); 
+                }
+                else if(mt == 60  && checkcount == 4 )
+                {
+                    // debugger;
+                    var win5_name = $("#win_5").attr('data-name');
+                    var win5_locaition = $("#win_5").attr('data-locaition');
+                    var win5_bookingid = $("#win_5").attr('data-bookingid');
+                    var win5_price = 1;
+                    var win5_val = "True";
+                    $('.slick-current.slick-center').html($("#win_5").html()).addClass('itm').attr('data-name',win5_name).attr('data-locaition', win5_locaition).attr('data-bookingid',win5_bookingid).attr('data-val',win5_val).attr('data-winnertype',win5_price);
+
+                        $("#ltrusername").html(win5_name);
+                        $("#ltrbookingid").html(win5_bookingid);
+                        $("#ltrlocation").html(win5_locaition);
+                        $("#ltrprice").html(win5_price);
+                        
+                        clearInterval(countDownInterval);     
+                        stopWinnerScroll();
+                        checkcount++;
+                        setTimeout(function() 
+                        {
+                            countDownInterval = setInterval(countDownTimer, 1000);
+                            startWinnerScroll();
+                        }, 5000); 
+                }
+                else if(mt == 0 && checkcount == 5)
+                {
+                    // debugger;
+                    var win6_name = $("#win_6").attr('data-name');
+                    var win6_locaition = $("#win_6").attr('data-locaition');
+                    var win6_bookingid = $("#win_6").attr('data-bookingid');
+                    var win6_price = 5;
+                    var win6_val = "True";
+                    $('.slick-current.slick-center').html($("#win_6").html()).addClass('itm').attr('data-name',win6_name).attr('data-locaition', win6_locaition).attr('data-bookingid',win6_bookingid).attr('data-val',win6_val).attr('data-winnertype',win6_price);
+
+                        $("#ltrusername").html(win6_name);
+                        $("#ltrbookingid").html(win6_bookingid);
+                        $("#ltrlocation").html(win6_locaition);
+                        $("#ltrprice").html(win6_price);
+                        
+                        checkcount++;
+                        stopWinnerScroll();
+                        clearInterval(countDownInterval); 
+                        clearInterval(slideInterval); 
+                }
+                else 
+                {
+                    // nothing
+                }
+                $('#timer2').html(secondsToMinSecPadded(mt));
+                $("#mtcounter").html(mt);
+                
+                console.log(mt, secondsToMinSecPadded(mt), checkcount);
+}
+ 
+const secondsToMinSecPadded = time => 
+{
+  const minutes = `${Math.floor(time / 60)}`;
+  const seconds = `${time - minutes * 60}`.padStart(2, "0");
+  return `${minutes}:${seconds}`;
+};
+
+function stopWinnerScroll() // stop sliding
+{
+        $('.winnerSlider').slick('slickSetOption', {
+            'autoplay': false,
+        }, false);  
+}
+function startWinnerScroll()  // start sliding
+{
+        $('.winnerSlider').slick('slickSetOption', {
+            'autoplay': true,
+        }, true);
+}
+function gotoWinnerScroll(val)  // go to slide
+{
+        $('.winnerSlider').slickGoTo(val);
+}
+
+ 
+
+</script>
+</body>
+</html>
+ 
