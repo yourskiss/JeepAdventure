@@ -215,17 +215,20 @@
             </div>
             <div class="maincontainer">
                 <section class="screen6">
-                    <h4>
-                        Congratulations to <span id="ltrusername"></span> <br> (Booking ID <span id="ltrbookingid"></span>)<br> you’ve won ₹ <span id="ltrprice"></span>  Lakh cashback!
-                        <span id="ltrlocation" style="display: none;"></span>
-                    </h4>
+                    <h4>MERIDIAN WHEEL OF ADVENTURE</h2>
+                    <h3> Congratulations to all the Jeep Adventure Days Contest Winners!</h3>
                     <h6>
                         <img src="images/star2.png" alt="jeep" />
                     </h6>
+                    <ul id="winnerslist">
+                    </ul>
+                    <!-- <h6>
+                        <img src="images/star2.png" alt="jeep" />
+                    </h6> -->
                     <h5>
                         Get in touch with your Jeep <br> DEALERSHIP to claim it.
                     </h5>
-                    <aside>
+                    <aside id="spin_counter_button">
                         <span class="set_button" id="tmrCount">
                             Next spin in 
                             <b id="countdown">6:0</b>
@@ -299,7 +302,7 @@
 
 <script>
 var checkcount = 0;
-var mt = 360;
+var mt = 60;
 var countDownInterval = setInterval(countDownTimer, 1000);
 function countDownTimer(){
     mt--;
@@ -343,27 +346,22 @@ function countDownTimer(){
                     $(this).removeClass('slk_active');
                 }   
              }); 
-             
         });
 
 
 var slideInterval = setInterval(slideTimer, 1000);
 function slideTimer()
 {
-                if(mt == 300  && checkcount == 0)
+                if(mt == 50  && checkcount == 0)
                 {
                     var win1_name = $("#win_1").attr('data-name');
                     var win1_locaition = $("#win_1").attr('data-locaition');
                     var win1_bookingid = $("#win_1").attr('data-bookingid');
                     var win1_price = $("#win_1").attr('data-winnertype');
                     var win1_val = "True";
+                    $("#winnerslist").prepend("<li><span>"+ win1_name +"<small>("+ win1_bookingid +")</small></span><span>"+ win1_price.split(' ')[0] +" Lakh</span></li>");
                     $('.slick-current.slick-center').html($("#win_1").html()).addClass('itm').attr('data-name',win1_name).attr('data-locaition', win1_locaition).attr('data-bookingid',win1_bookingid).attr('data-val',win1_val).attr('data-winnertype',win1_price);
-
-                        $("#ltrusername").html(win1_name);
-                        $("#ltrbookingid").html(win1_bookingid);
-                        $("#ltrlocation").html(win1_locaition);
-                        $("#ltrprice").html(win1_price);
-
+                    
                         clearInterval(countDownInterval);     
                         stopWinnerScroll();
                         checkcount++;
@@ -371,23 +369,18 @@ function slideTimer()
                         {
                             countDownInterval = setInterval(countDownTimer, 1000);
                             startWinnerScroll();
-                        }, 10000); 
-                        
+                        }, 3000); 
                 }
-                else if(mt == 240  && checkcount == 1 )
+                else if(mt == 40  && checkcount == 1 )
                 {
                     var win2_name = $("#win_2").attr('data-name');
                     var win2_locaition = $("#win_2").attr('data-locaition');
                     var win2_bookingid = $("#win_2").attr('data-bookingid');
                     var win2_price = $("#win_2").attr('data-winnertype');
                     var win2_val = "True";
+                    $("#winnerslist").prepend("<li><span>"+ win2_name +"<small>("+ win2_bookingid +")</small></span><span>"+ win2_price.split(' ')[0] +" Lakh</span></li>");
                     $('.slick-current.slick-center').html($("#win_2").html()).addClass('itm').attr('data-name',win2_name).attr('data-locaition', win2_locaition).attr('data-bookingid',win2_bookingid).attr('data-val',win2_val).attr('data-winnertype',win2_price);
 
-                        $("#ltrusername").html(win2_name);
-                        $("#ltrbookingid").html(win2_bookingid);
-                        $("#ltrlocation").html(win2_locaition);
-                        $("#ltrprice").html(win2_price);
-                        
                         clearInterval(countDownInterval);     
                         stopWinnerScroll();
                         checkcount++;
@@ -395,22 +388,18 @@ function slideTimer()
                         {
                             countDownInterval = setInterval(countDownTimer, 1000);
                             startWinnerScroll();
-                        }, 10000); 
+                        }, 3000); 
                 }
-                else if(mt == 180  && checkcount == 2 )
+                else if(mt == 30  && checkcount == 2 )
                 {
                     var win3_name = $("#win_3").attr('data-name');
                     var win3_locaition = $("#win_3").attr('data-locaition');
                     var win3_bookingid = $("#win_3").attr('data-bookingid');
                     var win3_price = $("#win_3").attr('data-winnertype');
                     var win3_val = "True";
+                    $("#winnerslist").prepend("<li><span>"+ win3_name +"<small>("+ win3_bookingid +")</small></span><span>"+ win3_price.split(' ')[0] +" Lakh</span></li>");
                     $('.slick-current.slick-center').html($("#win_3").html()).addClass('itm').attr('data-name',win3_name).attr('data-locaition', win3_locaition).attr('data-bookingid',win3_bookingid).attr('data-val',win3_val).attr('data-winnertype',win3_price);
 
-                        $("#ltrusername").html(win3_name);
-                        $("#ltrbookingid").html(win3_bookingid);
-                        $("#ltrlocation").html(win3_locaition);
-                        $("#ltrprice").html(win3_price);
-                        
                         clearInterval(countDownInterval);     
                         stopWinnerScroll();
                         checkcount++;
@@ -418,22 +407,18 @@ function slideTimer()
                         {
                             countDownInterval = setInterval(countDownTimer, 1000);
                             startWinnerScroll();
-                        }, 10000); 
+                        }, 3000); 
                 }
-                else if(mt == 120  && checkcount == 3)
+                else if(mt == 20  && checkcount == 3)
                 {
                     var win4_name = $("#win_4").attr('data-name');
                     var win4_locaition = $("#win_4").attr('data-locaition');
                     var win4_bookingid = $("#win_4").attr('data-bookingid');
                     var win4_price = $("#win_4").attr('data-winnertype');
                     var win4_val = "True";
+                    $("#winnerslist").prepend("<li><span>"+ win4_name +"<small>("+ win4_bookingid +")</small></span><span>"+ win4_price.split(' ')[0] +" Lakh</span></li>");
                     $('.slick-current.slick-center').html($("#win_4").html()).addClass('itm').attr('data-name',win4_name).attr('data-locaition', win4_locaition).attr('data-bookingid',win4_bookingid).attr('data-val',win4_val).attr('data-winnertype',win4_price);
 
-                        $("#ltrusername").html(win4_name);
-                        $("#ltrbookingid").html(win4_bookingid);
-                        $("#ltrlocation").html(win4_locaition);
-                        $("#ltrprice").html(win4_price);
-                        
                         clearInterval(countDownInterval);     
                         stopWinnerScroll();
                         checkcount++;
@@ -441,22 +426,18 @@ function slideTimer()
                         {
                             countDownInterval = setInterval(countDownTimer, 1000);
                             startWinnerScroll();
-                        }, 10000); 
+                        }, 3000); 
                 }
-                else if(mt == 60  && checkcount == 4 )
+                else if(mt == 10  && checkcount == 4 )
                 {
                     var win5_name = $("#win_5").attr('data-name');
                     var win5_locaition = $("#win_5").attr('data-locaition');
                     var win5_bookingid = $("#win_5").attr('data-bookingid');
                     var win5_price = $("#win_5").attr('data-winnertype');
                     var win5_val = "True";
+                    $("#winnerslist").prepend("<li><span>"+ win5_name +"<small>("+ win5_bookingid +")</small></span><span>"+ win5_price.split(' ')[0] +" Lakh</span></li>");
                     $('.slick-current.slick-center').html($("#win_5").html()).addClass('itm').attr('data-name',win5_name).attr('data-locaition', win5_locaition).attr('data-bookingid',win5_bookingid).attr('data-val',win5_val).attr('data-winnertype',win5_price);
 
-                        $("#ltrusername").html(win5_name);
-                        $("#ltrbookingid").html(win5_bookingid);
-                        $("#ltrlocation").html(win5_locaition);
-                        $("#ltrprice").html(win5_price);
-                        
                         clearInterval(countDownInterval);     
                         stopWinnerScroll();
                         checkcount++;
@@ -464,7 +445,7 @@ function slideTimer()
                         {
                             countDownInterval = setInterval(countDownTimer, 1000);
                             startWinnerScroll();
-                        }, 10000); 
+                        }, 3000); 
                 }
                 else if(mt == 0 && checkcount == 5)
                 {
@@ -473,32 +454,28 @@ function slideTimer()
                     var win6_bookingid = $("#win_6").attr('data-bookingid');
                     var win6_price = $("#win_6").attr('data-winnertype');
                     var win6_val = "True";
+                    $("#winnerslist").prepend("<li><span>"+ win6_name +"<small>("+ win6_bookingid +")</small></span><span>"+ win6_price.split(' ')[0] +" Lakh</span></li>");
                     $('.slick-current.slick-center').html($("#win_6").html()).addClass('itm').attr('data-name',win6_name).attr('data-locaition', win6_locaition).attr('data-bookingid',win6_bookingid).attr('data-val',win6_val).attr('data-winnertype',win6_price);
 
-                        $("#ltrusername").html(win6_name);
-                        $("#ltrbookingid").html(win6_bookingid);
-                        $("#ltrlocation").html(win6_locaition);
-                        $("#ltrprice").html(win6_price);
-                        
                         checkcount++;
                         stopWinnerScroll();
                         clearInterval(countDownInterval); 
                         clearInterval(slideInterval); 
+                        $("#spin_counter_button").hide();
                 }
                 else 
                 {
                     // nothing
                 }
                 $('#countdown').html(secondsToMinSecPadded(mt));
-                
                 console.log(mt, secondsToMinSecPadded(mt), checkcount);
 }
  
 const secondsToMinSecPadded = time => 
 {
-  const minutes = `${Math.floor(time / 60)}`;
-  const seconds = `${time - minutes * 60}`.padStart(2, "0");
-  return `${minutes}:${seconds}`;
+        const minutes = `${Math.floor(time / 60)}`;
+        const seconds = `${time - minutes * 60}`.padStart(2, "0");
+        return `${minutes}:${seconds}`;
 };
 
 function stopWinnerScroll() // stop sliding
@@ -517,7 +494,6 @@ function gotoWinnerScroll(val)  // go to slide
 {
         $('.winnerSliderList').slickGoTo(val);
 }
-
 </script>
 </body>
 </html>

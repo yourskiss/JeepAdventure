@@ -1274,6 +1274,35 @@ body {
   width: 100%;
   float: left;
 }
+.mainwrapper .maincontainer .screen6 ul {
+  width: 100%;
+  float: left;
+  margin: 0 0 1rem 0;
+}
+.mainwrapper .maincontainer .screen6 ul li {
+  list-style: none;
+  float: left;
+  width: 100%;
+  padding: 0 0 0.7rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.mainwrapper .maincontainer .screen6 ul li span {
+  font-family: "DinNextLtProMedium", Arial, sans-serif;
+  font-weight: 500;
+  color: #fff;
+  font-size: 18px;
+  text-align: left;
+}
+.mainwrapper .maincontainer .screen6 ul li span small {
+  margin-left: 0.5rem;
+  font-size: 85%;
+}
+.mainwrapper .maincontainer .screen6 ul li span:last-child {
+  width: 60px;
+  text-align: right;
+}
 .mainwrapper .maincontainer .screen6 h2 {
   width: 100%;
   float: left;
@@ -1408,6 +1437,15 @@ body {
   .mainwrapper .maincontainer .screen6 {
     padding: 3rem 1rem 1.5rem 1rem;
   }
+  .mainwrapper .maincontainer .screen6 ul {
+    margin: 0 0 0.5rem 0;
+  }
+  .mainwrapper .maincontainer .screen6 ul li {
+    padding: 0 0 0.5rem 0;
+  }
+  .mainwrapper .maincontainer .screen6 ul li span {
+    font-size: 16px;
+  }
   .mainwrapper .maincontainer .screen6 h2 {
     font-size: 18px;
     line-height: 1.4;
@@ -1467,6 +1505,12 @@ body {
   }
   .mainwrapper .maincontainer .screen6 {
     padding: 3rem 1rem 1.5rem 1rem;
+  }
+  .mainwrapper .maincontainer .screen6 ul {
+    margin: 0 0 0.4rem 0;
+  }
+  .mainwrapper .maincontainer .screen6 ul li span {
+    font-size: 14px;
   }
   .mainwrapper .maincontainer .screen6 h2 {
     font-size: 16px;
