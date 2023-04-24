@@ -269,7 +269,7 @@ timeCounter();
 
 
 /* winner slider ===== start  */
-/*
+
 $(function($) 
 {
     if($(".weeklywinnerlist").length > 0)
@@ -359,5 +359,5 @@ function startWinnerScroll()  // start sliding
             'autoplay': true
         }, true);
 }
-*/
+
 /* winner slider ===== end  */
