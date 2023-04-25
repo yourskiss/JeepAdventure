@@ -215,16 +215,12 @@
             -->
 
             
-    <div class="">    
-        <div style="opacity: 0;">
-            <audio id="megadrawaudio" controls>
+    <div class="megaAudioSecion">    
+        <audio id="megadrawaudio" controls >
                 <source src="audio/mega-draw.mp3"  type="audio/mp3">
                 Sorry, your broswer doesn't support embedded videos. Here's the
-            </audio>
-        </div>
-        <aside>
-            <span id="audioMuteText" class="audioplay" onclick="muteUnmuteAudio();" style="font-size: 24px; color: #f30;">play</span>
-        </aside>
+        </audio>
+        <span id="audioMuteText" class="audioPlayPause audioplay" onclick="muteUnmuteAudio();"></span>
     </div>
 
         </div>
@@ -343,12 +339,12 @@ function muteUnmuteAudio()
     megadrawaudio.play();
     if($("#audioMuteText").hasClass('audioplay'))
     {
-        $("#audioMuteText").removeClass("audioplay").addClass("audiopause").html('pause');
+        $("#audioMuteText").removeClass("audioplay").addClass("audiopause"); // .html('pause');
         megadrawaudio.play();
     }
     else 
     {
-        $("#audioMuteText").removeClass("audiopause").addClass("audioplay").html('play');
+        $("#audioMuteText").removeClass("audiopause").addClass("audioplay"); // .html('play');
         megadrawaudio.pause(); 
     }
 }

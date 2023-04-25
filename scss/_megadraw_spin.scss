@@ -15,11 +15,11 @@
                               -webkit-backface-visibility: hidden; backface-visibility: hidden; 
                          }
                               .winnerItem {
-                                   @include fSC(); list-style:none; width:100%; padding:5% 10%; margin: 0;  border: 0; float: left; text-align: left;  background-color:transparent; @include outT();
-                                   h4 {  width:auto; float: left; text-align: left; color: $brown; font-size: 42px; line-height: 1; @include DinNextLtProMedium(); text-transform: uppercase; @include outT(); }
+                                   @include fSC(); flex-wrap: wrap; list-style:none; width:100%; padding:4% 10%; margin: 0;  border: 0; float: left; text-align: left;  background-color:transparent; @include outT();
+                                   h4 {  width:100%; float: left; text-align: left; color: $brown; font-size: 30px; line-height: 1; @include DinNextLtProMedium(); text-transform: uppercase; @include outT(); }
                                    p {
-                                        padding:0.3rem 0 0 0.5rem; width:auto; float: left; text-align: left; color: $brown; font-size: 16px;  line-height: 1; @include DinNextLtProMedium(); text-transform: uppercase; @include outT();
-                                        span { display: block;  }
+                                        padding:0; width:100%; float: left; text-align: left; color: $brown; font-size: 16px;  line-height: 1; @include DinNextLtProMedium(); text-transform: uppercase; @include outT();
+                                        span { display: inline-block; margin: 0.5rem;  }
                                    }
                                    &.slk_active {
                                         background-color: $brown;  @include inT();
@@ -66,6 +66,19 @@
                          }
                     }
           }
+          .megaAudioSecion {
+               clear: both; width: 100%; float: left;  padding:2rem 0 0 2.5rem;  text-align: left;
+               audio { display: none; float: left; width: 100%;  }
+               .audioPlayPause { 
+                    float: left; width: auto; display: block; @include outT();  text-align: left; font-size: 36px; cursor: pointer; text-decoration: none;
+                    &.audioplay {
+                         &:after { content: "\f026";  color: $white; font-family:'FontAwesome'; line-height: 1; font-weight: normal;   }
+                     }
+                    &.audiopause { 
+                         &:after { content: "\f027";  color: $black; font-family:'FontAwesome'; line-height: 1; font-weight: normal;  }
+                    }
+               }
+          }
     }
     
 
@@ -93,9 +106,9 @@
                     .winnerSlider, .winnerSliderList { 
                          height: 350px; padding:6% 9% 6% 9%;  
                               .winnerItem {
-                                   padding:5% 10%;
-                                   h4 {  font-size:32px; } 
-                                   p { padding: 0rem 0 0 .5rem; font-size: 14px;  }
+                                   padding:4% 10%;
+                                   h4 {  font-size:26px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } 
+                                   p {  font-size: 14px;  }
                               }
                    }
                    .weeklycontestwinners {
@@ -126,7 +139,7 @@
                     .winnerSlider, .winnerSliderList { 
                          height: 400px; padding:7% 9% 7% 9%;
                               .winnerItem {
-                                   padding:5% 12%;  
+                                   padding:4% 12%;  
                               }
                     }
                     .weeklycontestwinners {
@@ -156,12 +169,9 @@
                     .winnerSlider, .winnerSliderList { 
                          height: 300px; padding:7% 9% 8% 9%;
                               .winnerItem {
-                                   padding:5% 12%; display: flex !important; @include fCC(); flex-wrap: wrap;
-                                   h4 { width: 1000%; text-align: center; font-size:22px; } 
-                                   p { 
-                                        width: 1000%;  text-align: center; font-size: 14px;  
-                                        span { margin-left:0.5rem; display: inline-block; }
-                                   }
+                                   padding:4% 12%; display: flex !important; @include fCC(); flex-wrap: wrap;
+                                   h4 { text-align: center; font-size:18px; } 
+                                   p { text-align: center; font-size: 12px;  }
                               }
 
                     }
@@ -183,7 +193,7 @@
                     .winnerSlider, .winnerSliderList { 
                          height: 340px; padding:7% 9% 6% 9%;
                               .winnerItem {
-                                   padding:5% 10%; 
+                                   padding:4% 10%; 
                               }
                     } 
                }
@@ -204,7 +214,7 @@
                     .winnerSlider, .winnerSliderList { 
                          height: 300px; padding:7% 9% 6% 9%;
                               .winnerItem {
-                                   padding:6% 10%; 
+                                   padding:4% 10%; 
                               }
                     }
                }
@@ -221,7 +231,7 @@
                .winnerSlider, .winnerSliderList { 
                     height: 290px; padding:7% 9% 6% 9%;
                          .winnerItem {
-                              padding:6% 12%; 
+                              padding:4% 12%; 
                          }
 
                }
@@ -242,7 +252,9 @@
                .winnerSlider, .winnerSliderList { 
                     height: 270px; padding:7% 9% 6% 9%;
                          .winnerItem {
-                              padding:6% 12%; 
+                              padding:5% 12%; 
+                              h4 { font-size:14px; } 
+                              p { font-size: 11px;  }
                          }
                }
 
